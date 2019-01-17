@@ -13,7 +13,7 @@
 
 So, with Docker Swarm Mode you have:
 
-* Almost all the replicability as developing locally.
+* Replicability, use the same files as when developing locally.
 * Simplicity and speed for development and deployment.
 * Robustness and security, with fault-tolerant clusters.
 
@@ -42,7 +42,7 @@ Some of the main alternatives are:
 * <a href="https://kubernetes.io/" target="_blank">Kubernetes</a>.
 * <a href="http://mesos.apache.org/" target="_blank">Mesos</a>.
 
-To use any of them, you need to learn a huge new set of concepts, configurations, files, etc.
+To use any of them you need to learn a huge new set of concepts, configurations, files, etc.
 
 ### Docker Swarm mode
 
@@ -58,9 +58,9 @@ Set up a distributed cluster ready for production.
 
 ...In about **20 minutes**.
 
-If it doesn't work for you, then you can go for Kubernetes, Mesos or other.
+If it doesn't work for you, then you can go for Kubernetes, Mesos or any other.
 
-Those are great tools. But learning them might take weeks of learning, the **20 minutes spent here** are not much (and up to here you already spent 3 minutes).
+Those are great tools. But learning them might take weeks. So, the **20 minutes spent here** are not much (and up to here you already spent 3 minutes).
 
 ## Single server
 
@@ -72,14 +72,14 @@ And then, when the time to grow comes, you can add more servers to the cluster.
 
 With a **one-line command**.
 
-And you can create your application to be ready for massive scale from the beginning, in a single small server.
+And you can create your applications to be ready for massive scale from the beginning, starting from a single small server.
 
 
 ## About **Docker Swarm Rocks**
 
 This is not associated with Docker or any of the tools suggested here.
 
-This is mostly a set of ideas, documentation and tools to use existing open source products efficiently together.
+It's mainly a set of ideas, documentation and tools to use existing open source products efficiently together.
 
 
 ## Prerequisites
@@ -124,8 +124,8 @@ apt-get update
 apt-get upgrade -y
 ```
 
-* Install Docker following <a href="https://docs.docker.com/install/" target="_black">the official guide</a>:
-* Or alternatively, run the official convenience script:
+* Install Docker following <a href="https://docs.docker.com/install/" target="_black">the official guide</a>...
+* ...or alternatively, run the official convenience script:
 
 ```bash
 # Download Docker
@@ -136,7 +136,8 @@ CHANNEL=stable sh get-docker.sh
 rm get-docker.sh
 ```
 
-* If you are setting up multiple nodes (servers/VPSs), repeat these steps for each one. Using a different domain/subdomain for each one of them.
+* If you are setting up multiple nodes (servers/VPSs), repeat these steps for each one.
+    * Make sure you use a different domain/subdomain for each node.
 
 ### Set up swarm mode
 
@@ -182,7 +183,7 @@ docker swarm join --token SWMTKN-1-5tl7ya98erd9qtasdfml4lqbosbhfqv3asdf4p13-dzw6
 docker node ls
 ```
 
-it outputs something like:
+It outputs something like:
 
 ```
 ID                            HOSTNAME             STATUS    AVAILABILITY    MANAGER STATUS    ENGINE VERSION
@@ -197,6 +198,6 @@ That's it.
 
 You have a distributed Docker swarm mode cluster set up.
 
-Check other sections in the documentation to see how to set up HTTPS, deploy stacks, etc.
+Check other sections in the documentation at <a href="https://dockerswarm.rocks">https://dockerswarm.rocks</a> to see how to set up HTTPS, deploy stacks, etc.
 
 You already did the hard part, the rest is easy.
