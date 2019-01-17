@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://dockerswarm.rocks"><img src="/img/logo-light-blue-vectors.svg" alt="dockerswarm.rocks"></a>
+  <a href="https://dockerswarm.rocks"><img src="https://dockerswarm.rocks/img/logo-light-blue-vectors.svg" alt="dockerswarm.rocks"></a>
 </p>
 
 
