@@ -1,12 +1,12 @@
 ## Intro
 
-So, you have a **Docker Swarm mode** cluster.
+So, you have a **<a href="https://dockerswarm.rocks" target="_blank">Docker Swarm mode</a>** cluster.
 
 Now you can add a main, distributed, <a href="https://traefik.io/" target="_blank">**Traefik**</a> load balancer/proxy to:
 
 * Handle **connections**.
 * **Expose** specific services and applications based on their domain names.
-* Handle **multiple domains** (if you need so). Similar to "virtual hosts".
+* Handle **multiple domains** (if you need to). Similar to "virtual hosts".
 * Handle **HTTPS**.
 * Acquire (generate) **HTTPS certificates automatically** (including renewals) with <a href="https://letsencrypt.org/" target="_blank">Let's Encrypt</a>.
 * Add HTTP **Basic Auth** for any service that you need to protect and doesn't have its own security, etc.
@@ -14,9 +14,9 @@ Now you can add a main, distributed, <a href="https://traefik.io/" target="_blan
 
 This article/guide covers setting up Traefik in a distributed system, including distributed HTTPS certificates.
 
-This ideas, techniques and tools would also apply to other cluster orchestrators, like Kubernetes or Mesos, to add a main load balancer with HTTPS support, certificate generation, etc. But this article is focused on Docker Swarm mode. 
+This ideas, techniques, and tools would also apply to other cluster orchestrators, like Kubernetes or Mesos, to add a main load balancer with HTTPS support, certificate generation, etc. But this article is focused on Docker Swarm mode. 
 
-It's an alternative/continuation to a previous article <a href="https://medium.com/@tiangolo/docker-swarm-mode-and-traefik-for-a-https-cluster-20328dba6232" target="_blank">Docker Swarm Mode and Traefik for an HTTPS cluster</a> that covered Traefik in a Docker Swarm mode cluster, but running on a single node.
+It's an alternative/continuation to a previous article <a href="https://medium.com/@tiangolo/docker-swarm-mode-and-traefik-for-a-https-cluster-20328dba6232" target="_blank">Docker Swarm Mode and Traefik for an HTTPS cluster</a> that covered Traefik in a Docker Swarm mode cluster but running on a single node.
 
 
 ## Background
@@ -39,7 +39,7 @@ So, you have "redundancy" in the load balancer in your cluster.
 
 You can easily have redundancy in your application using Docker Swarm.
 
-And if you set your domain name DNS records correctly, adding the IP addresses of several of the machines in your cluster, you would then have round robin DNS load balancing for your application too.
+And if you set your domain name DNS records correctly, adding the IP addresses of several of the machines in your cluster, you would then have round-robin DNS load balancing for your application too.
 
 Full application redundancy.
 
@@ -65,7 +65,7 @@ Consul is a distributed configuration key/value store, it will:
 * Store HTTPS certificates for Traefik.
 
 
-## Set up environment variables
+## Preparation
 
 * Connect via SSH to a manager node in your cluster (you might have only one node) that will have the Traefik service.
 * Create a network that will be shared with Traefik and the containers that should be accessible from the outside, with:
