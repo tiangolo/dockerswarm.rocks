@@ -16,7 +16,7 @@ edit_uri: ""
 nav:
     - Docker Swarm Rocks: 'index.md'
     - Traefik Proxy with HTTPS: 'traefik.md'
-    - Traefik Proxy with HTTPS - Technical Details: 'traefik-techical-details.md'
+    - Traefik Proxy with HTTPS - Technical Details: 'traefik-technical-details.md'
 
 markdown_extensions:
   - markdown.extensions.codehilite:
