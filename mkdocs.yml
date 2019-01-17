@@ -1,0 +1,27 @@
+site_name: Docker Swarm Rocks
+site_description: Docker Swarm mode ideas and tools
+
+theme:
+    name: 'material'
+    palette:
+      primary: 'light blue'
+      accent: 'indigo'
+    logo: 'img/icon-white.svg'
+    favicon: 'img/favicon.png'
+
+repo_name: tiangolo/dockerswarm.rocks
+repo_url: https://github.com/tiangolo/dockerswarm.rocks
+edit_uri: ""
+
+nav:
+    - Docker Swarm Rocks: 'index.md'
+    
+
+markdown_extensions:
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown_include.include:
+      base_path: docs
+  - admonition
+  - codehilite
+  - extra

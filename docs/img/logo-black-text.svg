@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg6"
+   version="1.1"
+   viewBox="0 0 486.50849 236.74578"
+   height="236.74577"
+   width="486.50848">
+  <metadata
+     id="metadata12">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs10" />
+  <rect
+     y="0"
+     x="0"
+     height="236.74577"
+     width="486.50848"
+     id="rect933"
+     style="opacity:0.98000004;fill:none;fill-opacity:1;stroke-width:0.93944699" />
+  <path
+     style="fill:none"
+     id="path2"
+     d="m 215.00069,55.738978 h 24 v 24 h -24 z" />
+  <path
+     style="fill:#000000;fill-opacity:1;stroke-width:4.90508509"
+     id="path4"
+     d="m 235.11865,35.593216 c -27.07607,0 -49.05085,21.97478 -49.05085,49.050848 0,27.076066 21.97478,49.050846 49.05085,49.050846 27.07607,0 49.05085,-21.97478 49.05085,-49.050846 0,-27.076068 -21.97478,-49.050848 -49.05085,-49.050848 z m 22.07288,68.671184 h -41.69322 c -8.14244,0 -14.71525,-6.572811 -14.71525,-14.715252 0,-8.14244 6.57281,-14.715254 14.71525,-14.715254 l 0.68671,0.04905 c 2.15824,-8.485796 9.76112,-14.764306 18.93363,-14.764306 10.84024,0 19.62034,8.780103 19.62034,19.62034 h 2.45254 c 6.76902,0 12.26271,5.493695 12.26271,12.262712 0,6.769017 -5.49369,12.26271 -12.26271,12.26271 z" />
+  <text
+     id="text912"
+     y="175.94237"
+     x="46.196148"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+       y="175.94237"
+       x="46.196148"
+       id="tspan910">Docker Swarm Rocks</tspan></text>
+</svg>
