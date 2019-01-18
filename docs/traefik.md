@@ -1,3 +1,9 @@
+This article lives in:
+
+* [Medium]()
+* [GitHub](https://github.com/tiangolo/medium-posts/tree/master/docker-swarm-mode-and-distributed-traefik-proxy-with-https)
+* [DockerSwarm.rocks](https://dockerswarm.rocks/traefik/)
+
 ## Intro
 
 So, you have a **<a href="https://dockerswarm.rocks" target="_blank">Docker Swarm mode</a>** cluster.
@@ -14,14 +20,14 @@ Now you can add a main, distributed, <a href="https://traefik.io/" target="_blan
 
 This article/guide covers setting up Traefik in a distributed system, including distributed HTTPS certificates.
 
-This ideas, techniques, and tools would also apply to other cluster orchestrators, like Kubernetes or Mesos, to add a main load balancer with HTTPS support, certificate generation, etc. But this article is focused on Docker Swarm mode. 
+These ideas, techniques, and tools would also apply to other cluster orchestrators, like Kubernetes or Mesos, to add a main load balancer with HTTPS support, certificate generation, etc. But this article is focused on Docker Swarm mode. 
 
 It's an alternative/continuation to a previous article <a href="https://medium.com/@tiangolo/docker-swarm-mode-and-traefik-for-a-https-cluster-20328dba6232" target="_blank">Docker Swarm Mode and Traefik for an HTTPS cluster</a> that covered Traefik in a Docker Swarm mode cluster but running on a single node.
 
 
 ## Background
 
-Docker Swarm mode with a main Traefik load balancer/proxy is the **base cluster architecture** that I'm using with my current team for many of the applications and projects.
+Docker Swarm mode with a main Traefik load balancer/proxy is the **base cluster architecture** that I'm using with my current team for most of the applications and projects.
 
 It's also used by several other friends and teams.
 
@@ -43,11 +49,14 @@ And if you set your domain name DNS records correctly, adding the IP addresses o
 
 Full application redundancy.
 
+!!! note
+    But if you have a single node, it will also work. And you can grow later if needed.
+
 ### User Interface
 
 The guide includes how to expose the internal Traefik web UI through the same Traefik load balancer, using a secure HTTPS certificate and HTTP Basic Auth.
 
-<img src="/img/traefik-ui.png">
+<img src="https://dockerswarm.rocks/img/traefik-ui.png">
 
 ## How it works
 
@@ -134,6 +143,12 @@ export CONSUL_REPLICAS=3
 
 ```bash
 export CONSUL_REPLICAS=$(docker node ls -q | wc -l)
+```
+
+...if you have a single node, you can set `CONSUL_REPLICAS` to `0`, that way you will only have the Consul "leader", you don't need the replicas if you don't have other nodes yet:
+
+```bash
+export CONSUL_REPLICAS=0
 ```
 
 * Create an environment variable with the number of replicas for the Traefik service (if you don't set it, by default it will be 3):
@@ -224,6 +239,13 @@ You will be able to securely access the web UI at `https://traefik.<your domain>
 And the same way, to access the Consul web user interface at `https://consul.<your domain>`.
 
 
+## Updating
+
+Let's say you add a couple of new nodes to your cluster, and you want to increment the number of Consul replicas or Traefik replicas.
+
+You can just set the environment variables again, and re-deploy. Docker Swarm mode will take care of making sure the state of the system is consistent.
+
+
 ## What's next
 
 The next thing would be to deploy a stack (a complete web application, with backend, frontend, database, etc) using this Docker Swarm mode cluster.
@@ -237,4 +259,4 @@ It has everything set up to be deployed in a Docker Swarm mode cluster with Trae
 
 ## Technical Details
 
-If you want to see the technical details of what each part of the Docker Compose `traefik.yml` file do, check the chapter ["Traefik Proxy with HTTPS - Technical Details"](/traefik-technical-details/).
+If you want to see the technical details of what each part of the Docker Compose `traefik.yml` file do, check the chapter ["Traefik Proxy with HTTPS - Technical Details"](https://dockerswarm.rocks/traefik-technical-details/).

@@ -12,11 +12,11 @@ And if your cluster has more nodes, or if one node goes down, you would have to 
 
 ### Consul leader
 
-In this Docker Compose stack we define a single Consul leader named `consul-leader`, that is able to self-elect as a leader (`-boostrap`), and tries to join another consul replica by the name `consul-replica`.
+In this Docker Compose stack we define a single Consul leader named `consul-leader`, that is able to self-elect as a leader (`-boostrap`).
 
-In reality, `consul-replica` is a service with multiple replicas, but each one of them will contact `consul-leader`, so, they will all end up exchanging their IP addresses and being able to synchronize.
+There is also `consul-replica`, a service with multiple replicas. Each one of them will contact `consul-leader`, so, they will all end up exchanging their IP addresses and being able to synchronize (including the leader, once the replicas send him their data).
 
-It's configured to listen to the first internal private IP address by using the environment variable `CONSUL_BIND_INTERFACE` listening on the first "ethernet" (virtual) interface `eth0`.
+`consul-leader` is configured to listen to the first internal private IP address by using the environment variable `CONSUL_BIND_INTERFACE` listening on the first "ethernet" (virtual) interface `eth0`.
 
 It is attached to the `default` network to be able to talk to the other `consul-replica` service (of multiple replica containers) and to the external network `traefik-public`, to be able to expose its web user interface with Traefik.
 
@@ -39,6 +39,12 @@ It has several deployment labels, these are what make Traefik expose the Consul 
 ### Consul replicas
 
 `consul-replica` is a service with multiple replicas (multiple containers).
+
+Each of them will try to communicate and send their data to `consul-leader`, using `-retry-join="consul-leader"`.
+
+By having them do that, and not forcing the leader to try to communicate with the replicas, you can set the replication of these `consul-replica`s to `0`, and the leader will still work alone, in case you have a single node.
+
+Then, if you have new nodes, you can set the variable again, and re-deploy. Docker Swarm mode will take care of making the deployed services consistent with the new state.
 
 It is set to distribute those replicas spread across the cluster with `spread: node.id`.
 

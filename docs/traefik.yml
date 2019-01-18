@@ -3,7 +3,7 @@ version: '3.3'
 services:
   consul-leader:
     image: consul
-    command: agent -server -client=0.0.0.0 -bootstrap -retry-join="consul-replica" -ui
+    command: agent -server -client=0.0.0.0 -bootstrap -ui
     volumes:
       - consul-data-leader:/consul/data
     environment:

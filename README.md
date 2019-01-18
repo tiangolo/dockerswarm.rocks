@@ -42,7 +42,7 @@ Some of the main alternatives are:
 * <a href="https://kubernetes.io/" target="_blank">Kubernetes</a>.
 * <a href="http://mesos.apache.org/" target="_blank">Mesos</a>.
 
-To use any of them you need to learn a huge new set of concepts, configurations, files, etc.
+To use any of them you need to learn a huge new set of concepts, configurations, files, commands, etc.
 
 ### Docker Swarm mode
 
@@ -116,6 +116,8 @@ echo $USE_HOSTNAME > /etc/hostname
 hostname -F /etc/hostname
 ```
 
+**Note**: If you are not a `root` user, you might need to add `sudo` to these commands. The shell will tell you when you don't have enough permissions.
+
 * Update packages:
 
 ```bash
@@ -150,6 +152,21 @@ The first step is to configure one (or more) manager nodes.
 ```bash
 docker swarm init
 ```
+
+
+**Note**: if you see an error like:
+
+```
+Error response from daemon: could not choose an IP address to advertise since this system has multiple addresses on interface eth0 (138.68.58.48 and 10.19.0.5) - specify one with --advertise-addr
+```
+
+...select the public IP `138.68.58.48`, and run the command again with `--advertise-addr`, e.g.:
+
+```bash
+docker swarm init --advertise-addr 138.68.58.48
+```
+
+---
 
 * On the main manager node, for each additional manager node you want to set up, run:
 
@@ -198,6 +215,8 @@ That's it.
 
 You have a distributed Docker swarm mode cluster set up.
 
-Check other sections in the documentation at <a href="https://dockerswarm.rocks">https://dockerswarm.rocks</a> to see how to set up HTTPS, deploy stacks, etc.
+Check other sections in the documentation at <a href="https://dockerswarm.rocks">https://dockerswarm.rocks</a> to see how to set up HTTPS, you still have time, the 20 minutes are not over yet.
+
+Then you can see how to deploy stacks, etc.
 
 You already did the hard part, the rest is easy.
