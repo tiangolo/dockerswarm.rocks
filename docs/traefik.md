@@ -1,8 +1,8 @@
 This article lives in:
 
-* [Medium]()
-* [GitHub](https://github.com/tiangolo/medium-posts/tree/master/docker-swarm-mode-and-distributed-traefik-proxy-with-https)
-* [DockerSwarm.rocks](https://dockerswarm.rocks/traefik/)
+* <a href="https://medium.com/@tiangolo/docker-swarm-mode-and-distributed-traefik-proxy-with-https-6df45d0c0fc0" target="_blank">Medium</a>
+* <a href="https://github.com/tiangolo/medium-posts/tree/master/docker-swarm-mode-and-distributed-traefik-proxy-with-https" target="_blank">GitHub</a>
+* <a href="https://dockerswarm.rocks/traefik/" target="_blank">DockerSwarm.rocks</a>
 
 ## Intro
 
