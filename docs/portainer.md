@@ -1,4 +1,4 @@
-<a href="https://github.com/portainer/portainer">Portainer</a> is a web UI (user interface) that allows you to see the state of your Docker services in a Docker Swarm mode cluster and manage it.
+<a href="https://github.com/portainer/portainer" target="_blank">Portainer</a> is a web UI (user interface) that allows you to see the state of your Docker services in a Docker Swarm mode cluster and manage it.
 
 Follow this guide to integrate it in your Docker Swarm mode cluster deployed as described in <a href="https://dockerswarm.rocks" target="_blank">DockerSwarm.rocks</a> with a global Traefik HTTPS proxy.
 
