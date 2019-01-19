@@ -17,6 +17,7 @@ nav:
     - Docker Swarm Rocks: index.md
     - Traefik Proxy with HTTPS: traefik.md
     - Traefik Proxy with HTTPS - Technical Details: traefik-technical-details.md
+    - Traefik Proxy with HTTPS using volume (outdated): traefik-with-volume.md
     - Swarmprom for real-time monitoring and alerts: swarmprom.md
 
 markdown_extensions:
