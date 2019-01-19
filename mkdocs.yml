@@ -14,9 +14,10 @@ repo_url: https://github.com/tiangolo/dockerswarm.rocks
 edit_uri: ""
 
 nav:
-    - Docker Swarm Rocks: 'index.md'
-    - Traefik Proxy with HTTPS: 'traefik.md'
-    - Traefik Proxy with HTTPS - Technical Details: 'traefik-technical-details.md'
+    - Docker Swarm Rocks: index.md
+    - Traefik Proxy with HTTPS: traefik.md
+    - Traefik Proxy with HTTPS - Technical Details: traefik-technical-details.md
+    - Swarmprom for real-time monitoring and alerts: swarmprom.md
 
 markdown_extensions:
   - markdown.extensions.codehilite:
