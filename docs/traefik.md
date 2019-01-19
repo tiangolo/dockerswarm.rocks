@@ -6,7 +6,7 @@ This article lives in:
 
 ## Intro
 
-So, you have a **<a href="https://dockerswarm.rocks" target="_blank">Docker Swarm mode</a>** cluster.
+So, you have a **Docker Swarm mode** cluster set up as described in <a href="https://dockerswarm.rocks" target="_blank">DockerSwarm.rocks</a>.
 
 Now you can add a main, distributed, <a href="https://traefik.io/" target="_blank">**Traefik**</a> load balancer/proxy to:
 
