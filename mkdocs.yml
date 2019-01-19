@@ -20,6 +20,7 @@ nav:
     - Traefik Proxy with HTTPS using volume (outdated): traefik-with-volume.md
     - Swarmprom for real-time monitoring and alerts: swarmprom.md
     - Portainer web user interface for your Docker Swarm cluster: portainer.md
+    - GitLab CI runner for CI/CD: gitlab-ci.md
 
 markdown_extensions:
   - markdown.extensions.codehilite:
