@@ -163,6 +163,12 @@ export TRAEFIK_REPLICAS=3
 export TRAEFIK_REPLICAS=$(docker node ls -q | wc -l)
 ```
 
+...if you have a single node, you can set `TRAEFIK_REPLICAS` to `1`:
+
+```bash
+export TRAEFIK_REPLICAS=1
+```
+
 
 ## Create the Docker Compose file
 

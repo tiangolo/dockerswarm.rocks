@@ -18,6 +18,8 @@ There is also `consul-replica`, a service with multiple replicas. Each one of th
 
 `consul-leader` is configured to listen to the first internal private IP address by using the environment variable `CONSUL_BIND_INTERFACE` listening on the first "ethernet" (virtual) interface `eth0`.
 
+It also has an evironment variable `CONSUL_LOCAL_CONFIG` with local configuration `{"leave_on_terminate": true}`. This means that if you re-deploy the service, the container it will leave the cluster before being turned off. And then the new container will be able to start. Otherwise, the new container will keep trying to contact the old container, without knowing that it is supposed to replace it.
+
 It is attached to the `default` network to be able to talk to the other `consul-replica` service (of multiple replica containers) and to the external network `traefik-public`, to be able to expose its web user interface with Traefik.
 
 It has several deployment labels, these are what make Traefik expose the Consul web UI with specific settings:
