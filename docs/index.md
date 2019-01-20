@@ -166,7 +166,7 @@ Error response from daemon: could not choose an IP address to advertise since th
 docker swarm init --advertise-addr 138.68.58.48
 ```
 
----
+### Add manager nodes (optional)
 
 * On the main manager node, for each additional manager node you want to set up, run:
 
@@ -179,6 +179,8 @@ docker swarm join-token manager
 ```bash
  docker swarm join --token SWMTKN-1-5tl7yaasdfd9qt9j0easdfnml4lqbosbasf14p13-f3hem9ckmkhasdf3idrzk5gz 172.173.174.175:2377
 ```
+
+### Add worker nodes (optional)
 
 * On the main manager node, for each additional worker node you want to set up, run:
 
