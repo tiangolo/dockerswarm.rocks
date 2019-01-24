@@ -9,7 +9,7 @@ You could also test and build your code on "runners" in dedicated, isolated mach
 And then deploy it to your production Docker Swarm mode cluster using another GitLab CI runner configured in the same cluster.
 
 
-### Create the GitLab Runner in Docker standalone mode
+## Create the GitLab Runner in Docker standalone mode
 
 You probably want to run the GitLab runner in Docker standalone, even when you deploy it in a Docker Swarm mode Manager Node to deploy production stacks.
 
@@ -62,3 +62,38 @@ gitlab-runner \
 * The runner will appear in your GitLab web user interface, in the runner's section.
 
 * You can edit the runner data from the GitLab admin section (name, tags, etc).
+
+## Use it
+
+GitLab CI is controlled using a `.gitlab-ci.yml` file that lives in your same code repository.
+
+To learn more about it, you can check <a href="https://about.gitlab.com/product/continuous-integration/" target="_blank">GitLab CI's official documentation</a>.
+
+If you have a Docker Swarm mode cluster with a main Traefik proxy set up using the ideas from <a href="https://dockerswarm.rocks" target="_blank">DockerSwarm.rocks</a>, your `.gitlab-ci.yml` file could look like:
+
+```YAML
+image: tiangolo/docker-with-compose
+
+before_script:
+  - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+
+stages:
+  - build
+  - deploy
+  
+build-prod:
+  stage: build
+  script:
+    - docker-compose build
+  only:
+    - master
+
+deploy-prod:
+  stage: deploy
+  script:
+    - docker stack deploy -c docker-compose.yml --with-registry-auth my-stack
+  only:
+    - master
+```
+
+To see more complete examples, check the <a href="https://dockerswarm.rocks/project-generators/" target="_blank">Project Generators at DockerSwarm.rocks</a>.
