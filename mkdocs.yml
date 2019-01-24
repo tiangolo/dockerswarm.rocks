@@ -12,6 +12,9 @@ theme:
 repo_name: tiangolo/dockerswarm.rocks
 repo_url: https://github.com/tiangolo/dockerswarm.rocks
 edit_uri: ""
+google_analytics:
+    - 'UA-133194648-1'
+    - 'auto'
 
 nav:
     - Docker Swarm Rocks: index.md
