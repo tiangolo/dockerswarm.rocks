@@ -32,6 +32,7 @@ services:
       - consul-data-replica:/consul/data
     environment:
       - CONSUL_BIND_INTERFACE=eth0
+      - 'CONSUL_LOCAL_CONFIG={"leave_on_terminate": true}'
     networks:
       - default
       - traefik-public
