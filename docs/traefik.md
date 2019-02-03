@@ -139,17 +139,17 @@ $apr1$89eqM5Ro$CxaFELthUKV21DpI3UTQO.
 export CONSUL_REPLICAS=3
 ```
 
-...if you want to have one replica per node in your cluster, you can set it like this:
-
-```bash
-export CONSUL_REPLICAS=$(docker node ls -q | wc -l)
-```
-
-...if you have a single node, you can set `CONSUL_REPLICAS` to `0`, that way you will only have the Consul "leader", you don't need the replicas if you don't have other nodes yet:
+If you have a single node, you can set `CONSUL_REPLICAS` to `0`, that way you will only have the Consul "leader", you don't need the replicas if you don't have other nodes yet:
 
 ```bash
 export CONSUL_REPLICAS=0
 ```
+
+**Note**: The <a href="https://www.consul.io/docs/internals/architecture.html" target="_blank">Consul documentation says</a>:
+
+> It is expected that there be between three to five servers.
+
+So, you probably want to set `CONSUL_REPLICAS=3` or `CONSUL_REPLICAS=5`, but not more.
 
 * Create an environment variable with the number of replicas for the Traefik service (if you don't set it, by default it will be 3):
 

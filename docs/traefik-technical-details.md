@@ -34,7 +34,7 @@ It has several deployment labels, these are what make Traefik expose the Consul 
 * `traefik.webservice.frontend.entryPoints=https`: make the web UI listen and serve on HTTPS.
 * `traefik.frontend.auth.basic.users=${USERNAME}:${HASHED_PASSWORD}`: enable basic auth, so that not everyone can access your Traefik web dashboard, it uses the username and password created above.
 
-```YAML hl_lines="4 6 10 12 13 16 17 18 19 20 21 22 23 24 25 26"
+```YAML hl_lines="4 6 10 11 13 14 17 18 19 20 21 22 23 24 25 26 27"
 {!traefik.yml!}
 ```
 
@@ -58,7 +58,7 @@ As each replica will send its data (IP, ID, etc) to the service `consul-leader`,
 
 That way, all the Consul instances will be able to communicate and synchronize.
 
-```YAML hl_lines="27 29 38 41"
+```YAML hl_lines="28 30 40 43"
 {!traefik.yml!}
 ```
 
@@ -106,6 +106,6 @@ It is connected to the internal stack `default`, to store the configurations in 
 
 Technically, Traefik and Consul could just use the network `traefik-public` to communicate, to store configurations, HTTPS certificates, etc. But it's more explicit what each network does having the intra-stack `default` network declared too.
 
-```YAML hl_lines="45 46 48 51 55 57 67 69 70 77 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 89 90 99 100"
+```YAML hl_lines="47 48 50 53 57 59 69 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 91 92 100 101"
 {!traefik.yml!}
 ```
