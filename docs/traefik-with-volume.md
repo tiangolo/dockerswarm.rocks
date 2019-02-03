@@ -80,22 +80,16 @@ export PASSWORD=changethis
 export HASHED_PASSWORD=$(openssl passwd -apr1 $PASSWORD)
 ```
 
-* Create an environment variable with the username and password in "`htpasswd`" format:
-
-```bash
-export USERNAME_PASSWORD=$USERNAME:$HASHED_PASSWORD
-```
-
 * You can check the contents with:
 
 ```bash
-echo $USERNAME_PASSWORD
+echo $HASHED_PASSWORD
 ```
 
 It will look like:
 
 ```
-admin:$apr1$89eqM5Ro$CxaFELthUKV21DpI3UTQO.
+$apr1$89eqM5Ro$CxaFELthUKV21DpI3UTQO.
 ```
 
 * Create a Traefik service, copy this long command in the terminal:
@@ -117,8 +111,8 @@ docker service create \
     --label "traefik.redirectorservice.frontend.entryPoints=http" \
     --label "traefik.redirectorservice.frontend.redirect.entryPoint=https" \
     --label "traefik.webservice.frontend.entryPoints=https" \
-    --label "traefik.frontend.auth.basic=$USERNAME_PASSWORD" \
-    traefik:v1.6 \
+    --label "traefik.frontend.auth.basic.users=${USERNAME}:${HASHED_PASSWORD}" \
+    traefik:v1.7 \
     --docker \
     --docker.swarmmode \
     --docker.watch \
@@ -158,8 +152,8 @@ The previous command explained:
 * `--label "traefik.redirectorservice.frontend.entryPoints=http"`: make the web dashboard listen to HTTP, so that it can redirect to HTTPS
 * `--label "traefik.redirectorservice.frontend.redirect.entryPoint=https"`: make Traefik redirect HTTP trafic to HTTPS for the web dashboard
 * `--label "traefik.webservice.frontend.entryPoints=https"`: make the web dashboard listen and serve on HTTPS
-* `--label "traefik.frontend.auth.basic=$USERNAME_PASSWORD"`: enable basic auth, so that not every one can access your Traefik web dashboard, it uses the username and password created above
-* `traefik:v1.6`: use the image `traefik:v1.6`
+* `--label "traefik.frontend.auth.basic.users=${USERNAME}:${HASHED_PASSWORD}"`: enable basic auth, so that not every one can access your Traefik web dashboard, it uses the username and password created above
+* `traefik:v1.7`: use the image `traefik:v1.7`
 * `--docker`: enable Docker
 * `--docker.swarmmode`: enable Docker Swarm Mode
 * `--docker.watch`: enable "watch", so it reloads its config based on new stacks and labels
@@ -198,4 +192,4 @@ The next thing would be to deploy a stack (a complete web application, with back
 
 It's actually very simple, as you can use Docker Compose for local development and then use the same files for deployment in the Docker Swarm mode cluster.
 
-If you want to try it right now, I made this <a href="https://github.com/tiangolo/full-stack" target="_blank">full-stack project generator</a> that you can use. It has everything set up to be deployed in a Docker Swarm mode cluster with Traefik as described in this article.
+If you want to try it right now, you can check this very simple <a href="https://github.com/tiangolo/flask-frontend-docker" target="_blank">project generator with a minimal Flask backend and Vue.js frontend</a>.
