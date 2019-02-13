@@ -26,6 +26,7 @@ nav:
     - Portainer web user interface for your Docker Swarm cluster: portainer.md
     - GitLab CI runner for CI/CD: gitlab-ci.md
     - Project Generators: project-generators.md
+    - Release Notes: release-notes.md
 
 markdown_extensions:
   - markdown.extensions.codehilite:
