@@ -22,6 +22,7 @@ nav:
     - Traefik Proxy with HTTPS - Technical Details: traefik-technical-details.md
     - Traefik Proxy with HTTPS using volume (outdated): traefik-with-volume.md
     - Swarmprom for real-time monitoring and alerts: swarmprom.md
+    - Swarmpit web user interface for your Docker Swarm cluster: swarmpit.md
     - Portainer web user interface for your Docker Swarm cluster: portainer.md
     - GitLab CI runner for CI/CD: gitlab-ci.md
     - Project Generators: project-generators.md
