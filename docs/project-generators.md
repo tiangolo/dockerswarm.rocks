@@ -1,23 +1,23 @@
 There are several project generators designed to be used in a Docker Swarm mode cluster with a main Traefik HTTPS proxy, all set up with the ideas from <a href="https://dockerswarm.rocks" target="_blank">DockerSwarm.rocks</a>.
 
 
+## Full Stack FastAPI PostgreSQL - project generator
+
+Link: <a href="https://github.com/tiangolo/full-stack-fastapi-postgresql" target="_blank">https://github.com/tiangolo/full-stack-fastapi-postgresql</a>
+
+* Python backend with <a href="https://github.com/tiangolo/fastapi" target="_blank">FastAPI</a>.
+* Frontend with <a href="https://vuejs.org/" target="_blank">Vue.js</a>.
+* <a href="http://www.celeryproject.org/" target="_blank">Celery</a> for asynchronous jobs with <a href="https://www.rabbitmq.com/" target="_blank">RabbitMQ</a>.
+* <a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a> as the database.
+* Email notifications.
+* <a href="https://about.gitlab.com/product/continuous-integration/" target="_blank">GitLab CI</a> integration.
+
+
 ## Full Stack FastAPI Couchbase - project generator
 
 Link: <a href="https://github.com/tiangolo/full-stack-fastapi-couchbase" target="_blank">https://github.com/tiangolo/full-stack-fastapi-couchbase</a>
 
 * Python backend with <a href="https://github.com/tiangolo/fastapi" target="_blank">FastAPI</a>.
-* Frontend with <a href="https://vuejs.org/" target="_blank">Vue.js</a>.
-* <a href="http://www.celeryproject.org/" target="_blank">Celery</a> for asynchronous jobs with <a href="https://www.rabbitmq.com/" target="_blank">RabbitMQ</a>.
-* <a href="https://www.couchbase.com/" target="_blank">Couchbase</a> as the NoSQL database.
-* Email notifications.
-* <a href="https://about.gitlab.com/product/continuous-integration/" target="_blank">GitLab CI</a> integration.
-
-
-## Full Stack Flask Couchbase - project generator
-
-Link: <a href="https://github.com/tiangolo/full-stack-flask-couchbase" target="_blank">https://github.com/tiangolo/full-stack-flask-couchbase</a>
-
-* Python backend with <a href="http://flask.pocoo.org/" target="_blank">Flask</a>.
 * Frontend with <a href="https://vuejs.org/" target="_blank">Vue.js</a>.
 * <a href="http://www.celeryproject.org/" target="_blank">Celery</a> for asynchronous jobs with <a href="https://www.rabbitmq.com/" target="_blank">RabbitMQ</a>.
 * <a href="https://www.couchbase.com/" target="_blank">Couchbase</a> as the NoSQL database.
@@ -33,6 +33,18 @@ Link: <a href="https://github.com/tiangolo/full-stack" target="_blank">https://g
 * Frontend with <a href="https://vuejs.org/" target="_blank">Vue.js</a>.
 * <a href="http://www.celeryproject.org/" target="_blank">Celery</a> for asynchronous jobs with <a href="https://www.rabbitmq.com/" target="_blank">RabbitMQ</a>.
 * <a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a> as the database.
+* <a href="https://about.gitlab.com/product/continuous-integration/" target="_blank">GitLab CI</a> integration.
+
+
+## Full Stack Flask Couchbase - project generator
+
+Link: <a href="https://github.com/tiangolo/full-stack-flask-couchbase" target="_blank">https://github.com/tiangolo/full-stack-flask-couchbase</a>
+
+* Python backend with <a href="http://flask.pocoo.org/" target="_blank">Flask</a>.
+* Frontend with <a href="https://vuejs.org/" target="_blank">Vue.js</a>.
+* <a href="http://www.celeryproject.org/" target="_blank">Celery</a> for asynchronous jobs with <a href="https://www.rabbitmq.com/" target="_blank">RabbitMQ</a>.
+* <a href="https://www.couchbase.com/" target="_blank">Couchbase</a> as the NoSQL database.
+* Email notifications.
 * <a href="https://about.gitlab.com/product/continuous-integration/" target="_blank">GitLab CI</a> integration.
 
 
