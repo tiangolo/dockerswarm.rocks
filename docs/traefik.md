@@ -251,6 +251,50 @@ Let's say you add a couple of new nodes to your cluster, and you want to increme
 
 You can just set the environment variables again, and re-deploy. Docker Swarm mode will take care of making sure the state of the system is consistent.
 
+## Getting the client IP
+
+If you need to read the client IP in your applications/stacks using the `X-Forwarded-For` or `X-Real-IP` headers provided by Traefik, you need to make Traefik listen directly, not through Docker Swarm mode, even while being deployed with Docker Swarm mode.
+
+For that, you need to publish the ports using "host" mode.
+
+So, the Docker Compose lines:
+
+```YAML
+    ports:
+      - 80:80
+      - 443:443
+```
+
+need to be:
+
+```YAML
+    ports:
+      - target: 80
+        published: 80
+        mode: host
+      - target: 443
+        published: 443
+        mode: host
+```
+
+You can use all the same instructions above, downloading the host-mode file:
+
+```bash
+curl -L dockerswarm.rocks/traefik-host.yml -o traefik-host.yml
+```
+
+Or alternatively, copying it directly:
+
+```YAML
+{!./traefik-host.yml!}
+```
+
+And then deploying with:
+
+```bash
+docker stack deploy -c traefik-host.yml traefik-consul
+```
+
 
 ## What's next
 

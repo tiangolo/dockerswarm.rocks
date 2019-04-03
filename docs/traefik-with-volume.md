@@ -185,6 +185,66 @@ docker service logs traefik
 
 And open `https://traefik.<your domain>` in your browser, you will be asked for the username and password that you set up before, and you will be able to see the Traefik web UI interface. Once you deploy a stack, you will be able to see it there and see how the different hosts and paths map to different Docker services / containers.
 
+## Getting the client IP
+
+If you need to read the client IP in your applications/stacks using the `X-Forwarded-For` or `X-Real-IP` headers provided by Traefik, you need to make Traefik listen directly, not through Docker Swarm mode, even while being deployed with Docker Swarm mode.
+
+For that, you need to publish the ports using "host" mode.
+
+So, the two lines above:
+
+```
+    --publish 80:80 \
+    --publish 443:443 \
+```
+
+need to be:
+
+```
+    --publish mode=host,target=80,published=80 \
+    --publish mode=host,target=443,published=443 \
+```
+
+Here's the complete command with those lines updated:
+
+
+```bash
+docker service create \
+    --name traefik \
+    --constraint=node.labels.traefik-public.traefik-public-certificates==true \
+    --publish mode=host,target=80,published=80 \
+    --publish mode=host,target=443,published=443 \
+    --mount type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock \
+    --mount type=volume,source=traefik-public-certificates,target=/certificates \
+    --network traefik-public \
+    --label "traefik.frontend.rule=Host:traefik.$USE_HOSTNAME" \
+    --label "traefik.enable=true" \
+    --label "traefik.port=8080" \
+    --label "traefik.tags=traefik-public" \
+    --label "traefik.docker.network=traefik-public" \
+    --label "traefik.redirectorservice.frontend.entryPoints=http" \
+    --label "traefik.redirectorservice.frontend.redirect.entryPoint=https" \
+    --label "traefik.webservice.frontend.entryPoints=https" \
+    --label "traefik.frontend.auth.basic.users=${USERNAME}:${HASHED_PASSWORD}" \
+    traefik:v1.7 \
+    --docker \
+    --docker.swarmmode \
+    --docker.watch \
+    --docker.exposedbydefault=false \
+    --constraints=tag==traefik-public \
+    --entrypoints='Name:http Address::80' \
+    --entrypoints='Name:https Address::443 TLS' \
+    --acme \
+    --acme.email=$EMAIL \
+    --acme.storage=/certificates/acme.json \
+    --acme.entryPoint=https \
+    --acme.httpChallenge.entryPoint=http\
+    --acme.onhostrule=true \
+    --acme.acmelogging=true \
+    --logLevel=INFO \
+    --accessLog \
+    --api
+```
 
 ## What's next
 
