@@ -1,3 +1,7 @@
+## Next release
+
+* Update development dependencies for security.
+
 ## 0.2.0
 
 * Add notes about starting Traefik in host mode. To be able to get the real IP from clients. Here's the updated <a href="https://dockerswarm.rocks/traefik/#getting-the-client-ip" target="_blank">documentation for distributed Traefik</a> and here's the updated <a href="https://dockerswarm.rocks/traefik-with-volume/#getting-the-client-ip" target="_blank">documentation for a single Traefik using a volume</a>.
