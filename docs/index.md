@@ -116,7 +116,7 @@ echo $USE_HOSTNAME > /etc/hostname
 hostname -F /etc/hostname
 ```
 
-**Note**: If you are not a `root` user, you might need to add `sudo` to these commands. The shell will tell you when you don't have enough permissions.
+**Note**: If you are not a `root` user, you might need to add `sudo` to these commands. The shell will tell you when you don't have enough permissions. Note that sudo does not preserve environment variables by default, but this can be enabled via the `-E` flag.
 
 * Update packages:
 
