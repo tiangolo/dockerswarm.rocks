@@ -1,6 +1,7 @@
 ## Next release
 
 * Update development dependencies for security.
+* Add warning about `sudo` and environment variables. PR [#13](https://github.com/tiangolo/dockerswarm.rocks/pull/13) by [@dmontagu](https://github.com/dmontagu).
 
 ## 0.2.0
 
