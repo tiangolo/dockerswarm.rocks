@@ -14,7 +14,7 @@ services:
       - traefik-public
     deploy:
       labels:
-        - traefik.frontend.rule=Host:consul.${DOMAIN}
+        - traefik.frontend.rule=Host:consul.${DOMAIN?Variable DOMAIN not set}
         - traefik.enable=true
         - traefik.port=8500
         - traefik.tags=${TRAEFIK_PUBLIC_TAG:-traefik-public}
@@ -24,7 +24,7 @@ services:
         - traefik.redirectorservice.frontend.redirect.entryPoint=https
         # Traefik service that listens to HTTPS
         - traefik.webservice.frontend.entryPoints=https
-        - traefik.frontend.auth.basic.users=${USERNAME}:${HASHED_PASSWORD}
+        - traefik.frontend.auth.basic.users=${USERNAME?Variable USERNAME not set}:${HASHED_PASSWORD?Variable HASHED_PASSWORD not set}
   consul-replica:
     image: consul
     command: agent -server -client=0.0.0.0 -retry-join="consul-leader"
@@ -54,7 +54,7 @@ services:
         preferences:
           - spread: node.id
       labels:
-        - traefik.frontend.rule=Host:traefik.${DOMAIN}
+        - traefik.frontend.rule=Host:traefik.${DOMAIN?Variable DOMAIN not set}
         - traefik.enable=true
         - traefik.port=8080
         - traefik.tags=traefik-public
@@ -64,7 +64,7 @@ services:
         - traefik.redirectorservice.frontend.redirect.entryPoint=https
         # Traefik service that listens to HTTPS
         - traefik.webservice.frontend.entryPoints=https
-        - traefik.frontend.auth.basic.users=${USERNAME}:${HASHED_PASSWORD}
+        - traefik.frontend.auth.basic.users=${USERNAME?Variable USERNAME not set}:${HASHED_PASSWORD?Variable HASHED_PASSWORD not set}
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     command: >
@@ -78,7 +78,7 @@ services:
       --consul
       --consul.endpoint="consul-leader:8500"
       --acme
-      --acme.email=${EMAIL}
+      --acme.email=${EMAIL?Variable EMAIL not set}
       --acme.storage="traefik/acme/account"
       --acme.entryPoint=https
       --acme.httpChallenge.entryPoint=http

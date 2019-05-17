@@ -30,7 +30,7 @@ services:
           - node.role == manager
           - node.labels.portainer.portainer-data == true
       labels:
-        - traefik.frontend.rule=Host:${DOMAIN}
+        - traefik.frontend.rule=Host:${DOMAIN?Variable DOMAIN not set}
         - traefik.enable=true
         - traefik.port=9000
         - traefik.tags=traefik-public

@@ -24,7 +24,7 @@ services:
         constraints:
           - node.role == manager
       labels:
-        - traefik.frontend.rule=Host:${DOMAIN}
+        - traefik.frontend.rule=Host:${DOMAIN?Variable DOMAIN not set}
         - traefik.enable=true
         - traefik.port=8080
         - traefik.tags=traefik-public
