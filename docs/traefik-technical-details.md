@@ -24,7 +24,7 @@ It is attached to the `default` network to be able to talk to the other `consul-
 
 It has several deployment labels, these are what make Traefik expose the Consul web UI with specific settings:
 
-* `traefik.frontend.rule=Host:consul.${DOMAIN}`: use as a host, the subdomain `consul` of the domain set in the environment variable `DOMAIN`. This host name is what will be used to genereate/acquire the HTTPS certificates.
+* `traefik.frontend.rule=Host:consul.${DOMAIN?Variable DOMAIN not set}`: use as a host, the subdomain `consul` of the domain set in the environment variable `DOMAIN`. This host name is what will be used to genereate/acquire the HTTPS certificates. If there's no environment variable `DOMAIN`, show the error "`Variable DOMAIN not set`".
 * `traefik.enable=true`: tell Traefik to expose this service in the web (otherwise, it wouldn't).
 * `traefik.port=8500`: expose the content from the port `8500` (that's the port inside the container).
 * `traefik.tags=${TRAEFIK_PUBLIC_TAG:-traefik-public}`: as the main Traefik proxy will only expose services with the `traefik-public` tag (using a parameter below), make the Consul service have this tag too, so that the Traefik public can find it and expose it. Use as the tag the environment variable `TRAEFIK_PUBLIC_TAG`, or by default, set it to `traefik-public`.
@@ -32,7 +32,7 @@ It has several deployment labels, these are what make Traefik expose the Consul 
 * `traefik.redirectorservice.frontend.entryPoints=http`: make the service listen to HTTP, so that it can redirect to HTTPS.
 * `traefik.redirectorservice.frontend.redirect.entryPoint=https`: make Traefik redirect HTTP trafic to HTTPS for the web UI.
 * `traefik.webservice.frontend.entryPoints=https`: make the web UI listen and serve on HTTPS.
-* `traefik.frontend.auth.basic.users=${USERNAME}:${HASHED_PASSWORD}`: enable basic auth, so that not everyone can access your Traefik web dashboard, it uses the username and password created above.
+* `traefik.frontend.auth.basic.users=${USERNAME?Variable USERNAME not set}:${HASHED_PASSWORD?Variable HASHED_PASSWORD not set}`: enable basic auth, so that not everyone can access your Traefik web dashboard, it uses the username and password created above. If those environment variables are not set, show the error "`Variable USERNAME not set`" or "`Variable HASHED_PASSWORD not set`".
 
 ```YAML hl_lines="4 6 10 11 13 14 17 18 19 20 21 22 23 24 25 26 27"
 {!traefik.yml!}
@@ -74,7 +74,7 @@ It has labels that configure how its own UI interface should be exposed (by hims
 
 Here are some specific details:
 
-* `traefik.frontend.rule=Host:traefik.${DOMAIN}`: use as a host, the subdomain `traefik` of the domain set in the environment variable `DOMAIN`. This host name is what will be used to genereate/acquire the HTTPS certificates.
+* `traefik.frontend.rule=Host:traefik.${DOMAIN?Variable DOMAIN not set}`: use as a host, the subdomain `traefik` of the domain set in the environment variable `DOMAIN`. This host name is what will be used to genereate/acquire the HTTPS certificates. If the environment variable `DOMAIN` is not set, show the error "`Variable DOMAIN not set`".
 * `traefik.port=8080`: the content of the Traefik web UI is served in the container port `8080`, this tells Traefik to get the content from this port when serving pages to the public (using the standard HTTPS port, `443`).
 
 
@@ -92,7 +92,7 @@ The command has several flags:
 * `--consul`: enable Consul to store configurations.
 * `--consul.endpoint="consul-leader:8500"`: use the `consul-leader` host (the service in the same stack) with its domain to communicate with Consul.
 * `--acme`: enable Let's encrypt.
-* `--acme.email=${EMAIL}`: let's encrypt email, using the environment variable.
+* `--acme.email=${EMAIL?Variable EMAIL not set}`: let's encrypt email, using the environment variable. If it is not set, show the error "`Variable EMAIL not set`".
 * `--acme.storage="traefik/acme/account"`: store the HTTPS certificates in this location in Consul.
 * `--acme.entryPoint=https`: the entrypoint for Let's encrypt - created above.
 * `--acme.httpChallenge.entryPoint=http`: use HTTP for the ACME (Let's Encrypt HTTPS certificates) challenge, as HTTPS was disabled after a security issue.
