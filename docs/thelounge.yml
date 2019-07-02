@@ -17,11 +17,8 @@ services:
         - traefik.port=9000
         - traefik.tags=traefik-public
         - traefik.docker.network=traefik-public
-        # Traefik service that listens to HTTP
-        - traefik.redirectorservice.frontend.entryPoints=http
-        - traefik.redirectorservice.frontend.redirect.entryPoint=https
-        # Traefik service that listens to HTTPS
-        - traefik.webservice.frontend.entryPoints=https
+        - traefik.frontend.entryPoints=http,https
+        - traefik.frontend.redirect.entryPoint=https
 
 networks:
   traefik-public:
