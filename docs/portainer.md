@@ -13,8 +13,9 @@ Here's one of the screens:
 * Create an environment variable with the domain where you want to access your Portainer instance, e.g.:
 
 ```bash
-export DOMAIN=portainer.sys.example.com
+export DOMAIN=sys.example.com
 ```
+* You will access Portainer UI at portainer.<your domain>, e.g. portainer.sys.example.com
 
 * Make sure that your DNS records point that domain (e.g. `portainer.sys.example.com`) to one of the IPs of the Docker Swarm mode cluster.
 
@@ -52,7 +53,7 @@ nano portainer.yml
 
 !!! info
     This is just a standard Docker Compose file.
-    
+
     It's common to name the file `docker-compose.yml` or something like `docker-compose.portainer.yml`.
 
     Here it's named just `portainer.yml` for brevity.
@@ -100,13 +101,13 @@ You will be able to securely access the web UI at `https://<your portainer domai
 
 ### Timing Note
 
-    Make sure you login and create your credentials soon after Portainer is ready, or it will automatically shut down itself for security.
+Make sure you login and create your credentials soon after Portainer is ready, or it will automatically shut down itself for security.
 
-    If you didn't create the credentials on time and it shut down itself automatically, you can force it to restart with:
+If you didn't create the credentials on time and it shut down itself automatically, you can force it to restart with:
 
-    ```bash
-    docker service update portainer_portainer --force
-    ```
+```bash
+docker service update portainer_portainer --force
+```
 
 
 ## References
