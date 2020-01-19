@@ -1,5 +1,6 @@
-## Next release
+## Latest Changes
 
+* Add [Issue Manager](https://github.com/tiangolo/issue-manager).
 * Update Docker Compose files to show an error if the environment variables are not set. PR [#15](https://github.com/tiangolo/dockerswarm.rocks/pull/15) by [@dmrty](https://github.com/dmrty).
 * Update development dependencies for security.
 * Add warning about `sudo` and environment variables. PR [#13](https://github.com/tiangolo/dockerswarm.rocks/pull/13) by [@dmontagu](https://github.com/dmontagu).
