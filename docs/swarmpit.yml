@@ -5,6 +5,7 @@ services:
     image: swarmpit/swarmpit:latest
     environment:
       - SWARMPIT_DB=http://db:5984
+      - SWARMPIT_INFLUXDB=http://influxdb:8086
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
     ports:
@@ -52,7 +53,20 @@ services:
       placement:
         constraints:
           - node.labels.swarmpit.db-data == true
-
+  influxdb:
+    image: influxdb:1.7
+    volumes:
+      - influx-data:/var/lib/influxdb
+    networks:
+      - net
+    deploy:
+      resources:
+        reservations:
+          cpus: '0.3'
+          memory: 128M
+        limits:
+          cpus: '0.6'
+          memory: 512M
   agent:
     image: swarmpit/agent:latest
     environment:
@@ -80,4 +94,6 @@ networks:
 
 volumes:
   db-data:
+    driver: local
+  influx-data:
     driver: local
