@@ -17,7 +17,7 @@ jobs:
       - name: Install packages
         run: poetry install
       - name: Build Docs
-        run: python -m mkdocs build
+        run: python3.7 -m mkdocs build
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.0.3
         with:
