@@ -1,5 +1,6 @@
 ## Latest Changes
 
+* Add CI with GitHub actions to deploy to Netlify. PR [#34](https://github.com/tiangolo/dockerswarm.rocks/pull/34).
 * Move development dependencies from Pipenv to Poetry. PR [#33](https://github.com/tiangolo/dockerswarm.rocks/pull/33).
 * Update and simplify labels for redirections. PR [#22](https://github.com/tiangolo/dockerswarm.rocks/pull/22) by [@ldez](https://github.com/ldez).
 * Add [Issue Manager](https://github.com/tiangolo/issue-manager).
