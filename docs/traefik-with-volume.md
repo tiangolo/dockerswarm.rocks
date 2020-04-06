@@ -108,9 +108,8 @@ docker service create \
     --label "traefik.port=8080" \
     --label "traefik.tags=traefik-public" \
     --label "traefik.docker.network=traefik-public" \
-    --label "traefik.redirectorservice.frontend.entryPoints=http" \
-    --label "traefik.redirectorservice.frontend.redirect.entryPoint=https" \
-    --label "traefik.webservice.frontend.entryPoints=https" \
+    --label "traefik.frontend.entryPoints=http,https" \
+    --label "traefik.frontend.redirect.entryPoint=https" \
     --label "traefik.frontend.auth.basic.users=${USERNAME?Variable USERNAME not set}:${HASHED_PASSWORD?Variable HASHED_PASSWORD not set}" \
     traefik:v1.7 \
     --docker \
@@ -149,9 +148,8 @@ The previous command explained:
 * `--label "traefik.port=8080"`: when Traefik exposes itself as a service (for the dashboard), use the internal service port `8080`
 * `--label "traefik.tags=traefik-public"`: as the main Traefik proxy will only expose services with the `traefik-public` tag (using a parameter below), make the dashboard service have this tag too, so that the Traefik public (itself) can find it and expose it
 * `--label "traefik.docker.network=traefik-public"`: make the dashboard service use the `traefik-public` network to expose itself
-* `--label "traefik.redirectorservice.frontend.entryPoints=http"`: make the web dashboard listen to HTTP, so that it can redirect to HTTPS
-* `--label "traefik.redirectorservice.frontend.redirect.entryPoint=https"`: make Traefik redirect HTTP trafic to HTTPS for the web dashboard
-* `--label "traefik.webservice.frontend.entryPoints=https"`: make the web dashboard listen and serve on HTTPS
+* `--label "traefik.frontend.entryPoints=http"`: make the web dashboard listen and serve on HTTP and HTTPS
+* `--label "traefik.frontend.redirect.entryPoint=https"`: make Traefik redirect HTTP trafic to HTTPS for the web dashboard
 * `--label "traefik.frontend.auth.basic.users=${USERNAME?Variable USERNAME not set}:${HASHED_PASSWORD?Variable HASHED_PASSWORD not set}"`: enable basic auth, so that not every one can access your Traefik web dashboard, it uses the username and password created above. If the variables are not set, show an error.
 * `traefik:v1.7`: use the image `traefik:v1.7`
 * `--docker`: enable Docker
@@ -222,9 +220,8 @@ docker service create \
     --label "traefik.port=8080" \
     --label "traefik.tags=traefik-public" \
     --label "traefik.docker.network=traefik-public" \
-    --label "traefik.redirectorservice.frontend.entryPoints=http" \
-    --label "traefik.redirectorservice.frontend.redirect.entryPoint=https" \
-    --label "traefik.webservice.frontend.entryPoints=https" \
+    --label "traefik.frontend.entryPoints=http,https" \
+    --label "traefik.frontend.redirect.entryPoint=https" \
     --label "traefik.frontend.auth.basic.users=${USERNAME?Variable USERNAME not set}:${HASHED_PASSWORD?Variable HASHED_PASSWORD not set}" \
     traefik:v1.7 \
     --docker \

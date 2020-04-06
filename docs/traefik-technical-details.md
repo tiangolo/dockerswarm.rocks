@@ -29,9 +29,8 @@ It has several deployment labels, these are what make Traefik expose the Consul 
 * `traefik.port=8500`: expose the content from the port `8500` (that's the port inside the container).
 * `traefik.tags=${TRAEFIK_PUBLIC_TAG:-traefik-public}`: as the main Traefik proxy will only expose services with the `traefik-public` tag (using a parameter below), make the Consul service have this tag too, so that the Traefik public can find it and expose it. Use as the tag the environment variable `TRAEFIK_PUBLIC_TAG`, or by default, set it to `traefik-public`.
 * `traefik.docker.network=traefik-public`: tell Traefik to get the contents provided by this service using that shared network.
-* `traefik.redirectorservice.frontend.entryPoints=http`: make the service listen to HTTP, so that it can redirect to HTTPS.
-* `traefik.redirectorservice.frontend.redirect.entryPoint=https`: make Traefik redirect HTTP trafic to HTTPS for the web UI.
-* `traefik.webservice.frontend.entryPoints=https`: make the web UI listen and serve on HTTPS.
+* `traefik.frontend.entryPoints=http,https`: make the web UI listen and serve on HTTP and HTTPS.
+* `traefik.frontend.redirect.entryPoint=https`: make Traefik redirect HTTP trafic to HTTPS for the web UI.
 * `traefik.frontend.auth.basic.users=${USERNAME?Variable USERNAME not set}:${HASHED_PASSWORD?Variable HASHED_PASSWORD not set}`: enable basic auth, so that not everyone can access your Traefik web dashboard, it uses the username and password created above. If those environment variables are not set, show the error "`Variable USERNAME not set`" or "`Variable HASHED_PASSWORD not set`".
 
 ```YAML hl_lines="4 6 10 11 13 14 17 18 19 20 21 22 23 24 25 26 27"
