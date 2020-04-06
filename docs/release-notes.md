@@ -1,5 +1,6 @@
 ## Latest Changes
 
+* Update and simplify labels for redirections. PR [#22](https://github.com/tiangolo/dockerswarm.rocks/pull/22) by [@ldez](https://github.com/ldez).
 * Add [Issue Manager](https://github.com/tiangolo/issue-manager).
 * Update Docker Compose files to show an error if the environment variables are not set. PR [#15](https://github.com/tiangolo/dockerswarm.rocks/pull/15) by [@dmrty](https://github.com/dmrty).
 * Update development dependencies for security.
