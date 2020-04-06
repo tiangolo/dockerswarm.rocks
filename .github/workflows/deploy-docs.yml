@@ -14,6 +14,8 @@ jobs:
           python-version: "3.7"
       - name: Install Poetry
         run: python3.7 -m pip install poetry
+      - name: Disable Poetry venv
+        run: poetry config virtualenvs.create false
       - name: Install packages
         run: poetry install
       - name: Build Docs
