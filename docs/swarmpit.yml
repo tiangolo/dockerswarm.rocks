@@ -67,6 +67,9 @@ services:
         limits:
           cpus: '0.6'
           memory: 512M
+      placement:
+        constraints:
+          - node.labels.swarmpit.influx-data == true
   agent:
     image: swarmpit/agent:latest
     environment:
