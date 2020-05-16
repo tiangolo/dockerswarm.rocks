@@ -4,7 +4,7 @@ Follow this guide to integrate it in your Docker Swarm mode cluster deployed as 
 
 Here's one of the screens:
 
-<img src="https://dockerswarm.rocks/img/swarmpit.png">
+![Swarmpit UI](./img/swarmpit.png)
 
 ## Preparation
 
@@ -24,10 +24,16 @@ export DOMAIN=swarmpit.sys.example.com
 export NODE_ID=$(docker info -f '{{.Swarm.NodeID}}')
 ```
 
-* Create a tag in this node, so that the database used by Swarmpit is always deployed to the same node and uses the existing volume:
+* Create a tag in this node, so that the CouchDB database used by Swarmpit is always deployed to the same node and uses the existing volume:
 
 ```bash
 docker node update --label-add swarmpit.db-data=true $NODE_ID
+```
+
+* Create another tag in this node, so that the Influx database used by Swarmpit is always deployed to the same node and uses the existing volume:
+
+```bash
+docker node update --label-add swarmpit.influx-data=true $NODE_ID
 ```
 
 ## Create the Docker Compose file
@@ -56,7 +62,6 @@ nano swarmpit.yml
     It's common to name the file `docker-compose.yml` or something like `docker-compose.swarmpit.yml`.
 
     Here it's named just `swarmpit.yml` for brevity.
-
 
 ## Deploy it
 
@@ -94,7 +99,6 @@ m4jasdf3369c   swarmpit_app.1             swarmpit/swarmpit:latest   cat.example
 ```bash
 docker service logs swarmpit_app
 ```
-
 
 ## Check the user interfaces
 
