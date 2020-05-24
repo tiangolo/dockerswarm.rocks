@@ -18,16 +18,19 @@ google_analytics:
 
 nav:
     - Docker Swarm Rocks: index.md
-    - Traefik Proxy with HTTPS: traefik.md
-    - Traefik Proxy with HTTPS - Technical Details: traefik-technical-details.md
-    - Traefik Proxy with HTTPS using volume (outdated): traefik-with-volume.md
-    - Swarmprom for real-time monitoring and alerts: swarmprom.md
-    - Swarmpit web user interface for your Docker Swarm cluster: swarmpit.md
-    - Portainer web user interface for your Docker Swarm cluster: portainer.md
-    - The Lounge - self-hosted web IRC client: thelounge.md
-    - GitLab CI runner for CI/CD: gitlab-ci.md
-    - Project Generators: project-generators.md
-    - Release Notes: release-notes.md
+    - traefik.md
+    - swarmpit.md
+    - swarmprom.md
+    - portainer.md
+    - thelounge.md
+    - gitlab-ci.md
+    - Traefik v1 (previous/obsolete guides):
+        - traefik-v1/index.md
+        - traefik-v1/traefik.md
+        - traefik-v1/traefik-technical-details.md
+        - traefik-v1/traefik-with-volume.md
+    - project-generators.md
+    - release-notes.md
 
 markdown_extensions:
   - markdown.extensions.codehilite:
