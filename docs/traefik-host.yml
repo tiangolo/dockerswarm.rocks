@@ -53,7 +53,7 @@ services:
         # Enable HTTP Basic auth, using the middleware created above
         - traefik.http.routers.traefik-public-https.middlewares=admin-auth
         # Define the port inside of the Docker service to use
-        - traefik.http.services.traefik-public-https.loadbalancer.server.port=8080
+        - traefik.http.services.traefik-public.loadbalancer.server.port=8080
     volumes:
       # Add Docker as a mounted volume, so that Traefik can read the labels of other services
       - /var/run/docker.sock:/var/run/docker.sock:ro
