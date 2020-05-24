@@ -2,6 +2,7 @@
 
 ## Latest Changes
 
+* Upgrade everything to use Traefik v2. PR [#39](https://github.com/tiangolo/dockerswarm.rocks/pull/39).
 * Update Portainer guide to use the same conventions for `DOMAIN` as the rest of the guides. PR [#25](https://github.com/tiangolo/dockerswarm.rocks/pull/25) by [@Mantosh](https://github.com/Mantosh).
 * Add CI with GitHub actions to deploy to Netlify. PR [#34](https://github.com/tiangolo/dockerswarm.rocks/pull/34).
 * Move development dependencies from Pipenv to Poetry. PR [#33](https://github.com/tiangolo/dockerswarm.rocks/pull/33).
