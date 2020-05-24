@@ -1,23 +1,20 @@
+# Traefik Proxy with HTTPS using volume
+
 This article lives in:
 
 * <a href="https://medium.com/@tiangolo/docker-swarm-mode-and-traefik-for-a-https-cluster-20328dba6232" target="_blank">Medium</a>
 * <a href="https://github.com/tiangolo/medium-posts/tree/master/docker-swarm-mode-and-traefik-for-a-https-cluster" target="_blank">GitHub</a>
 * <a href="https://dockerswarm.rocks/traefik-with-volume/" target="_blank">DockerSwarm.rocks</a>
 
-## Note
+## Note about Traefik v2
 
-If you want to have a distributed Traefik HTTPS proxy/load-balancer, you should check instead the guide for the distributed version on <a href="https://dockerswarm.rocks/traefik/" target="_blank">DockerSwarm.rocks: Traefik Proxy with HTTPS</a>. It can also run on a single node.
+This article is for Traefik version 1.
 
-This is the old version, having a Traefik instance on a single node. It uses a "mounted volume" instead of Consul to store HTTPS certificates.
-
-If you want to start with a single node and expect to possibly grow to more nodes, check that guide in the link above.
-
-But if you only want to have a single node and want to save the memory used by Consul, keep reading...
-
+There is now a guide for Traefik version 2, if you are starting a new project, you should check that one at <a href="https://dockerswarm.rocks/traefik/" class="external-link" target="_blank">DockerSwarm.rocks/traefik/</a>.
 
 ## Set up
 
-Set up a main load balancer with Traefik that handles the public connections and Let's encrypt HTTPS certificates. 
+Set up a main load balancer with Traefik that handles the public connections and Let's encrypt HTTPS certificates.
 
 * Connect via SSH to a manager node in your cluster (you might have only one node) that will have the Traefik service.
 * Create a network that will be shared with Traefik and the containers that should be accessible from the outside, with:
