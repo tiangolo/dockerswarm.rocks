@@ -2,7 +2,6 @@
   <a href="https://dockerswarm.rocks"><img src="https://dockerswarm.rocks/img/logo-light-blue-vectors.svg" alt="dockerswarm.rocks"></a>
 </p>
 
-
 ## Why?
 
 <a href="https://www.docker.com/" target="_blank">Docker</a> is a great tool (the "de facto" standard) to build **Linux containers**.
@@ -16,7 +15,6 @@ So, with Docker Swarm Mode you have:
 * Replicability, use the same files as when developing locally.
 * Simplicity and speed for development and deployment.
 * Robustness and security, with fault-tolerant clusters.
-
 
 ## Docker Swarm mode
 
@@ -34,7 +32,6 @@ You don't have to install anything else.
 
 </blockquote>
 
-
 ## Alternatives
 
 Some of the main alternatives are:
@@ -44,7 +41,7 @@ Some of the main alternatives are:
 
 To use any of them you need to learn a huge new set of concepts, configurations, files, commands, etc.
 
-### Docker Swarm mode
+### About Docker Swarm mode
 
 Docker Swarm mode is comparable to them.
 
@@ -74,19 +71,16 @@ With a **one-line command**.
 
 And you can create your applications to be ready for massive scale from the beginning, starting from a single small server.
 
-
 ## About **Docker Swarm Rocks**
 
 This is not associated with Docker or any of the tools suggested here.
 
 It's mainly a set of ideas, documentation and tools to use existing open source products efficiently together.
 
-
 ## Prerequisites
 
 * To know some Linux.
 * To know some Docker.
-
 
 ## Install and set up
 
@@ -153,14 +147,13 @@ The first step is to configure one (or more) manager nodes.
 docker swarm init
 ```
 
-
 **Note**: if you see an error like:
 
 ```
 Error response from daemon: could not choose an IP address to advertise since this system has multiple addresses on interface eth0 (138.68.58.48 and 10.19.0.5) - specify one with --advertise-addr
 ```
 
-...select the public IP `138.68.58.48`, and run the command again with `--advertise-addr`, e.g.:
+...select the public IP (e.g. `138.68.58.48` in this example), and run the command again with `--advertise-addr`, e.g.:
 
 ```bash
 docker swarm init --advertise-addr 138.68.58.48

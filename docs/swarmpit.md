@@ -1,3 +1,5 @@
+# Swarmpit web user interface for your Docker Swarm cluster
+
 <a href="https://swarmpit.io/" target="_blank">Swarmpit</a> provides a nice and clean way to manage your Docker Swarm cluster.
 
 Follow this guide to integrate it in your Docker Swarm mode cluster deployed as described in <a href="https://dockerswarm.rocks" target="_blank">DockerSwarm.rocks</a> with a global Traefik HTTPS proxy.
@@ -24,13 +26,13 @@ export DOMAIN=swarmpit.sys.example.com
 export NODE_ID=$(docker info -f '{{.Swarm.NodeID}}')
 ```
 
-* Create a tag in this node, so that the CouchDB database used by Swarmpit is always deployed to the same node and uses the existing volume:
+* Create a label in this node, so that the CouchDB database used by Swarmpit is always deployed to the same node and uses the existing volume:
 
 ```bash
 docker node update --label-add swarmpit.db-data=true $NODE_ID
 ```
 
-* Create another tag in this node, so that the Influx database used by Swarmpit is always deployed to the same node and uses the existing volume:
+* Create another label in this node, so that the Influx database used by Swarmpit is always deployed to the same node and uses the existing volume:
 
 ```bash
 docker node update --label-add swarmpit.influx-data=true $NODE_ID
@@ -58,7 +60,7 @@ nano swarmpit.yml
 
 !!! info
     This is just a standard Docker Compose file.
-    
+
     It's common to name the file `docker-compose.yml` or something like `docker-compose.swarmpit.yml`.
 
     Here it's named just `swarmpit.yml` for brevity.
@@ -72,7 +74,6 @@ docker stack deploy -c swarmpit.yml swarmpit
 ```
 
 It will use the environment variables you created above.
-
 
 ## Check it
 

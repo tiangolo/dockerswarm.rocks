@@ -12,13 +12,17 @@ services:
         constraints:
           - node.labels.thelounge.thelounge-data == true
       labels:
-        - traefik.frontend.rule=Host:${DOMAIN?Variable DOMAIN not set}
         - traefik.enable=true
-        - traefik.port=9000
-        - traefik.tags=traefik-public
         - traefik.docker.network=traefik-public
-        - traefik.frontend.entryPoints=http,https
-        - traefik.frontend.redirect.entryPoint=https
+        - traefik.constraint-label=traefik-public
+        - traefik.http.routers.thelounge-http.rule=Host(`${DOMAIN?Variable DOMAIN not set}`)
+        - traefik.http.routers.thelounge-http.entrypoints=http
+        - traefik.http.routers.thelounge-http.middlewares=https-redirect
+        - traefik.http.routers.thelounge-https.rule=Host(`${DOMAIN?Variable DOMAIN not set}`)
+        - traefik.http.routers.thelounge-https.entrypoints=https
+        - traefik.http.routers.thelounge-https.tls=true
+        - traefik.http.routers.thelounge-https.tls.certresolver=le
+        - traefik.http.services.thelounge.loadbalancer.server.port=9000
 
 networks:
   traefik-public:

@@ -1,3 +1,5 @@
+# The Lounge - self-hosted web IRC client
+
 <a href="https://thelounge.chat/" target="_blank">The Lounge</a> is a self-hosted web IRC client.
 
 Follow this guide to integrate it in your Docker Swarm mode cluster deployed as described in <a href="https://dockerswarm.rocks" target="_blank">DockerSwarm.rocks</a> with a global Traefik HTTPS proxy.
@@ -48,11 +50,10 @@ nano thelounge.yml
 
 !!! info
     This is just a standard Docker Compose file.
-    
+
     It's common to name the file `docker-compose.yml` or something like `docker-compose.thelounge.yml`.
 
     Here it's named just `thelounge.yml` for brevity.
-
 
 ## Deploy it
 
@@ -63,7 +64,6 @@ docker stack deploy -c thelounge.yml thelounge
 ```
 
 It will use the environment variables you created above.
-
 
 ## Check it
 
@@ -128,8 +128,8 @@ thelounge add admin
 * You will see a prompt for a password. Enter your password and hit `Enter`.
 * It will ask you if you want to save, hit `Enter` again and the user will be created.
 
-
 ## Login and configure
 
 Now you can open the URL in your browser, e.g.: `https://thelounge.example.com`.
-* Use the user and password you just created and finish configuring it in the web browser.
+
+Use the user and password you just created and finish configuring it in the web browser.

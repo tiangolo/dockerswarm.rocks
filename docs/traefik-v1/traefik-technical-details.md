@@ -1,4 +1,15 @@
-### Consul
+# Traefik Proxy with HTTPS - Technical Details
+
+## Note about Traefik v2
+
+This article is for Traefik version 1.
+
+There is now a guide for Traefik version 2, if you are starting a new project, you should check that one at <a href="https://dockerswarm.rocks/traefik/" class="external-link" target="_blank">DockerSwarm.rocks/traefik/</a>.
+
+!!! warning
+    The technique described here using Consul to store the Let's Encrypt certificates seemed to work well at first, but was fragile and error prone, and could lead to issues later. Because of that, the Traefik team disabled it in Traefik version 2.
+
+## Consul
 
 Consul by default expects to be running independent of any cluster orchestrator. To have fixed IPs, etc.
 
@@ -10,7 +21,7 @@ So, by default, you would have to make sure to set up a specific Consul instance
 
 And if your cluster has more nodes, or if one node goes down, you would have to manually create another Consul instance, etc.
 
-### Consul leader
+## Consul leader
 
 In this Docker Compose stack we define a single Consul leader named `consul-leader`, that is able to self-elect as a leader (`-boostrap`).
 
@@ -34,10 +45,10 @@ It has several deployment labels, these are what make Traefik expose the Consul 
 * `traefik.frontend.auth.basic.users=${USERNAME?Variable USERNAME not set}:${HASHED_PASSWORD?Variable HASHED_PASSWORD not set}`: enable basic auth, so that not everyone can access your Traefik web dashboard, it uses the username and password created above. If those environment variables are not set, show the error "`Variable USERNAME not set`" or "`Variable HASHED_PASSWORD not set`".
 
 ```YAML hl_lines="4 6 10 11 13 14 17 18 19 20 21 22 23 24 25 26 27"
-{!traefik.yml!}
+{!traefik-v1.yml!}
 ```
 
-### Consul replicas
+## Consul replicas
 
 `consul-replica` is a service with multiple replicas (multiple containers).
 
@@ -58,10 +69,10 @@ As each replica will send its data (IP, ID, etc) to the service `consul-leader`,
 That way, all the Consul instances will be able to communicate and synchronize.
 
 ```YAML hl_lines="28 30 40 43"
-{!traefik.yml!}
+{!traefik-v1.yml!}
 ```
 
-### Traefik
+## Traefik
 
 The `traefik` service exposes the ports `80` (standard for HTTP) and `443` (standard for HTTPS).
 
@@ -69,13 +80,12 @@ It creates replicas set to the environment variable `TRAEFIK_REPLICAS`, or by de
 
 It is marked to be started on Docker Swarm manager nodes, as it needs to be able to communicate to Docker directly, to be able to read the labels you create in the rest of the stacks.
 
-It has labels that configure how its own UI interface should be exposed (by himself), all the labels are very similar to the ones described above for Consul. 
+It has labels that configure how its own UI interface should be exposed (by himself), all the labels are very similar to the ones described above for Consul.
 
 Here are some specific details:
 
 * `traefik.frontend.rule=Host:traefik.${DOMAIN?Variable DOMAIN not set}`: use as a host, the subdomain `traefik` of the domain set in the environment variable `DOMAIN`. This host name is what will be used to genereate/acquire the HTTPS certificates. If the environment variable `DOMAIN` is not set, show the error "`Variable DOMAIN not set`".
 * `traefik.port=8080`: the content of the Traefik web UI is served in the container port `8080`, this tells Traefik to get the content from this port when serving pages to the public (using the standard HTTPS port, `443`).
-
 
 The Traefik service is configured to communicate with Docker directly, using a mounted volume for `/var/run/docker.sock`. This is needed for it to be able to read the labels in the stacks you create later.
 
@@ -106,5 +116,5 @@ It is connected to the internal stack `default`, to store the configurations in 
 Technically, Traefik and Consul could just use the network `traefik-public` to communicate, to store configurations, HTTPS certificates, etc. But it's more explicit what each network does having the intra-stack `default` network declared too.
 
 ```YAML hl_lines="47 48 50 53 57 59 69 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 91 92 100 101"
-{!traefik.yml!}
+{!traefik-v1.yml!}
 ```

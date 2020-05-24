@@ -1,3 +1,5 @@
+# Release Notes
+
 ## Latest Changes
 
 * Update Portainer guide to use the same conventions for `DOMAIN` as the rest of the guides. PR [#25](https://github.com/tiangolo/dockerswarm.rocks/pull/25) by [@Mantosh](https://github.com/Mantosh).

@@ -25,13 +25,17 @@ services:
         constraints:
           - node.role == manager
       labels:
-        - traefik.frontend.rule=Host:${DOMAIN?Variable DOMAIN not set}
         - traefik.enable=true
-        - traefik.port=8080
-        - traefik.tags=traefik-public
         - traefik.docker.network=traefik-public
-        - traefik.frontend.entryPoints=http,https
-        - traefik.frontend.redirect.entryPoint=https
+        - traefik.constraint-label=traefik-public
+        - traefik.http.routers.swarmpit-http.rule=Host(`${DOMAIN?Variable DOMAIN not set}`)
+        - traefik.http.routers.swarmpit-http.entrypoints=http
+        - traefik.http.routers.swarmpit-http.middlewares=https-redirect
+        - traefik.http.routers.swarmpit-https.rule=Host(`${DOMAIN?Variable DOMAIN not set}`)
+        - traefik.http.routers.swarmpit-https.entrypoints=https
+        - traefik.http.routers.swarmpit-https.tls=true
+        - traefik.http.routers.swarmpit-https.tls.certresolver=le
+        - traefik.http.services.swarmpit.loadbalancer.server.port=8080
 
   db:
     image: couchdb:2.3.0
