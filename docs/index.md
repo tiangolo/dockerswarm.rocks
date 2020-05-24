@@ -160,7 +160,7 @@ docker swarm init
 Error response from daemon: could not choose an IP address to advertise since this system has multiple addresses on interface eth0 (138.68.58.48 and 10.19.0.5) - specify one with --advertise-addr
 ```
 
-...select the public IP `138.68.58.48`, and run the command again with `--advertise-addr`, e.g.:
+...select the public IP (e.g. `138.68.58.48` in this example), and run the command again with `--advertise-addr`, e.g.:
 
 ```bash
 docker swarm init --advertise-addr 138.68.58.48
