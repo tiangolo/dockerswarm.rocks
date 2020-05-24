@@ -2,7 +2,7 @@
 
 ## Note - version 2
 
-This guide is updated for Traefik version 2 ✨.
+This guide is updated for Traefik version 2. ✨
 
 If you are looking for the previous guides for Traefik version 1, check them in <a href="https://dockerswarm.rocks/traefik-v1/" class="external-link" target="_blank">DockerSwarm.rocks/traefik-v1/</a>.
 
