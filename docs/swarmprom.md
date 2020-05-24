@@ -1,3 +1,5 @@
+# Swarmprom for real-time monitoring and alerts
+
 This article lives in:
 
 * <a href="https://medium.com/@tiangolo/docker-swarm-with-swarmprom-for-real-time-monitoring-and-alerts-282da7890698" target="_blank">Medium</a>
@@ -6,7 +8,7 @@ This article lives in:
 
 ## Intro
 
-Let's say you already set up a **<a href="https://dockerswarm.rocks" target="_blank">Docker Swarm mode</a>** cluster, with a <a href="https://dockerswarm.rocks/traefik/" target="_blank">Traefik distributed HTTPS proxy</a>.
+Let's say you already set up a **<a href="https://dockerswarm.rocks" target="_blank">Docker Swarm mode</a>** cluster, with a <a href="https://dockerswarm.rocks/traefik/" target="_blank">Traefik HTTPS proxy</a>.
 
 Here's how you can set up <a href="https://github.com/stefanprodan/swarmprom" target="_blank">Swarmprom</a> to monitor your cluster.
 
@@ -33,7 +35,6 @@ Here's how it looks like:
 
 <img src="https://dockerswarm.rocks/img/swarmprom.png">
 
-
 ## Instructions
 
 * Clone Swarmprom repository and enter into the directory:
@@ -50,7 +51,6 @@ export ADMIN_USER=admin
 ```
 
 * Set and export an `ADMIN_PASSWORD` environment variable:
-
 
 ```bash
 export ADMIN_PASSWORD=changethis
@@ -91,12 +91,6 @@ and make sure that the following sub-domains point to your Docker Swarm cluster 
 
 **Note**: You can also use a subdomain, like `swarmprom.example.com`. Just make sure that the subdomains point to (at least one of) your cluster IPs. Or set up a wildcard subdomain (`*`).
 
-* Set and export an environment variable with the tag used by Traefik public to filter services (by default, it's `traefik-public`):
-
-```bash
-export TRAEFIK_PUBLIC_TAG=traefik-public
-```
-
 * If you are using Slack and want to integrate it, set the following environment variables:
 
 ```bash
@@ -107,11 +101,37 @@ export SLACK_USER=alertmanager
 
 **Note**: by using `export` when declaring all the environment variables above, the next command will be able to use them.
 
-* Deploy the Traefik version of the stack:
+## Create the Docker Compose file
 
+* Download the file `swarmprom.yml`:
 
 ```bash
-docker stack deploy -c docker-compose.traefik.yml swarmprom
+curl -L dockerswarm.rocks/swarmprom.yml -o swarmprom.yml
+```
+
+* ...or create it manually, for example, using `nano`:
+
+```bash
+nano swarmprom.yml
+```
+
+* And copy the contents inside:
+
+```YAML
+{!./swarmprom.yml!}
+```
+
+!!! info
+    This is just a standard Docker Compose file.
+
+    It's common to name the file `docker-compose.yml` or something like `docker-compose.swarmprom.yml`.
+
+    Here it's named just `swarmprom.yml` for brevity.
+
+* Deploy the Traefik version of the stack:
+
+```bash
+docker stack deploy -c swarmprom.yml swarmprom
 ```
 
 To test it, go to each URL:

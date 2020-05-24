@@ -41,11 +41,9 @@ Docker Swarm mode with a main Traefik load balancer/proxy is the **base cluster 
 
 It's also used by several other friends and teams.
 
-
 ## Overview
 
 This guide will show you how to set up <a href="https://traefik.io/" target="_blank">**Traefik**</a> as a load balancer/proxy and <a href="https://www.consul.io/" target="_blank">**Consul**</a> to store configurations and HTTPS certificates.
-
 
 ### Redundancy
 
@@ -74,7 +72,6 @@ The idea is to have a main load balancer/proxy that covers all the Docker Swarm 
 
 But doing it in a way that allows you to have other Traefik services inside each stack without interfering with each other, to redirect based on path in the same stack (e.g. one container handles `/` for a web frontend and another handles `/api` for an API under the same domain), or to redirect from HTTP to HTTPS selectively.
 
-
 ## About Consul
 
 Consul is a distributed configuration key/value store, it will:
@@ -82,7 +79,6 @@ Consul is a distributed configuration key/value store, it will:
 * Store the Traefik configurations in a distributed manner.
 * Make sure configurations are synchronized among Consul services across the cluster.
 * Store HTTPS certificates for Traefik.
-
 
 ## Preparation
 
@@ -179,7 +175,6 @@ export TRAEFIK_REPLICAS=$(docker node ls -q | wc -l)
 export TRAEFIK_REPLICAS=1
 ```
 
-
 ## Create the Docker Compose file
 
 * Download the file `traefik-v1.yml`:
@@ -202,11 +197,10 @@ nano traefik-v1.yml
 
 !!! info
     This is just a standard Docker Compose file.
-    
+
     It's common to name the file `docker-compose.yml` or something like `docker-compose.traefik.yml`.
 
     Here it's named just `traefik-v1.yml` for brevity.
-
 
 ## Deploy it
 
@@ -217,7 +211,6 @@ docker stack deploy -c traefik-v1.yml traefik-consul
 ```
 
 It will use the environment variables you created above.
-
 
 ## Check it
 
@@ -253,7 +246,6 @@ After some seconds/minutes, Traefik will acquire the HTTPS certificates for the 
 You will be able to securely access the web UI at `https://traefik.<your domain>` using the created username and password.
 
 And the same way, to access the Consul web user interface at `https://consul.<your domain>`.
-
 
 ## Updating
 
@@ -305,7 +297,6 @@ And then deploying with:
 docker stack deploy -c traefik-host.yml traefik-consul
 ```
 
-
 ## What's next
 
 The next thing would be to deploy a stack (a complete web application, with backend, frontend, database, etc) using this Docker Swarm mode cluster.
@@ -315,7 +306,6 @@ It's actually very simple, as you can use Docker Compose for local development a
 If you want to try it right now, you can check this very simple <a href="https://github.com/tiangolo/flask-frontend-docker" target="_blank">project generator with a minimal Flask backend and Vue.js frontend</a>.
 
 It has everything set up to be deployed in a Docker Swarm mode cluster with Traefik as described in this article.
-
 
 ## Technical Details
 

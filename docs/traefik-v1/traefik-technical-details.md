@@ -87,7 +87,6 @@ Here are some specific details:
 * `traefik.frontend.rule=Host:traefik.${DOMAIN?Variable DOMAIN not set}`: use as a host, the subdomain `traefik` of the domain set in the environment variable `DOMAIN`. This host name is what will be used to genereate/acquire the HTTPS certificates. If the environment variable `DOMAIN` is not set, show the error "`Variable DOMAIN not set`".
 * `traefik.port=8080`: the content of the Traefik web UI is served in the container port `8080`, this tells Traefik to get the content from this port when serving pages to the public (using the standard HTTPS port, `443`).
 
-
 The Traefik service is configured to communicate with Docker directly, using a mounted volume for `/var/run/docker.sock`. This is needed for it to be able to read the labels in the stacks you create later.
 
 The command has several flags:

@@ -1,3 +1,5 @@
+# GitLab CI runner for CI/CD
+
 <a href="https://about.gitlab.com/" target="_blank">GitLab</a> is an open source Git code management system, similar to GitHub and Bitbucket.
 
 It has integrated CI/CD (continuous integration and continuous deployment).
@@ -7,7 +9,6 @@ If you are using GitLab, you can run a GitLab CI "runner" in your Docker Swarm m
 You could also test and build your code on "runners" in dedicated, isolated machines.
 
 And then deploy it to your production Docker Swarm mode cluster using another GitLab CI runner configured in the same cluster.
-
 
 ## Create the GitLab Runner in Docker standalone mode
 

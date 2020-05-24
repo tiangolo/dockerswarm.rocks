@@ -1,5 +1,6 @@
-There are several project generators designed to be used in a Docker Swarm mode cluster with a main Traefik HTTPS proxy, all set up with the ideas from <a href="https://dockerswarm.rocks" target="_blank">DockerSwarm.rocks</a>.
+# Project Generators
 
+There are several project generators designed to be used in a Docker Swarm mode cluster with a main Traefik HTTPS proxy, all set up with the ideas from <a href="https://dockerswarm.rocks" target="_blank">DockerSwarm.rocks</a>.
 
 ## Full Stack FastAPI PostgreSQL - project generator
 
@@ -12,7 +13,6 @@ Link: <a href="https://github.com/tiangolo/full-stack-fastapi-postgresql" target
 * Email notifications.
 * <a href="https://about.gitlab.com/product/continuous-integration/" target="_blank">GitLab CI</a> integration.
 
-
 ## Full Stack FastAPI Couchbase - project generator
 
 Link: <a href="https://github.com/tiangolo/full-stack-fastapi-couchbase" target="_blank">https://github.com/tiangolo/full-stack-fastapi-couchbase</a>
@@ -24,7 +24,6 @@ Link: <a href="https://github.com/tiangolo/full-stack-fastapi-couchbase" target=
 * Email notifications.
 * <a href="https://about.gitlab.com/product/continuous-integration/" target="_blank">GitLab CI</a> integration.
 
-
 ## Full Stack Flask and PostgreSQL - project generator
 
 Link: <a href="https://github.com/tiangolo/full-stack" target="_blank">https://github.com/tiangolo/full-stack</a>
@@ -34,7 +33,6 @@ Link: <a href="https://github.com/tiangolo/full-stack" target="_blank">https://g
 * <a href="http://www.celeryproject.org/" target="_blank">Celery</a> for asynchronous jobs with <a href="https://www.rabbitmq.com/" target="_blank">RabbitMQ</a>.
 * <a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a> as the database.
 * <a href="https://about.gitlab.com/product/continuous-integration/" target="_blank">GitLab CI</a> integration.
-
 
 ## Full Stack Flask Couchbase - project generator
 
@@ -47,7 +45,6 @@ Link: <a href="https://github.com/tiangolo/full-stack-flask-couchbase" target="_
 * Email notifications.
 * <a href="https://about.gitlab.com/product/continuous-integration/" target="_blank">GitLab CI</a> integration.
 
-
 ## Full Stack Flask CouchDB - project generator
 
 Link: <a href="https://github.com/tiangolo/full-stack-flask-couchdb" target="_blank">https://github.com/tiangolo/full-stack-flask-couchdb</a>
@@ -57,7 +54,6 @@ Link: <a href="https://github.com/tiangolo/full-stack-flask-couchdb" target="_bl
 * <a href="http://www.celeryproject.org/" target="_blank">Celery</a> for asynchronous jobs with <a href="https://www.rabbitmq.com/" target="_blank">RabbitMQ</a>.
 * <a href="http://couchdb.apache.org/" target="_blank">CouchDB</a> as the NoSQL database.
 * <a href="https://about.gitlab.com/product/continuous-integration/" target="_blank">GitLab CI</a> integration.
-
 
 ## Flask Frontend Docker - project generator
 

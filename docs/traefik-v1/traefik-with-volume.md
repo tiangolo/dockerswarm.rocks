@@ -167,7 +167,6 @@ The previous command explained:
 * `--accessLog`: enable the access log, to see and debug HTTP traffic
 * `--api`: enable the API, which includes the dashboard
 
-
 ## Check it
 
 To check if it worked, check the logs:
@@ -201,7 +200,6 @@ need to be:
 ```
 
 Here's the complete command with those lines updated:
-
 
 ```bash
 docker service create \
