@@ -62,3 +62,13 @@ Link: <a href="https://github.com/tiangolo/flask-frontend-docker" target="_blank
 * Python backend with <a href="http://flask.pocoo.org/" target="_blank">Flask</a>.
 * Frontend with <a href="https://vuejs.org/" target="_blank">Vue.js</a>.
 * <a href="https://about.gitlab.com/product/continuous-integration/" target="_blank">GitLab CI</a> integration.
+
+
+## Terraform + Ansible + Docker Swarm boilerplate (T.A.D.S.) - project generator
+
+Link: <a href="https://github.com/Thomvaill/tads-boilerplate" target="_blank">https://github.com/Thomvaill/tads-boilerplate</a>
+
+* Cloud infrastructure created with <a href="https://www.terraform.io/" target="_blank">Terraform</a>.
+* Production-like environment reproduced locally with <a href="https://www.vagrantup.com/" target="_blank">Vagrant</a>.
+* <a href="https://www.ansible.com/" target="_blank">Ansible</a> provisioning (same playbooks for local machine and remote environments).
+* <a href="https://www.ansible.com/" target="_blank">Ansible</a> again to deploy services (Traefik and your apps).
