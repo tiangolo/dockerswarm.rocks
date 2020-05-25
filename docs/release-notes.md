@@ -2,6 +2,8 @@
 
 ## Latest Changes
 
+## 0.3.0
+
 * Add [GitHub Sponsors](https://github.com/sponsors/tiangolo) button. PR [#41](https://github.com/tiangolo/dockerswarm.rocks/pull/41).
 * Simplify errors for env vars not set to make them consistent and re-usable. PR [#40](https://github.com/tiangolo/dockerswarm.rocks/pull/40).
 * Upgrade everything to use Traefik v2. PR [#39](https://github.com/tiangolo/dockerswarm.rocks/pull/39).
