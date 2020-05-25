@@ -2,6 +2,7 @@
 
 ## Latest Changes
 
+* Add [GitHub Sponsors](https://github.com/sponsors/tiangolo) button. PR [#41](https://github.com/tiangolo/dockerswarm.rocks/pull/41).
 * Simplify errors for env vars not set to make them consistent and re-usable. PR [#40](https://github.com/tiangolo/dockerswarm.rocks/pull/40).
 * Upgrade everything to use Traefik v2. PR [#39](https://github.com/tiangolo/dockerswarm.rocks/pull/39).
 * Update Portainer guide to use the same conventions for `DOMAIN` as the rest of the guides. PR [#25](https://github.com/tiangolo/dockerswarm.rocks/pull/25) by [@Mantosh](https://github.com/Mantosh).
