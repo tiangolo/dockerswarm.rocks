@@ -100,14 +100,14 @@ docker service create \
     --mount type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock \
     --mount type=volume,source=traefik-public-certificates,target=/certificates \
     --network traefik-public \
-    --label "traefik.frontend.rule=Host:traefik.${USE_HOSTNAME?Variable USE_HOSTNAME not set}" \
+    --label "traefik.frontend.rule=Host:traefik.${USE_HOSTNAME?Variable not set}" \
     --label "traefik.enable=true" \
     --label "traefik.port=8080" \
     --label "traefik.tags=traefik-public" \
     --label "traefik.docker.network=traefik-public" \
     --label "traefik.frontend.entryPoints=http,https" \
     --label "traefik.frontend.redirect.entryPoint=https" \
-    --label "traefik.frontend.auth.basic.users=${USERNAME?Variable USERNAME not set}:${HASHED_PASSWORD?Variable HASHED_PASSWORD not set}" \
+    --label "traefik.frontend.auth.basic.users=${USERNAME?Variable not set}:${HASHED_PASSWORD?Variable not set}" \
     traefik:v1.7 \
     --docker \
     --docker.swarmmode \
@@ -117,7 +117,7 @@ docker service create \
     --entrypoints='Name:http Address::80' \
     --entrypoints='Name:https Address::443 TLS' \
     --acme \
-    --acme.email=${EMAIL?Variable EMAIL not set} \
+    --acme.email=${EMAIL?Variable not set} \
     --acme.storage=/certificates/acme.json \
     --acme.entryPoint=https \
     --acme.httpChallenge.entryPoint=http\
@@ -140,14 +140,14 @@ The previous command explained:
 * `--mount type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock`: communicate with Docker, to read labels, etc.
 * `--mount type=volume,source=traefik-public-certificates,target=/certificates`: create a volume to store TLS certificates
 * `--network traefik-public`: listen to the specific network traefik-public
-* `--label "traefik.frontend.rule=Host:traefik.${USE_HOSTNAME?Variable USE_HOSTNAME not set}"`: enable the Traefik API and dashboard in the host `traefik.$USE_HOSTNAME`, using the `$USE_HOSTNAME` environment variable created above. If the variable is not set, show an error.
+* `--label "traefik.frontend.rule=Host:traefik.${USE_HOSTNAME?Variable not set}"`: enable the Traefik API and dashboard in the host `traefik.$USE_HOSTNAME`, using the `$USE_HOSTNAME` environment variable created above. If the variable is not set, show an error.
 * `--label "traefik.enable=true"`: make Traefik expose "itself" as a Docker service, this is what makes the Traefik dashboard available with HTTPS and basic auth
 * `--label "traefik.port=8080"`: when Traefik exposes itself as a service (for the dashboard), use the internal service port `8080`
 * `--label "traefik.tags=traefik-public"`: as the main Traefik proxy will only expose services with the `traefik-public` tag (using a parameter below), make the dashboard service have this tag too, so that the Traefik public (itself) can find it and expose it
 * `--label "traefik.docker.network=traefik-public"`: make the dashboard service use the `traefik-public` network to expose itself
 * `--label "traefik.frontend.entryPoints=http"`: make the web dashboard listen and serve on HTTP and HTTPS
 * `--label "traefik.frontend.redirect.entryPoint=https"`: make Traefik redirect HTTP trafic to HTTPS for the web dashboard
-* `--label "traefik.frontend.auth.basic.users=${USERNAME?Variable USERNAME not set}:${HASHED_PASSWORD?Variable HASHED_PASSWORD not set}"`: enable basic auth, so that not every one can access your Traefik web dashboard, it uses the username and password created above. If the variables are not set, show an error.
+* `--label "traefik.frontend.auth.basic.users=${USERNAME?Variable not set}:${HASHED_PASSWORD?Variable not set}"`: enable basic auth, so that not every one can access your Traefik web dashboard, it uses the username and password created above. If the variables are not set, show an error.
 * `traefik:v1.7`: use the image `traefik:v1.7`
 * `--docker`: enable Docker
 * `--docker.swarmmode`: enable Docker Swarm Mode
@@ -157,7 +157,7 @@ The previous command explained:
 * `--entrypoints='Name:http Address::80'`: create an entrypoint http, on port 80
 * `--entrypoints='Name:https Address::443 TLS'`: create an entrypoint https, on port 443 with TLS enabled
 * `--acme`: enable Let's encrypt
-* `--acme.email=${EMAIL?Variable EMAIL not set}`: let's encrypt email, using the environment variable. If not set, show an error.
+* `--acme.email=${EMAIL?Variable not set}`: let's encrypt email, using the environment variable. If not set, show an error.
 * `--acme.storage=/certificates/acme.json`: where to store the Let's encrypt TLS certificates - in the mapped volume
 * `--acme.entryPoint=https`: the entrypoint for Let's encrypt - created above
 * `--acme.httpChallenge.entryPoint=http`: use HTTP for the ACME (Let's Encrypt HTTPS certificates) challenge, as HTTPS was disabled after a security issue
@@ -210,14 +210,14 @@ docker service create \
     --mount type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock \
     --mount type=volume,source=traefik-public-certificates,target=/certificates \
     --network traefik-public \
-    --label "traefik.frontend.rule=Host:traefik.${USE_HOSTNAME?Variable USE_HOSTNAME not set}" \
+    --label "traefik.frontend.rule=Host:traefik.${USE_HOSTNAME?Variable not set}" \
     --label "traefik.enable=true" \
     --label "traefik.port=8080" \
     --label "traefik.tags=traefik-public" \
     --label "traefik.docker.network=traefik-public" \
     --label "traefik.frontend.entryPoints=http,https" \
     --label "traefik.frontend.redirect.entryPoint=https" \
-    --label "traefik.frontend.auth.basic.users=${USERNAME?Variable USERNAME not set}:${HASHED_PASSWORD?Variable HASHED_PASSWORD not set}" \
+    --label "traefik.frontend.auth.basic.users=${USERNAME?Variable not set}:${HASHED_PASSWORD?Variable not set}" \
     traefik:v1.7 \
     --docker \
     --docker.swarmmode \
@@ -227,7 +227,7 @@ docker service create \
     --entrypoints='Name:http Address::80' \
     --entrypoints='Name:https Address::443 TLS' \
     --acme \
-    --acme.email=${EMAIL?Variable EMAIL not set} \
+    --acme.email=${EMAIL?Variable not set} \
     --acme.storage=/certificates/acme.json \
     --acme.entryPoint=https \
     --acme.httpChallenge.entryPoint=http\
