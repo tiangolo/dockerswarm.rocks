@@ -2,6 +2,7 @@
 
 ## Latest Changes
 
+* Add alternative way to type passwords interactively. PR [#42](https://github.com/tiangolo/dockerswarm.rocks/pull/42).
 * Add T.A.D.S. project generator. PR [#36](https://github.com/tiangolo/dockerswarm.rocks/pull/36) by [@Thomvaill](https://github.com/Thomvaill).
 
 ## 0.3.0
