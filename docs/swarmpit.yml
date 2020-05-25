@@ -28,10 +28,10 @@ services:
         - traefik.enable=true
         - traefik.docker.network=traefik-public
         - traefik.constraint-label=traefik-public
-        - traefik.http.routers.swarmpit-http.rule=Host(`${DOMAIN?Variable DOMAIN not set}`)
+        - traefik.http.routers.swarmpit-http.rule=Host(`${DOMAIN?Variable not set}`)
         - traefik.http.routers.swarmpit-http.entrypoints=http
         - traefik.http.routers.swarmpit-http.middlewares=https-redirect
-        - traefik.http.routers.swarmpit-https.rule=Host(`${DOMAIN?Variable DOMAIN not set}`)
+        - traefik.http.routers.swarmpit-https.rule=Host(`${DOMAIN?Variable not set}`)
         - traefik.http.routers.swarmpit-https.entrypoints=https
         - traefik.http.routers.swarmpit-https.tls=true
         - traefik.http.routers.swarmpit-https.tls.certresolver=le

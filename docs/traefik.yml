@@ -27,19 +27,19 @@ services:
         - traefik.constraint-label=traefik-public
         # admin-auth middleware with HTTP Basic auth
         # Using the environment variables USERNAME and HASHED_PASSWORD
-        - traefik.http.middlewares.admin-auth.basicauth.users=${USERNAME?Variable USERNAME not set}:${HASHED_PASSWORD?Variable HASHED_PASSWORD not set}
+        - traefik.http.middlewares.admin-auth.basicauth.users=${USERNAME?Variable not set}:${HASHED_PASSWORD?Variable not set}
         # https-redirect middleware to redirect HTTP to HTTPS
         # It can be re-used by other stacks in other Docker Compose files
         - traefik.http.middlewares.https-redirect.redirectscheme.scheme=https
         - traefik.http.middlewares.https-redirect.redirectscheme.permanent=true
         # traefik-http set up only to use the middleware to redirect to https
         # Uses the environment variable DOMAIN
-        - traefik.http.routers.traefik-public-http.rule=Host(`${DOMAIN?Variable DOMAIN not set}`)
+        - traefik.http.routers.traefik-public-http.rule=Host(`${DOMAIN?Variable not set}`)
         - traefik.http.routers.traefik-public-http.entrypoints=http
         - traefik.http.routers.traefik-public-http.middlewares=https-redirect
         # traefik-https the actual router using HTTPS
         # Uses the environment variable DOMAIN
-        - traefik.http.routers.traefik-public-https.rule=Host(`${DOMAIN?Variable DOMAIN not set}`)
+        - traefik.http.routers.traefik-public-https.rule=Host(`${DOMAIN?Variable not set}`)
         - traefik.http.routers.traefik-public-https.entrypoints=https
         - traefik.http.routers.traefik-public-https.tls=true
         # Use the special Traefik service api@internal with the web UI/Dashboard
@@ -69,7 +69,7 @@ services:
       # Create an entrypoint "https" listening on address 80
       - --entrypoints.https.address=:443
       # Create the certificate resolver "le" for Let's Encrypt, uses the environment variable EMAIL
-      - --certificatesresolvers.le.acme.email=${EMAIL?Variable EMAIL not set}
+      - --certificatesresolvers.le.acme.email=${EMAIL?Variable not set}
       # Store the Let's Encrypt certificates in the mounted volume
       - --certificatesresolvers.le.acme.storage=/certificates/acme.json
       # Use the TLS Challenge for Let's Encrypt

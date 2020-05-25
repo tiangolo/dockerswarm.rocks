@@ -15,10 +15,10 @@ services:
         - traefik.enable=true
         - traefik.docker.network=traefik-public
         - traefik.constraint-label=traefik-public
-        - traefik.http.routers.thelounge-http.rule=Host(`${DOMAIN?Variable DOMAIN not set}`)
+        - traefik.http.routers.thelounge-http.rule=Host(`${DOMAIN?Variable not set}`)
         - traefik.http.routers.thelounge-http.entrypoints=http
         - traefik.http.routers.thelounge-http.middlewares=https-redirect
-        - traefik.http.routers.thelounge-https.rule=Host(`${DOMAIN?Variable DOMAIN not set}`)
+        - traefik.http.routers.thelounge-https.rule=Host(`${DOMAIN?Variable not set}`)
         - traefik.http.routers.thelounge-https.entrypoints=https
         - traefik.http.routers.thelounge-https.tls=true
         - traefik.http.routers.thelounge-https.tls.certresolver=le
