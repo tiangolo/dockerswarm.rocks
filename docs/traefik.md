@@ -96,6 +96,14 @@ export PASSWORD=changethis
 export HASHED_PASSWORD=$(openssl passwd -apr1 $PASSWORD)
 ```
 
+**(Optional)**: Alternatively, if you don't want to put the password in an environment variable, you could type it interactively, e.g.:
+
+```console
+$ export HASHED_PASSWORD=$(openssl passwd -apr1)
+Password: $ enter your password here
+Verifying - Password: $ re enter your password here
+```
+
 * You can check the contents with:
 
 ```bash
