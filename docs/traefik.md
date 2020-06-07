@@ -72,8 +72,6 @@ export EMAIL=admin@example.com
 
 ```bash
 export DOMAIN=traefik.sys.example.com
-# or if you have your $HOSTNAME variable configured:
-export DOMAIN=$HOSTNAME
 ```
 
 * You will access the Traefik dashboard at this domain, e.g. `traefik.sys.example.com`. So, make sure that your DNS records point the domain to one of the IPs of the cluster. Better if it is the IP where the Traefik service runs (the manager node you are currently connected to).
