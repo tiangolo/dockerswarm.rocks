@@ -75,6 +75,9 @@ docker stack deploy -c swarmpit.yml swarmpit
 
 It will use the environment variables you created above.
 
+__NOTE:- If you get error "network "traefik-public" is declared as external, but could not be found. You need to create a swarm-scoped network before the stack is deployed
+" then please create network by using this command docker network create --driver=overlay traefik-public then again run docker stack deploy -c swarmpit.yml swarmpit__
+
 ## Check it
 
 * Check if the stack was deployed with:
@@ -105,4 +108,4 @@ docker service logs swarmpit_app
 
 After some seconds/minutes, Traefik will acquire the HTTPS certificates for the web user interface.
 
-You will be able to securely access the web UI at `https://<your swarmpit domain>` where you can create your username and password.
+You will be able to securely access the web UI at `https://<your swarmpit domain>:888` where you can create your username and password.
