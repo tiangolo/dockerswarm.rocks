@@ -2,6 +2,7 @@
 
 ## Latest Changes
 
+* Remove unwanted Swarmpit port 888. PR [#51](https://github.com/tiangolo/dockerswarm.rocks/pull/51) by [@inmishrar](https://github.com/inmishrar).
 * Fix typo in YAML comment. PR [#46](https://github.com/tiangolo/dockerswarm.rocks/pull/46) by [@bmaggard](https://github.com/bmaggard).
 * Reword comment about Traefik image to use. PR [#45](https://github.com/tiangolo/dockerswarm.rocks/pull/45) by [@bmaggard](https://github.com/bmaggard).
 * Fix typo in comment on Traefik YAML file. PR [#44](https://github.com/tiangolo/dockerswarm.rocks/pull/44) by [@bmaggard](https://github.com/bmaggard).
