@@ -70,7 +70,7 @@ services:
       - --providers.docker.swarmmode
       # Create an entrypoint "http" listening on address 80
       - --entrypoints.http.address=:80
-      # Create an entrypoint "https" listening on address 80
+      # Create an entrypoint "https" listening on address 443
       - --entrypoints.https.address=:443
       # Create the certificate resolver "le" for Let's Encrypt, uses the environment variable EMAIL
       - --certificatesresolvers.le.acme.email=${EMAIL?Variable not set}
