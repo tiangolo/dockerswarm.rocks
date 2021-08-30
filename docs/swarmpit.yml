@@ -41,6 +41,10 @@ services:
       - db-data:/opt/couchdb/data
     networks:
       - net
+      - traefik-public
+    environment:
+      - COUCHDB_USER=admin
+      - COUCHDB_PASSWORD=XXXXXXXXXXXXXXXXXX
     deploy:
       resources:
         limits:
@@ -53,9 +57,12 @@ services:
         constraints:
           - node.labels.swarmpit.db-data == true
   influxdb:
-    image: influxdb:1.7
+    image: influxdb:1.7.11
     volumes:
       - influx-data:/var/lib/influxdb
+    environment:
+      - COUCHDB_USER=admin
+      - COUCHDB_PASSWORD=XXXXXXXXXXXXXXXXXX
     networks:
       - net
     deploy:
@@ -72,7 +79,7 @@ services:
   agent:
     image: swarmpit/agent:latest
     environment:
-      - DOCKER_API_VERSION=1.35
+      - DOCKER_API_VERSION=1.41
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
     networks:
