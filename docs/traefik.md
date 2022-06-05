@@ -13,6 +13,7 @@ If you are looking for the previous guides for Traefik version 1, check them in 
 
     But for new projects, continue here. 🚀
 
+
 ## Intro
 
 So, you have a **Docker Swarm mode** cluster set up as described in <a href="https://dockerswarm.rocks" target="_blank">DockerSwarm.rocks</a>.
@@ -49,6 +50,16 @@ But doing it in a way that allows you to have other Traefik services inside each
 ```bash
 docker network create --driver=overlay traefik-public
 ```
+
+!!! note
+
+    In this tutorial, we use single network for everything.
+
+    Note, that every container in the same network has access to each other,
+      even when they are in the different stacks.
+
+    In production, I recommend to create separate network for each stack.
+
 
 * Get the Swarm node ID of this node and store it in an environment variable:
 
