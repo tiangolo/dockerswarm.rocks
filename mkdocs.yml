@@ -4,8 +4,18 @@ site_description: Docker Swarm mode ideas and tools
 theme:
     name: 'material'
     palette:
-      primary: 'light blue'
-      accent: 'indigo'
+      - media: "(prefers-color-scheme: light)"
+        scheme: default
+        primary: 'light blue'
+        accent: 'indigo'
+        toggle:
+          icon: material/brightness-7
+          name: Switch to dark mode
+      - media: "(prefers-color-scheme: dark)"
+        scheme: slate
+        toggle:
+          icon: material/brightness-4
+          name: Switch to system preference
     logo: 'img/icon-white.svg'
     favicon: 'img/favicon.png'
 

@@ -5,21 +5,21 @@ on:
     types: [opened, synchronize]
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python
         uses: actions/setup-python@v1
         with:
-          python-version: "3.7"
+          python-version: "3.8"
       - name: Install Poetry
-        run: python3.7 -m pip install poetry
+        run: python3.8 -m pip install poetry
       - name: Disable Poetry venv
         run: poetry config virtualenvs.create false
       - name: Install packages
         run: poetry install
       - name: Build Docs
-        run: python3.7 -m mkdocs build
+        run: python3.8 -m mkdocs build
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.0.3
         with:
