@@ -1,10 +1,11 @@
 # Traefik Proxy with HTTPS
 
-## Note - version 2
+## Note - version 2 (and v3)
 
-This guide is updated for Traefik version 2. ✨
+This guide is updated for Traefik version 2 and version 3. ✨
 
 If you are looking for the previous guides for Traefik version 1, check them in <a href="https://dockerswarm.rocks/traefik-v1/" class="external-link" target="_blank">DockerSwarm.rocks/traefik-v1/</a>.
+Using Traefik 3 is only one line difference in the YAML used to deploy Traefik, and is detailed below.
 
 !!! note
     There are many applications and some project generators based on the previous guides for Traefik version 1.
@@ -116,10 +117,16 @@ $apr1$89eqM5Ro$CxaFELthUKV21DpI3UTQO.
 
 ## Create the Docker Compose file
 
-* Download the file `traefik.yml`:
+* Download the file `traefik.yml` for Traefik v2:
 
 ```bash
 curl -L dockerswarm.rocks/traefik.yml -o traefik.yml
+```
+
+or `traefik-v3.yml` for Traefik 3
+
+```bash
+curl -L dockerswarm.rocks/traefik-v3.yml -o traefik.yml
 ```
 
 * ...or create it manually, for example, using `nano`:
@@ -133,6 +140,17 @@ nano traefik.yml
 ```YAML
 {!./traefik.yml!}
 ```
+
+or for Traefik 3, where the only difference is how the swarm mode is activated:
+
+<details>
+  <summary>traefik-v3.yml</summary>
+
+```YAML
+{!./traefik-v3.yml!}
+```
+
+</details>
 
 !!! tip
     Read the internal comments to learn what each configuration is for.
