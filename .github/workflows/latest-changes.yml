@@ -24,7 +24,7 @@ jobs:
         with:
           token: ${{ secrets.DOCKERSWARM_ROCKS_LATEST_CHANGES }}
       - uses: docker://tiangolo/latest-changes:0.2.0
-      - uses: tiangolo/latest-changes@main
+      # - uses: tiangolo/latest-changes@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           latest_changes_file: docs/release-notes.md
