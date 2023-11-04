@@ -21,7 +21,7 @@ jobs:
       - name: Build Docs
         run: python3.7 -m mkdocs build
       - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v1.0.3
+        uses: nwtgck/actions-netlify@v2.1.0
         with:
           publish-dir: './site'
           production-branch: master
