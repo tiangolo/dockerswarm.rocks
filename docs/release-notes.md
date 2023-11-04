@@ -11,6 +11,10 @@
 * Add alternative way to type passwords interactively. PR [#42](https://github.com/tiangolo/dockerswarm.rocks/pull/42).
 * Add T.A.D.S. project generator. PR [#36](https://github.com/tiangolo/dockerswarm.rocks/pull/36) by [@Thomvaill](https://github.com/Thomvaill).
 
+### Internal
+
+* 🐛 Fix config for latest-changes GitHub Action. PR [#95](https://github.com/tiangolo/dockerswarm.rocks/pull/95) by [@tiangolo](https://github.com/tiangolo).
+
 ## 0.3.0
 
 * Add [GitHub Sponsors](https://github.com/sponsors/tiangolo) button. PR [#41](https://github.com/tiangolo/dockerswarm.rocks/pull/41).
