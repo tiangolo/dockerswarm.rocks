@@ -13,6 +13,7 @@
 
 ### Internal
 
+* ⬆ Bump actions/setup-python from 1 to 4. PR [#97](https://github.com/tiangolo/dockerswarm.rocks/pull/97) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump tiangolo/issue-manager from 0.2.0 to 0.4.0. PR [#98](https://github.com/tiangolo/dockerswarm.rocks/pull/98) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump nwtgck/actions-netlify from 1.0.3 to 2.1.0. PR [#99](https://github.com/tiangolo/dockerswarm.rocks/pull/99) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump actions/checkout from 2 to 4. PR [#100](https://github.com/tiangolo/dockerswarm.rocks/pull/100) by [@dependabot[bot]](https://github.com/apps/dependabot).
