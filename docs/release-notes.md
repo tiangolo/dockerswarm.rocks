@@ -13,6 +13,7 @@
 
 ### Internal
 
+* 👷 Update latest-changes GitHub Action. PR [#94](https://github.com/tiangolo/dockerswarm.rocks/pull/94) by [@tiangolo](https://github.com/tiangolo).
 * 🐛 Fix config for latest-changes GitHub Action. PR [#95](https://github.com/tiangolo/dockerswarm.rocks/pull/95) by [@tiangolo](https://github.com/tiangolo).
 
 ## 0.3.0
