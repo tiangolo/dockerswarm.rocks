@@ -13,6 +13,7 @@
 
 ### Internal
 
+* ⬆ Bump nwtgck/actions-netlify from 1.0.3 to 2.1.0. PR [#99](https://github.com/tiangolo/dockerswarm.rocks/pull/99) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump actions/checkout from 2 to 4. PR [#100](https://github.com/tiangolo/dockerswarm.rocks/pull/100) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 👷 Add dependabot. PR [#96](https://github.com/tiangolo/dockerswarm.rocks/pull/96) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Update latest-changes GitHub Action. PR [#94](https://github.com/tiangolo/dockerswarm.rocks/pull/94) by [@tiangolo](https://github.com/tiangolo).
