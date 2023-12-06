@@ -39,7 +39,7 @@ services:
           memory: 64M
 
   cadvisor:
-    image: google/cadvisor
+    image: gcr.io/cadvisor/cadvisor
     networks:
       - net
     command: -logtostderr -docker_only
