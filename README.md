@@ -94,6 +94,13 @@ It's mainly a set of ideas, documentation and tools to use existing open source 
 ssh root@172.173.174.175
 ```
 
+Check the Linux kernel of the VPS; it should **not** be in KVM. (the ipvs module, essential for swarm binding, is not present in KVM)
+
+```bash
+uname -r
+```
+
+
 * Define a server name using a subdomain of a domain you own, for example `dog.example.com`.
 * Make sure the subdomain DNS records point to your VPS's IP address.
 * Create a temporal environment variable with the name of the host to be used later, e.g.:
