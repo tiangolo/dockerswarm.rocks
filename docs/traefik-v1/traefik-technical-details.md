@@ -6,8 +6,11 @@ This article is for Traefik version 1.
 
 There is now a guide for Traefik version 2, if you are starting a new project, you should check that one at <a href="https://dockerswarm.rocks/traefik/" class="external-link" target="_blank">DockerSwarm.rocks/traefik/</a>.
 
-!!! warning
-    The technique described here using Consul to store the Let's Encrypt certificates seemed to work well at first, but was fragile and error prone, and could lead to issues later. Because of that, the Traefik team disabled it in Traefik version 2.
+/// warning
+
+The technique described here using Consul to store the Let's Encrypt certificates seemed to work well at first, but was fragile and error prone, and could lead to issues later. Because of that, the Traefik team disabled it in Traefik version 2.
+
+///
 
 ## Consul
 
@@ -45,7 +48,7 @@ It has several deployment labels, these are what make Traefik expose the Consul 
 * `traefik.frontend.auth.basic.users=${USERNAME?Variable not set}:${HASHED_PASSWORD?Variable not set}`: enable basic auth, so that not everyone can access your Traefik web dashboard, it uses the username and password created above. If those environment variables are not set, show the error "`Variable not set`" or "`Variable HASHED_PASSWORD not set`".
 
 ```YAML hl_lines="4 6 10 11 13 14 17 18 19 20 21 22 23 24 25 26 27"
-{!traefik-v1.yml!}
+{!./docs/traefik-v1.yml!}
 ```
 
 ## Consul replicas
@@ -69,7 +72,7 @@ As each replica will send its data (IP, ID, etc) to the service `consul-leader`,
 That way, all the Consul instances will be able to communicate and synchronize.
 
 ```YAML hl_lines="28 30 40 43"
-{!traefik-v1.yml!}
+{!./docs/traefik-v1.yml!}
 ```
 
 ## Traefik
@@ -116,5 +119,5 @@ It is connected to the internal stack `default`, to store the configurations in 
 Technically, Traefik and Consul could just use the network `traefik-public` to communicate, to store configurations, HTTPS certificates, etc. But it's more explicit what each network does having the intra-stack `default` network declared too.
 
 ```YAML hl_lines="47 48 50 53 57 59 69 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 91 92 100 101"
-{!traefik-v1.yml!}
+{!./docs/traefik-v1.yml!}
 ```

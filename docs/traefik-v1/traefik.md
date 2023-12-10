@@ -12,8 +12,11 @@ This article is for Traefik version 1.
 
 There is now a guide for Traefik version 2, if you are starting a new project, you should check that one at <a href="https://dockerswarm.rocks/traefik/" class="external-link" target="_blank">DockerSwarm.rocks/traefik/</a>.
 
-!!! warning
-    The technique described here using Consul to store the Let's Encrypt certificates seemed to work well at first, but was fragile and error prone, and could lead to issues later. Because of that, the Traefik team disabled it in Traefik version 2.
+/// warning
+
+The technique described here using Consul to store the Let's Encrypt certificates seemed to work well at first, but was fragile and error prone, and could lead to issues later. Because of that, the Traefik team disabled it in Traefik version 2.
+
+///
 
 ## Intro
 
@@ -57,8 +60,11 @@ And if you set your domain name DNS records correctly, adding the IP addresses o
 
 Full application redundancy.
 
-!!! note
-    But if you have a single node, it will also work. And you can grow later if needed.
+/// note
+
+But if you have a single node, it will also work. And you can grow later if needed.
+
+///
 
 ### User Interface
 
@@ -192,15 +198,18 @@ nano traefik-v1.yml
 * And copy the contents inside:
 
 ```YAML
-{!./traefik-v1.yml!}
+{!./docs/traefik-v1.yml!}
 ```
 
-!!! info
-    This is just a standard Docker Compose file.
+/// info
 
-    It's common to name the file `docker-compose.yml` or something like `docker-compose.traefik.yml`.
+This is just a standard Docker Compose file.
 
-    Here it's named just `traefik-v1.yml` for brevity.
+It's common to name the file `docker-compose.yml` or something like `docker-compose.traefik.yml`.
+
+Here it's named just `traefik-v1.yml` for brevity.
+
+///
 
 ## Deploy it
 
@@ -288,7 +297,7 @@ curl -L dockerswarm.rocks/traefik-host.yml -o traefik-host.yml
 Or alternatively, copying it directly:
 
 ```YAML
-{!./traefik-host-v1.yml!}
+{!./docs/traefik-host-v1.yml!}
 ```
 
 And then deploying with:
