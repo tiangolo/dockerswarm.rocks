@@ -6,8 +6,11 @@ This article is for Traefik version 1.
 
 There is now a guide for Traefik version 2, if you are starting a new project, you should check that one at <a href="https://dockerswarm.rocks/traefik/" class="external-link" target="_blank">DockerSwarm.rocks/traefik/</a>.
 
-!!! warning
-    The technique described here using Consul to store the Let's Encrypt certificates seemed to work well at first, but was fragile and error prone, and could lead to issues later. Because of that, the Traefik team disabled it in Traefik version 2.
+/// warning
+
+The technique described here using Consul to store the Let's Encrypt certificates seemed to work well at first, but was fragile and error prone, and could lead to issues later. Because of that, the Traefik team disabled it in Traefik version 2.
+
+///
 
 ## Consul
 

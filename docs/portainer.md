@@ -52,12 +52,15 @@ nano portainer.yml
 {!./docs/portainer.yml!}
 ```
 
-!!! info
-    This is just a standard Docker Compose file.
+/// info
 
-    It's common to name the file `docker-compose.yml` or something like `docker-compose.portainer.yml`.
+This is just a standard Docker Compose file.
 
-    Here it's named just `portainer.yml` for brevity.
+It's common to name the file `docker-compose.yml` or something like `docker-compose.portainer.yml`.
+
+Here it's named just `portainer.yml` for brevity.
+
+///
 
 ## Deploy it
 

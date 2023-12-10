@@ -6,12 +6,15 @@ This guide is updated for Traefik version 2. ✨
 
 If you are looking for the previous guides for Traefik version 1, check them in <a href="https://dockerswarm.rocks/traefik-v1/" class="external-link" target="_blank">DockerSwarm.rocks/traefik-v1/</a>.
 
-!!! note
-    There are many applications and some project generators based on the previous guides for Traefik version 1.
+/// note
 
-    If you have something already deployed, there are chances it uses those previous guides.
+There are many applications and some project generators based on the previous guides for Traefik version 1.
 
-    But for new projects, continue here. 🚀
+If you have something already deployed, there are chances it uses those previous guides.
+
+But for new projects, continue here. 🚀
+
+///
 
 ## Intro
 
@@ -134,17 +137,23 @@ nano traefik.yml
 {!./docs/traefik.yml!}
 ```
 
-!!! tip
-    Read the internal comments to learn what each configuration is for.
+/// tip
 
-    The file without comments is actually quite smaller, but the comments should give you an idea of what everything is doing.
+Read the internal comments to learn what each configuration is for.
 
-!!! info
-    This is just a standard Docker Compose file.
+The file without comments is actually quite smaller, but the comments should give you an idea of what everything is doing.
 
-    It's common to name the file `docker-compose.yml` or something like `docker-compose.traefik.yml`.
+///
 
-    Here it's named just `traefik.yml` for brevity.
+/// info
+
+This is just a standard Docker Compose file.
+
+It's common to name the file `docker-compose.yml` or something like `docker-compose.traefik.yml`.
+
+Here it's named just `traefik.yml` for brevity.
+
+///
 
 ## Deploy it
 
