@@ -192,7 +192,7 @@ nano traefik-v1.yml
 * And copy the contents inside:
 
 ```YAML
-{!./traefik-v1.yml!}
+{!./docs/traefik-v1.yml!}
 ```
 
 !!! info
@@ -288,7 +288,7 @@ curl -L dockerswarm.rocks/traefik-host.yml -o traefik-host.yml
 Or alternatively, copying it directly:
 
 ```YAML
-{!./traefik-host-v1.yml!}
+{!./docs/traefik-host-v1.yml!}
 ```
 
 And then deploying with:

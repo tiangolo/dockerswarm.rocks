@@ -49,7 +49,7 @@ nano portainer.yml
 * And copy the contents inside:
 
 ```YAML
-{!./portainer.yml!}
+{!./docs/portainer.yml!}
 ```
 
 !!! info

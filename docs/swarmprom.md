@@ -126,7 +126,7 @@ nano swarmprom.yml
 * And copy the contents inside:
 
 ```YAML
-{!./swarmprom.yml!}
+{!./docs/swarmprom.yml!}
 ```
 
 !!! info

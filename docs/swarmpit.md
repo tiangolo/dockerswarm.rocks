@@ -55,7 +55,7 @@ nano swarmpit.yml
 * And copy the contents inside:
 
 ```YAML
-{!./swarmpit.yml!}
+{!./docs/swarmpit.yml!}
 ```
 
 !!! info
