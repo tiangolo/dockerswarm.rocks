@@ -18,6 +18,7 @@
 
 ### Docs
 
+* ✨ Add Traefik v3 instructions. PR [#93](https://github.com/tiangolo/dockerswarm.rocks/pull/93) by [@rbauduin](https://github.com/rbauduin).
 * 🔧 Update Portainer. PR [#113](https://github.com/tiangolo/dockerswarm.rocks/pull/113) by [@tiangolo](https://github.com/tiangolo).
 * 📝 Do not use real public IPs in docs. PR [#77](https://github.com/tiangolo/dockerswarm.rocks/pull/77) by [@JakeDEvans](https://github.com/JakeDEvans).
 
