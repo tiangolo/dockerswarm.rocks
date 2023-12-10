@@ -12,6 +12,10 @@
 * Add alternative way to type passwords interactively. PR [#42](https://github.com/tiangolo/dockerswarm.rocks/pull/42).
 * Add T.A.D.S. project generator. PR [#36](https://github.com/tiangolo/dockerswarm.rocks/pull/36) by [@Thomvaill](https://github.com/Thomvaill).
 
+### Fixes
+
+* 🐛 Fix main branch for building docs. PR [#112](https://github.com/tiangolo/dockerswarm.rocks/pull/112) by [@tiangolo](https://github.com/tiangolo).
+
 ### Internal
 
 * 📝 Update admonition syntax. PR [#111](https://github.com/tiangolo/dockerswarm.rocks/pull/111) by [@tiangolo](https://github.com/tiangolo).
