@@ -2,6 +2,14 @@
   <a href="https://dockerswarm.rocks"><img src="https://dockerswarm.rocks/img/logo-light-blue-vectors.svg" alt="dockerswarm.rocks"></a>
 </p>
 
+## Deprecation Warning 🚨
+
+**This website is deprecated.**
+
+It's kept around mainly for historical reasons.
+
+See [Docker Swarm Mode or Kubernetes](swarm-or-kubernetes.md) for more information.
+
 ## Why?
 
 <a href="https://www.docker.com/" target="_blank">Docker</a> is a great tool (the "de facto" standard) to build **Linux containers**.
@@ -91,7 +99,7 @@ It's mainly a set of ideas, documentation and tools to use existing open source 
 * Connect to it via SSH, e.g.:
 
 ```bash
-ssh root@172.173.174.175
+ssh root@192.0.2.175
 ```
 
 * Check the Linux kernel of the VPS; it should **not** be in KVM. (the ipvs module, essential for swarm binding, is not present in KVM)
@@ -164,13 +172,13 @@ docker swarm init
 **Note**: if you see an error like:
 
 ```
-Error response from daemon: could not choose an IP address to advertise since this system has multiple addresses on interface eth0 (138.68.58.48 and 10.19.0.5) - specify one with --advertise-addr
+Error response from daemon: could not choose an IP address to advertise since this system has multiple addresses on interface eth0 (198.51.100.48 and 10.19.0.5) - specify one with --advertise-addr
 ```
 
-...select the public IP (e.g. `138.68.58.48` in this example), and run the command again with `--advertise-addr`, e.g.:
+...select the public IP (e.g. `198.51.100.48` in this example), and run the command again with `--advertise-addr`, e.g.:
 
 ```bash
-docker swarm init --advertise-addr 138.68.58.48
+docker swarm init --advertise-addr 198.51.100.48
 ```
 
 ### Add manager nodes (optional)
@@ -184,7 +192,7 @@ docker swarm join-token manager
 * Copy the result and paste it in the additional manager node's terminal, it will be something like:
 
 ```bash
- docker swarm join --token SWMTKN-1-5tl7yaasdfd9qt9j0easdfnml4lqbosbasf14p13-f3hem9ckmkhasdf3idrzk5gz 172.173.174.175:2377
+ docker swarm join --token SWMTKN-1-5tl7yaasdfd9qt9j0easdfnml4lqbosbasf14p13-f3hem9ckmkhasdf3idrzk5gz 192.0.2.175:2377
 ```
 
 ### Add worker nodes (optional)
@@ -198,7 +206,7 @@ docker swarm join-token worker
 * Copy the result and paste it in the additional worker node's terminal, it will be something like:
 
 ```bash
-docker swarm join --token SWMTKN-1-5tl7ya98erd9qtasdfml4lqbosbhfqv3asdf4p13-dzw6ugasdfk0arn0 172.173.174.175:2377
+docker swarm join --token SWMTKN-1-5tl7ya98erd9qtasdfml4lqbosbhfqv3asdf4p13-dzw6ugasdfk0arn0 192.0.2.175:2377
 ```
 
 ### Check it

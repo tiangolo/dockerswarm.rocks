@@ -55,15 +55,18 @@ nano swarmpit.yml
 * And copy the contents inside:
 
 ```YAML
-{!./swarmpit.yml!}
+{!./docs/swarmpit.yml!}
 ```
 
-!!! info
-    This is just a standard Docker Compose file.
+/// info
 
-    It's common to name the file `docker-compose.yml` or something like `docker-compose.swarmpit.yml`.
+This is just a standard Docker Compose file.
 
-    Here it's named just `swarmpit.yml` for brevity.
+It's common to name the file `docker-compose.yml` or something like `docker-compose.swarmpit.yml`.
+
+Here it's named just `swarmpit.yml` for brevity.
+
+///
 
 ## Deploy it
 
@@ -91,7 +94,7 @@ kkhasdfvce30   swarmpit_agent.ndasdfav5   swarmpit/agent:latest      dog.example
 k8oasdfg70jm   swarmpit_agent.i9asdfjps   swarmpit/agent:latest      cat.example.com     Running         Running 3 minutes ago
 kcvasdft0yzj   swarmpit_agent.3jasdfd3k   swarmpit/agent:latest      snake.example.com   Running         Running 3 minutes ago
 9onasdfzopve   swarmpit_agent.r6asdfb20   swarmpit/agent:latest      snake.example.com   Running         Running 3 minutes ago
-fxoasdfwjrbj   swarmpit_db.1              couchdb:2.3.0              dog.example.com     Running         Running 3 minutes ago
+fxoasdfwjrbj   swarmpit_db.1              couchdb:2.3.1              dog.example.com     Running         Running 3 minutes ago
 m4jasdf3369c   swarmpit_app.1             swarmpit/swarmpit:latest   cat.example.com     Running         Running 3 minutes ago
 ```
 

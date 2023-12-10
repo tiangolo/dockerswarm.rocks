@@ -126,15 +126,18 @@ nano swarmprom.yml
 * And copy the contents inside:
 
 ```YAML
-{!./swarmprom.yml!}
+{!./docs/swarmprom.yml!}
 ```
 
-!!! info
-    This is just a standard Docker Compose file.
+/// info
 
-    It's common to name the file `docker-compose.yml` or something like `docker-compose.swarmprom.yml`.
+This is just a standard Docker Compose file.
 
-    Here it's named just `swarmprom.yml` for brevity.
+It's common to name the file `docker-compose.yml` or something like `docker-compose.swarmprom.yml`.
+
+Here it's named just `swarmprom.yml` for brevity.
+
+///
 
 * Deploy the Traefik version of the stack:
 
