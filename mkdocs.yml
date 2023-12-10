@@ -55,7 +55,6 @@ markdown_extensions:
   toc:
     permalink: true
   pymdownx.superfences:
-    custom_fences:
   pymdownx.betterem:
   pymdownx.blocks.details:
   pymdownx.blocks.admonition:
