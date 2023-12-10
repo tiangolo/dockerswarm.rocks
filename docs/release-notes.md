@@ -2,6 +2,7 @@
 
 ## Latest Changes
 
+* ⬆ Bump actions/setup-python from 4 to 5. PR [#102](https://github.com/tiangolo/dockerswarm.rocks/pull/102) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 🚨 Deprecate website. PR [#104](https://github.com/tiangolo/dockerswarm.rocks/pull/104) by [@tiangolo](https://github.com/tiangolo).
 * ✏ Fix typo in comment for traefik-host.yml. PR [#52](https://github.com/tiangolo/dockerswarm.rocks/pull/52) by [@iRhonin](https://github.com/iRhonin).
 * 👷 Add latest-changes GitHub action. PR [#65](https://github.com/tiangolo/dockerswarm.rocks/pull/65) by [@tiangolo](https://github.com/tiangolo).
