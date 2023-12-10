@@ -6,9 +6,8 @@ authors = ["Sebastián Ramírez <tiangolo@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.6"
-mkdocs = "^1.1"
-mkdocs-material = "^4.6.3"
+python = "^3.8"
+mkdocs-material = "^9.5.1"
 markdown-include = "^0.5.1"
 
 [tool.poetry.dev-dependencies]

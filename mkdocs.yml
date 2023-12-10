@@ -12,12 +12,10 @@ theme:
 repo_name: tiangolo/dockerswarm.rocks
 repo_url: https://github.com/tiangolo/dockerswarm.rocks
 edit_uri: ""
-google_analytics:
-    - 'UA-133194648-1'
-    - 'auto'
 
 nav:
     - Docker Swarm Rocks: index.md
+    - swarm-or-kubernetes.md
     - traefik.md
     - swarmpit.md
     - swarmprom.md
@@ -40,3 +38,21 @@ markdown_extensions:
   - admonition
   - codehilite
   - extra
+
+extra:
+  analytics:
+    provider: google
+    property: G-DXZ6N63Y4N
+  social:
+  - icon: fontawesome/brands/github-alt
+    link: https://github.com/tiangolo/dockerswarm.rocks
+  - icon: fontawesome/brands/twitter
+    link: https://twitter.com/tiangolo
+  - icon: fontawesome/brands/linkedin
+    link: https://www.linkedin.com/in/tiangolo
+  - icon: fontawesome/brands/dev
+    link: https://dev.to/tiangolo
+  - icon: fontawesome/brands/medium
+    link: https://medium.com/@tiangolo
+  - icon: fontawesome/solid/globe
+    link: https://tiangolo.com
