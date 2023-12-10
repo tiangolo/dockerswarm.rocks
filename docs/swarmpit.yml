@@ -36,7 +36,7 @@ services:
         - traefik.http.services.swarmpit.loadbalancer.server.port=8080
 
   db:
-    image: couchdb:2.3.0
+    image: couchdb:2.3.1
     volumes:
       - db-data:/opt/couchdb/data
     networks:
