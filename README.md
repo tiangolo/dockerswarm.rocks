@@ -94,12 +94,19 @@ It's mainly a set of ideas, documentation and tools to use existing open source 
 ssh root@172.173.174.175
 ```
 
-Check the Linux kernel of the VPS; it should **not** be in KVM. (the ipvs module, essential for swarm binding, is not present in KVM)
+* Check the Linux kernel of the VPS; it should **not** be in KVM. (the ipvs module, essential for swarm binding, is not present in KVM)
 
 ```bash
 uname -r
 ```
 
+Output will look like this : (if kvm is **not** present in your kernel output, you're good to go)
+
+```bash
+5.15.0-89-generic # will work
+5.10.0-26-cloud-amd64 # will work as well
+5.15.0-1047-kvm # will NOT be able to run swarm 
+```
 
 * Define a server name using a subdomain of a domain you own, for example `dog.example.com`.
 * Make sure the subdomain DNS records point to your VPS's IP address.
