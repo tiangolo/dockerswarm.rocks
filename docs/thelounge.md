@@ -45,7 +45,7 @@ nano thelounge.yml
 * And copy the contents inside:
 
 ```YAML
-{!./thelounge.yml!}
+{!./docs/thelounge.yml!}
 ```
 
 !!! info
