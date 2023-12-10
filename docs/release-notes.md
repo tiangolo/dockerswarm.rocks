@@ -16,6 +16,10 @@
 
 * 🐛 Fix main branch for building docs. PR [#112](https://github.com/tiangolo/dockerswarm.rocks/pull/112) by [@tiangolo](https://github.com/tiangolo).
 
+### Docs
+
+* 📝 Do not use real public IPs in docs. PR [#77](https://github.com/tiangolo/dockerswarm.rocks/pull/77) by [@JakeDEvans](https://github.com/JakeDEvans).
+
 ### Internal
 
 * 📝 Update admonition syntax. PR [#111](https://github.com/tiangolo/dockerswarm.rocks/pull/111) by [@tiangolo](https://github.com/tiangolo).
