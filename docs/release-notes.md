@@ -2,6 +2,7 @@
 
 ## Latest Changes
 
+* 🚨 Deprecate website. PR [#104](https://github.com/tiangolo/dockerswarm.rocks/pull/104) by [@tiangolo](https://github.com/tiangolo).
 * ✏ Fix typo in comment for traefik-host.yml. PR [#52](https://github.com/tiangolo/dockerswarm.rocks/pull/52) by [@iRhonin](https://github.com/iRhonin).
 * 👷 Add latest-changes GitHub action. PR [#65](https://github.com/tiangolo/dockerswarm.rocks/pull/65) by [@tiangolo](https://github.com/tiangolo).
 * Remove unwanted Swarmpit port 888. PR [#51](https://github.com/tiangolo/dockerswarm.rocks/pull/51) by [@inmishrar](https://github.com/inmishrar).
