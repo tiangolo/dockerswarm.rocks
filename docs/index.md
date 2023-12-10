@@ -2,6 +2,14 @@
   <a href="https://dockerswarm.rocks"><img src="https://dockerswarm.rocks/img/logo-light-blue-vectors.svg" alt="dockerswarm.rocks"></a>
 </p>
 
+## Deprecation Warning 🚨
+
+**This website is deprecated.**
+
+It's kept around mainly for historical reasons.
+
+See [Docker Swarm Mode or Kubernetes](swarm-or-kubernetes.md) for more information.
+
 ## Why?
 
 <a href="https://www.docker.com/" target="_blank">Docker</a> is a great tool (the "de facto" standard) to build **Linux containers**.

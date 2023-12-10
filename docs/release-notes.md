@@ -2,6 +2,7 @@
 
 ## Latest Changes
 
+* 🚨 Deprecate website. PR [#104](https://github.com/tiangolo/dockerswarm.rocks/pull/104) by [@tiangolo](https://github.com/tiangolo).
 * ✏ Fix typo in comment for traefik-host.yml. PR [#52](https://github.com/tiangolo/dockerswarm.rocks/pull/52) by [@iRhonin](https://github.com/iRhonin).
 * 👷 Add latest-changes GitHub action. PR [#65](https://github.com/tiangolo/dockerswarm.rocks/pull/65) by [@tiangolo](https://github.com/tiangolo).
 * Remove unwanted Swarmpit port 888. PR [#51](https://github.com/tiangolo/dockerswarm.rocks/pull/51) by [@inmishrar](https://github.com/inmishrar).
@@ -10,6 +11,24 @@
 * Fix typo in comment on Traefik YAML file. PR [#44](https://github.com/tiangolo/dockerswarm.rocks/pull/44) by [@bmaggard](https://github.com/bmaggard).
 * Add alternative way to type passwords interactively. PR [#42](https://github.com/tiangolo/dockerswarm.rocks/pull/42).
 * Add T.A.D.S. project generator. PR [#36](https://github.com/tiangolo/dockerswarm.rocks/pull/36) by [@Thomvaill](https://github.com/Thomvaill).
+
+### Fixes
+
+* 🐛 Fix main branch for building docs. PR [#112](https://github.com/tiangolo/dockerswarm.rocks/pull/112) by [@tiangolo](https://github.com/tiangolo).
+
+### Internal
+
+* 📝 Update admonition syntax. PR [#111](https://github.com/tiangolo/dockerswarm.rocks/pull/111) by [@tiangolo](https://github.com/tiangolo).
+* 👷 Add GitHub Action to comment in PRs with previews. PR [#110](https://github.com/tiangolo/dockerswarm.rocks/pull/110) by [@tiangolo](https://github.com/tiangolo).
+* 👷 Deploy docs to Cloudflare. PR [#109](https://github.com/tiangolo/dockerswarm.rocks/pull/109) by [@tiangolo](https://github.com/tiangolo).
+* 👷 Update Dependabot. PR [#105](https://github.com/tiangolo/dockerswarm.rocks/pull/105) by [@tiangolo](https://github.com/tiangolo).
+* ⬆ Bump actions/setup-python from 1 to 4. PR [#97](https://github.com/tiangolo/dockerswarm.rocks/pull/97) by [@dependabot[bot]](https://github.com/apps/dependabot).
+* ⬆ Bump tiangolo/issue-manager from 0.2.0 to 0.4.0. PR [#98](https://github.com/tiangolo/dockerswarm.rocks/pull/98) by [@dependabot[bot]](https://github.com/apps/dependabot).
+* ⬆ Bump nwtgck/actions-netlify from 1.0.3 to 2.1.0. PR [#99](https://github.com/tiangolo/dockerswarm.rocks/pull/99) by [@dependabot[bot]](https://github.com/apps/dependabot).
+* ⬆ Bump actions/checkout from 2 to 4. PR [#100](https://github.com/tiangolo/dockerswarm.rocks/pull/100) by [@dependabot[bot]](https://github.com/apps/dependabot).
+* 👷 Add dependabot. PR [#96](https://github.com/tiangolo/dockerswarm.rocks/pull/96) by [@tiangolo](https://github.com/tiangolo).
+* 👷 Update latest-changes GitHub Action. PR [#94](https://github.com/tiangolo/dockerswarm.rocks/pull/94) by [@tiangolo](https://github.com/tiangolo).
+* 🐛 Fix config for latest-changes GitHub Action. PR [#95](https://github.com/tiangolo/dockerswarm.rocks/pull/95) by [@tiangolo](https://github.com/tiangolo).
 
 ## 0.3.0
 
