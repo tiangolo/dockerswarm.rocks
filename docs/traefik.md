@@ -7,12 +7,15 @@ This guide is updated for Traefik version 2 and version 3. ✨
 If you are looking for the previous guides for Traefik version 1, check them in <a href="https://dockerswarm.rocks/traefik-v1/" class="external-link" target="_blank">DockerSwarm.rocks/traefik-v1/</a>.
 Using Traefik 3 is only one line difference in the YAML used to deploy Traefik, and is detailed below.
 
-!!! note
-    There are many applications and some project generators based on the previous guides for Traefik version 1.
+/// note
 
-    If you have something already deployed, there are chances it uses those previous guides.
+There are many applications and some project generators based on the previous guides for Traefik version 1.
 
-    But for new projects, continue here. 🚀
+If you have something already deployed, there are chances it uses those previous guides.
+
+But for new projects, continue here. 🚀
+
+///
 
 ## Intro
 
@@ -138,31 +141,36 @@ nano traefik.yml
 * And copy the contents inside:
 
 ```YAML
-{!./traefik.yml!}
+{!./docs/traefik.yml!}
 ```
 
 or for Traefik 3, where the only difference is how the swarm mode is activated:
 
-<details>
-  <summary>traefik-v3.yml</summary>
+/// details | Traefik 3
 
 ```YAML
-{!./traefik-v3.yml!}
+{!./docs/traefik-v3.yml!}
 ```
 
-</details>
+///
 
-!!! tip
-    Read the internal comments to learn what each configuration is for.
+/// tip
 
-    The file without comments is actually quite smaller, but the comments should give you an idea of what everything is doing.
+Read the internal comments to learn what each configuration is for.
 
-!!! info
-    This is just a standard Docker Compose file.
+The file without comments is actually quite smaller, but the comments should give you an idea of what everything is doing.
 
-    It's common to name the file `docker-compose.yml` or something like `docker-compose.traefik.yml`.
+///
 
-    Here it's named just `traefik.yml` for brevity.
+/// info
+
+This is just a standard Docker Compose file.
+
+It's common to name the file `docker-compose.yml` or something like `docker-compose.traefik.yml`.
+
+Here it's named just `traefik.yml` for brevity.
+
+///
 
 ## Deploy it
 
@@ -239,7 +247,7 @@ curl -L dockerswarm.rocks/traefik-host.yml -o traefik-host.yml
 Or alternatively, copying it directly:
 
 ```YAML
-{!./traefik-host.yml!}
+{!./docs/traefik-host.yml!}
 ```
 
 And then deploying with:

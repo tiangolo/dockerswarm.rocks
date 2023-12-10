@@ -6,13 +6,14 @@ authors = ["Sebastián Ramírez <tiangolo@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.6"
-mkdocs = "^1.1"
-mkdocs-material = "^4.6.3"
-markdown-include = "^0.5.1"
-
-[tool.poetry.dev-dependencies]
+python = "^3.10"
+mkdocs-material = "9.2.7"
+pillow = "^9.3.0"
+cairosvg = "^2.5.2"
+mdx-include = "^1.4.1"
+typer-cli = "^0.0.13"
+mkdocs-markdownextradata-plugin = ">=0.1.7,<0.3.0"
 
 [build-system]
-requires = ["poetry>=0.12"]
-build-backend = "poetry.masonry.api"
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
