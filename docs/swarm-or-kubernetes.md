@@ -2,7 +2,7 @@
 
 I was a big fan and advocate of Docker Swarm Mode.
 
-Unfortunately, **Kubernetes simply won** all the market. 🥲
+Unfortunately, it seems **Kubernetes** has the overwhelming majority of the market. 🥲
 
 I think Docker Swarm Mode was a great product, and I didn't understand why it didn't get more adoption and kept growing.
 
@@ -19,6 +19,8 @@ The safest bet right now seems to be using Kubernetes or managed cloud services,
 Given that, this website is *deprecated*, and kept around mainly for historical reasons.
 
 Sadly, I don't have a good alternative or set of guides to recommend or offer right now. You can follow me on [Twitter](https://twitter.com/tiangolo) or [LinkedIn](https://www.linkedin.com/in/tiangolo/) to see what else I discover in the future.
+
+Meanwhile, you could check the [awesome-swarm](https://github.com/BretFisher/awesome-swarm) list for more resources about Docker Swarm Mode. 🤓
 
 ## History
 
