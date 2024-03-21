@@ -10,7 +10,7 @@ It's kept around mainly for historical reasons.
 
 See [Docker Swarm Mode or Kubernetes](swarm-or-kubernetes.md) for more information.
 
-If you want to see alternative resources, you could check the [awesome-swarm](https://github.com/BretFisher/awesome-swarm). 🤓
+If you want to see alternative resources, you could check the [awesome-swarm](https://github.com/BretFisher/awesome-swarm) list for more resources about Docker Swarm Mode. 🤓
 
 ## Why?
 
