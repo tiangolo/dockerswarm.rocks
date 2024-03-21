@@ -28,6 +28,7 @@
 
 ### Internal
 
+* ⬆ Bump actions/upload-artifact from 3 to 4. PR [#119](https://github.com/tiangolo/dockerswarm.rocks/pull/119) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 🔧 Add GitHub templates for discussions and issues, and security policy. PR [#139](https://github.com/tiangolo/dockerswarm.rocks/pull/139) by [@alejsdev](https://github.com/alejsdev).
 * ⬆ Bump tiangolo/issue-manager from 0.4.0 to 0.4.1. PR [#122](https://github.com/tiangolo/dockerswarm.rocks/pull/122) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 📝 Update admonition syntax. PR [#111](https://github.com/tiangolo/dockerswarm.rocks/pull/111) by [@tiangolo](https://github.com/tiangolo).
