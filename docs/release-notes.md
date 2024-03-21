@@ -28,6 +28,7 @@
 
 ### Internal
 
+* ⬆ Update mkdocs-material requirement from 9.5.7 to 9.5.14. PR [#140](https://github.com/tiangolo/dockerswarm.rocks/pull/140) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump tiangolo/issue-manager from 0.4.1 to 0.5.0. PR [#128](https://github.com/tiangolo/dockerswarm.rocks/pull/128) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump actions/cache from 3 to 4. PR [#124](https://github.com/tiangolo/dockerswarm.rocks/pull/124) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump actions/upload-artifact from 3 to 4. PR [#119](https://github.com/tiangolo/dockerswarm.rocks/pull/119) by [@dependabot[bot]](https://github.com/apps/dependabot).
