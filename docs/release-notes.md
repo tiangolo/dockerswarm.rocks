@@ -20,6 +20,7 @@
 
 ### Docs
 
+* 📝 Add note and link to Docker Swarm awesome list. PR [#142](https://github.com/tiangolo/dockerswarm.rocks/pull/142) by [@tiangolo](https://github.com/tiangolo).
 * 🐛 Fix `cadvisor` image in Swarmprom, use Google Registry. PR [#101](https://github.com/tiangolo/dockerswarm.rocks/pull/101) by [@otterDeveloper](https://github.com/otterDeveloper).
 * 📝 Tweak Swarmpit to use a new CouchDB with support for ARM. PR [#114](https://github.com/tiangolo/dockerswarm.rocks/pull/114) by [@tiangolo](https://github.com/tiangolo).
 * ✨ Add Traefik v3 instructions. PR [#93](https://github.com/tiangolo/dockerswarm.rocks/pull/93) by [@rbauduin](https://github.com/rbauduin).
