@@ -11,7 +11,7 @@ mkdocs-material = "9.5.14"
 pillow = "^9.3.0"
 cairosvg = "^2.5.2"
 mdx-include = "^1.4.1"
-typer-cli = "^0.0.13"
+typer-cli = "^0.12.3"
 mkdocs-markdownextradata-plugin = ">=0.1.7,<0.3.0"
 
 [build-system]
