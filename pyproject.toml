@@ -8,7 +8,7 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "^3.10"
 mkdocs-material = "9.5.24"
-pillow = "^9.3.0"
+pillow = "^10.3.0"
 cairosvg = "^2.5.2"
 mdx-include = "^1.4.1"
 typer-cli = "^0.0.13"
