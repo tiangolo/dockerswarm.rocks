@@ -29,6 +29,7 @@
 
 ### Internal
 
+* ⬆ Update mkdocs-material requirement from 9.5.14 to 9.5.24. PR [#159](https://github.com/tiangolo/dockerswarm.rocks/pull/159) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 👷 Update GitHub Actions to download and upload artifacts. PR [#156](https://github.com/tiangolo/dockerswarm.rocks/pull/156) by [@tiangolo](https://github.com/tiangolo).
 * ⬆ Bump dawidd6/action-download-artifact from 2.28.0 to 3.1.4. PR [#141](https://github.com/tiangolo/dockerswarm.rocks/pull/141) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Update mkdocs-material requirement from 9.5.7 to 9.5.14. PR [#140](https://github.com/tiangolo/dockerswarm.rocks/pull/140) by [@dependabot[bot]](https://github.com/apps/dependabot).
