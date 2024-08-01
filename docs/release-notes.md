@@ -29,6 +29,7 @@
 
 ### Internal
 
+* 👷 Update issue-manager.yml GitHub Action permissions. PR [#167](https://github.com/tiangolo/dockerswarm.rocks/pull/167) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Refactor GitHub Action to comment docs deployment URLs and update token. PR [#166](https://github.com/tiangolo/dockerswarm.rocks/pull/166) by [@tiangolo](https://github.com/tiangolo).
 * ⬆ Update pillow requirement from ^9.3.0 to ^10.3.0. PR [#145](https://github.com/tiangolo/dockerswarm.rocks/pull/145) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Update mkdocs-material requirement from 9.5.14 to 9.5.24. PR [#159](https://github.com/tiangolo/dockerswarm.rocks/pull/159) by [@dependabot[bot]](https://github.com/apps/dependabot).
