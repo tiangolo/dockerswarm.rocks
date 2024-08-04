@@ -29,6 +29,7 @@
 
 ### Internal
 
+* ♻️ Update build docs setup. PR [#169](https://github.com/tiangolo/dockerswarm.rocks/pull/169) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Update issue-manager.yml GitHub Action permissions. PR [#167](https://github.com/tiangolo/dockerswarm.rocks/pull/167) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Refactor GitHub Action to comment docs deployment URLs and update token. PR [#166](https://github.com/tiangolo/dockerswarm.rocks/pull/166) by [@tiangolo](https://github.com/tiangolo).
 * ⬆ Update pillow requirement from ^9.3.0 to ^10.3.0. PR [#145](https://github.com/tiangolo/dockerswarm.rocks/pull/145) by [@dependabot[bot]](https://github.com/apps/dependabot).
