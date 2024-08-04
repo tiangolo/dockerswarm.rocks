@@ -1,3 +1,4 @@
+INHERIT: ./mkdocs.maybe-insiders.yml
 site_name: Docker Swarm Rocks
 site_description: Docker Swarm mode ideas and tools
 
