@@ -6,12 +6,24 @@ site_url: https://dockerswarm.rocks
 theme:
   name: material
   palette:
-  - scheme: default
+  - media: "(prefers-color-scheme)"
+    toggle:
+      icon: material/lightbulb-auto
+      name: Switch to light mode
+  - media: '(prefers-color-scheme: light)'
+    scheme: default
     primary: light blue
     accent: indigo
     toggle:
       icon: material/lightbulb
       name: Switch to dark mode
+  - media: '(prefers-color-scheme: dark)'
+    scheme: slate
+    primary: light blue
+    accent: indigo
+    toggle:
+      icon: material/lightbulb-outline
+      name: Switch to system preference
   features:
   - search.suggest
   - search.highlight
