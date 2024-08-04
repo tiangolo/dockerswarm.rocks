@@ -1,4 +1,3 @@
 site
-.netlify
 .vscode
-poetry.lock
+*.pyc
