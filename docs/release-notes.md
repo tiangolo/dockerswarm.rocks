@@ -29,6 +29,7 @@
 
 ### Internal
 
+* 👷 Update docs-previews to handle no docs changes. PR [#174](https://github.com/tiangolo/dockerswarm.rocks/pull/174) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Show docs deployment status and preview URLs in comment. PR [#173](https://github.com/tiangolo/dockerswarm.rocks/pull/173) by [@tiangolo](https://github.com/tiangolo).
 * 🙈 Update gitignore. PR [#171](https://github.com/tiangolo/dockerswarm.rocks/pull/171) by [@tiangolo](https://github.com/tiangolo).
 * ♻️ Update build docs setup. PR [#169](https://github.com/tiangolo/dockerswarm.rocks/pull/169) by [@tiangolo](https://github.com/tiangolo).
