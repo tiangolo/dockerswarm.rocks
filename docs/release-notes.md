@@ -29,6 +29,7 @@
 
 ### Internal
 
+* 💄 Update Termynal line-height. PR [#176](https://github.com/tiangolo/dockerswarm.rocks/pull/176) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Upgrade build docs configs. PR [#175](https://github.com/tiangolo/dockerswarm.rocks/pull/175) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Update docs-previews to handle no docs changes. PR [#174](https://github.com/tiangolo/dockerswarm.rocks/pull/174) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Show docs deployment status and preview URLs in comment. PR [#173](https://github.com/tiangolo/dockerswarm.rocks/pull/173) by [@tiangolo](https://github.com/tiangolo).
