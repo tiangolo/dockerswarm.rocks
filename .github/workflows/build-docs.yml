@@ -27,6 +27,7 @@ jobs:
             - README.md
             - docs/**
             - requirements-docs.txt
+            - requirements-docs-insiders.txt
             - pyproject.toml
             - mkdocs.yml
             - mkdocs.insiders.yml
@@ -54,16 +55,15 @@ jobs:
         id: cache
         with:
           path: ${{ env.pythonLocation }}
-          key: ${{ runner.os }}-python-docs-${{ env.pythonLocation }}-${{ hashFiles('requirements-docs.txt') }}-v01
+          key: ${{ runner.os }}-python-docs-${{ env.pythonLocation }}-${{ hashFiles('pyproject.toml', 'requirements-docs.txt', 'requirements-docs-insiders.txt') }}-v02
       - name: Install docs extras
         if: steps.cache.outputs.cache-hit != 'true'
         run: pip install -r requirements-docs.txt
       - name: Install Material for MkDocs Insiders
         if: ( github.event_name != 'pull_request' || github.secret_source == 'Actions' ) && steps.cache.outputs.cache-hit != 'true'
-        run: |
-          pip install git+https://${{ secrets.MKDOCS_MATERIAL_INSIDERS }}@github.com/squidfunk/mkdocs-material-insiders.git
-          pip install git+https://${{ secrets.MKDOCS_MATERIAL_INSIDERS }}@github.com/pawamoy-insiders/griffe-typing-deprecated.git
-          pip install git+https://${{ secrets.MKDOCS_MATERIAL_INSIDERS }}@github.com/pawamoy-insiders/mkdocstrings-python.git
+        run: pip install -r requirements-docs-insiders.txt
+        env:
+          TOKEN: ${{ secrets.MKDOCS_MATERIAL_INSIDERS }}
       - uses: actions/cache@v4
         with:
           key: mkdocs-cards-${{ github.ref }}-v1
