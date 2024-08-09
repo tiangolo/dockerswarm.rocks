@@ -25,16 +25,28 @@ theme:
       icon: material/lightbulb-outline
       name: Switch to system preference
   features:
-  - search.suggest
-  - search.highlight
-  - content.tabs.link
-  - navigation.indexes
-  - content.tooltips
-  - navigation.path
   - content.code.annotate
   - content.code.copy
-  - content.code.select
+  # - content.code.select
+  - content.footnote.tooltips
+  - content.tabs.link
+  - content.tooltips
+  - navigation.footer
+  - navigation.indexes
+  - navigation.instant
+  - navigation.instant.prefetch
+  - navigation.instant.preview
+  - navigation.instant.progress
+  - navigation.path
   # - navigation.tabs
+  # - navigation.tabs.sticky
+  - navigation.top
+  - navigation.tracking
+  - search.highlight
+  - search.share
+  - search.suggest
+  - toc.follow
+
   icon:
     repo: fontawesome/brands/github-alt
   logo: img/icon-white.svg
@@ -42,7 +54,10 @@ theme:
   language: en
 repo_name: tiangolo/dockerswarm.rocks
 repo_url: https://github.com/tiangolo/dockerswarm.rocks
-edit_uri: ""
+plugins:
+  # Material for MkDocs
+  search:
+  social:
 
 nav:
     - Docker Swarm Rocks: index.md
@@ -62,29 +77,68 @@ nav:
     - release-notes.md
 
 markdown_extensions:
-  markdown.extensions.attr_list:
-  markdown.extensions.tables:
-  markdown.extensions.md_in_html:
+  # Python Markdown
+  abbr:
+  attr_list:
+  footnotes:
+  md_in_html:
+  tables:
   toc:
     permalink: true
-  pymdownx.superfences:
+
+  # Python Markdown Extensions
   pymdownx.betterem:
-  pymdownx.blocks.details:
+    smart_enable: all
+  pymdownx.caret:
+  pymdownx.highlight:
+    line_spans: __span
+  pymdownx.inlinehilite:
+  pymdownx.keys:
+  pymdownx.mark:
+  pymdownx.superfences:
+    custom_fences:
+    - name: mermaid
+      class: mermaid
+      format: !!python/name:pymdownx.superfences.fence_code_format
+  pymdownx.tilde:
+
+  # pymdownx blocks
   pymdownx.blocks.admonition:
     types:
     - note
-    - info
-    - tip
-    - warning
+    - attention
+    - caution
     - danger
+    - error
+    - tip
+    - hint
+    - warning
+    # Custom types
+    - info
+  pymdownx.blocks.details:
   pymdownx.blocks.tab:
     alternate_style: True
+
+  # Other extensions
   mdx_include:
 
 extra:
   analytics:
     provider: google
     property: G-DXZ6N63Y4N
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback!
   social:
   - icon: fontawesome/brands/github-alt
     link: https://github.com/tiangolo/dockerswarm.rocks
@@ -98,3 +152,14 @@ extra:
     link: https://medium.com/@tiangolo
   - icon: fontawesome/solid/globe
     link: https://tiangolo.com
+
+extra_css:
+  - css/termynal.css
+  - css/custom.css
+
+extra_javascript:
+  - js/termynal.js
+  - js/custom.js
+
+hooks:
+  - scripts/mkdocs_hooks.py
