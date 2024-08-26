@@ -29,6 +29,7 @@
 
 ### Internal
 
+* 👷 Update `latest-changes` GitHub Action. PR [#182](https://github.com/tiangolo/dockerswarm.rocks/pull/182) by [@tiangolo](https://github.com/tiangolo).
 * 🔨 Update docs.py script to enable dirty reload conditionally. PR [#178](https://github.com/tiangolo/dockerswarm.rocks/pull/178) by [@tiangolo](https://github.com/tiangolo).
 * 🔧 Update MkDocs previews. PR [#177](https://github.com/tiangolo/dockerswarm.rocks/pull/177) by [@tiangolo](https://github.com/tiangolo).
 * 💄 Update Termynal line-height. PR [#176](https://github.com/tiangolo/dockerswarm.rocks/pull/176) by [@tiangolo](https://github.com/tiangolo).
