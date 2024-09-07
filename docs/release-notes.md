@@ -29,6 +29,7 @@
 
 ### Internal
 
+* 👷 Update `issue-manager.yml`. PR [#185](https://github.com/tiangolo/dockerswarm.rocks/pull/185) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Update `build-docs.yml` GitHub Action `upload-artifact`. PR [#184](https://github.com/tiangolo/dockerswarm.rocks/pull/184) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Update `build-docs.yml` GitHub Action `upload-artifact`. PR [#183](https://github.com/tiangolo/dockerswarm.rocks/pull/183) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Update `latest-changes` GitHub Action. PR [#182](https://github.com/tiangolo/dockerswarm.rocks/pull/182) by [@tiangolo](https://github.com/tiangolo).
