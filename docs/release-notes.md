@@ -29,6 +29,7 @@
 
 ### Internal
 
+* ⬆ Bump mkdocs-material from 9.5.18 to 9.5.34. PR [#187](https://github.com/tiangolo/dockerswarm.rocks/pull/187) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump typer from 0.12.3 to 0.12.5. PR [#186](https://github.com/tiangolo/dockerswarm.rocks/pull/186) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump pillow from 10.1.0 to 10.4.0. PR [#172](https://github.com/tiangolo/dockerswarm.rocks/pull/172) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 👷 Update `issue-manager.yml`. PR [#185](https://github.com/tiangolo/dockerswarm.rocks/pull/185) by [@tiangolo](https://github.com/tiangolo).
