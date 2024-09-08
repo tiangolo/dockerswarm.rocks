@@ -29,6 +29,7 @@
 
 ### Internal
 
+* ⬆ Bump pillow from 10.1.0 to 10.4.0. PR [#172](https://github.com/tiangolo/dockerswarm.rocks/pull/172) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 👷 Update `issue-manager.yml`. PR [#185](https://github.com/tiangolo/dockerswarm.rocks/pull/185) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Update `build-docs.yml` GitHub Action `upload-artifact`. PR [#184](https://github.com/tiangolo/dockerswarm.rocks/pull/184) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Update `build-docs.yml` GitHub Action `upload-artifact`. PR [#183](https://github.com/tiangolo/dockerswarm.rocks/pull/183) by [@tiangolo](https://github.com/tiangolo).
