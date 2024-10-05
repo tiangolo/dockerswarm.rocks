@@ -29,6 +29,7 @@
 
 ### Internal
 
+* ⬆ Bump mkdocs-macros-plugin from 1.0.5 to 1.2.0. PR [#189](https://github.com/tiangolo/dockerswarm.rocks/pull/189) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump tiangolo/issue-manager from 0.5.0 to 0.5.1. PR [#188](https://github.com/tiangolo/dockerswarm.rocks/pull/188) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 👷 Upgrade Cloudflare GitHub Action. PR [#195](https://github.com/tiangolo/dockerswarm.rocks/pull/195) by [@tiangolo](https://github.com/tiangolo).
 * ⬆ Bump mkdocs-material from 9.5.18 to 9.5.34. PR [#187](https://github.com/tiangolo/dockerswarm.rocks/pull/187) by [@dependabot[bot]](https://github.com/apps/dependabot).
