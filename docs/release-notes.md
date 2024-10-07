@@ -29,6 +29,7 @@
 
 ### Internal
 
+* 👷 Update `labeler.yml`. PR [#198](https://github.com/tiangolo/dockerswarm.rocks/pull/198) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Update worfkow deploy-docs-notify URL. PR [#197](https://github.com/tiangolo/dockerswarm.rocks/pull/197) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Add labeler workflow. PR [#196](https://github.com/tiangolo/dockerswarm.rocks/pull/196) by [@tiangolo](https://github.com/tiangolo).
 * ⬆ Bump mkdocs-material from 9.5.34 to 9.5.39. PR [#194](https://github.com/tiangolo/dockerswarm.rocks/pull/194) by [@dependabot[bot]](https://github.com/apps/dependabot).
