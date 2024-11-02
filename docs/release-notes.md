@@ -29,6 +29,7 @@
 
 ### Internal
 
+* ⬆ Bump mkdocs-macros-plugin from 1.2.0 to 1.3.7. PR [#206](https://github.com/tiangolo/dockerswarm.rocks/pull/206) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump pillow from 10.4.0 to 11.0.0. PR [#203](https://github.com/tiangolo/dockerswarm.rocks/pull/203) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 👷 Update `labeler.yml`. PR [#198](https://github.com/tiangolo/dockerswarm.rocks/pull/198) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Update worfkow deploy-docs-notify URL. PR [#197](https://github.com/tiangolo/dockerswarm.rocks/pull/197) by [@tiangolo](https://github.com/tiangolo).
