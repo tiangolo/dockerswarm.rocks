@@ -29,6 +29,7 @@
 
 ### Internal
 
+* ⬆ Bump typer from 0.12.5 to 0.15.1. PR [#219](https://github.com/tiangolo/dockerswarm.rocks/pull/219) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Update httpx requirement from <0.28.0,>=0.27.0 to >=0.27.0,<0.29.0. PR [#215](https://github.com/tiangolo/dockerswarm.rocks/pull/215) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump tiangolo/latest-changes from 0.3.1 to 0.3.2. PR [#209](https://github.com/tiangolo/dockerswarm.rocks/pull/209) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 🔨 Update docs previews script. PR [#218](https://github.com/tiangolo/dockerswarm.rocks/pull/218) by [@tiangolo](https://github.com/tiangolo).
