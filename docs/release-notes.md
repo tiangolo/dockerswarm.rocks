@@ -29,6 +29,7 @@
 
 ### Internal
 
+* ⬆ Bump mkdocs-material from 9.5.43 to 9.6.2. PR [#225](https://github.com/tiangolo/dockerswarm.rocks/pull/225) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump pillow from 11.0.0 to 11.1.0. PR [#222](https://github.com/tiangolo/dockerswarm.rocks/pull/222) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump typer from 0.12.5 to 0.15.1. PR [#219](https://github.com/tiangolo/dockerswarm.rocks/pull/219) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Update httpx requirement from <0.28.0,>=0.27.0 to >=0.27.0,<0.29.0. PR [#215](https://github.com/tiangolo/dockerswarm.rocks/pull/215) by [@dependabot[bot]](https://github.com/apps/dependabot).
