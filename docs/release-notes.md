@@ -29,6 +29,7 @@
 
 ### Internal
 
+* ⬆ Bump tiangolo/latest-changes from 0.3.1 to 0.3.2. PR [#209](https://github.com/tiangolo/dockerswarm.rocks/pull/209) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 🔨 Update docs previews script. PR [#218](https://github.com/tiangolo/dockerswarm.rocks/pull/218) by [@tiangolo](https://github.com/tiangolo).
 * ⬆ Bump mkdocs-material from 9.5.39 to 9.5.43. PR [#207](https://github.com/tiangolo/dockerswarm.rocks/pull/207) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump mkdocs-macros-plugin from 1.2.0 to 1.3.7. PR [#206](https://github.com/tiangolo/dockerswarm.rocks/pull/206) by [@dependabot[bot]](https://github.com/apps/dependabot).
