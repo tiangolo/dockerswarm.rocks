@@ -29,6 +29,7 @@
 
 ### Internal
 
+* 👷 Use uv for CI. PR [#228](https://github.com/tiangolo/dockerswarm.rocks/pull/228) by [@tiangolo](https://github.com/tiangolo).
 * ⬆ Bump mkdocs-material from 9.5.43 to 9.6.2. PR [#225](https://github.com/tiangolo/dockerswarm.rocks/pull/225) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump pillow from 11.0.0 to 11.1.0. PR [#222](https://github.com/tiangolo/dockerswarm.rocks/pull/222) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump typer from 0.12.5 to 0.15.1. PR [#219](https://github.com/tiangolo/dockerswarm.rocks/pull/219) by [@dependabot[bot]](https://github.com/apps/dependabot).
