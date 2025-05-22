@@ -123,22 +123,6 @@ markdown_extensions:
   mdx_include:
 
 extra:
-  analytics:
-    provider: google
-    property: G-DXZ6N63Y4N
-    feedback:
-      title: Was this page helpful?
-      ratings:
-        - icon: material/emoticon-happy-outline
-          name: This page was helpful
-          data: 1
-          note: >-
-            Thanks for your feedback!
-        - icon: material/emoticon-sad-outline
-          name: This page could be improved
-          data: 0
-          note: >-
-            Thanks for your feedback!
   social:
   - icon: fontawesome/brands/github-alt
     link: https://github.com/tiangolo/dockerswarm.rocks
