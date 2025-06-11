@@ -29,6 +29,7 @@
 
 ### Internal
 
+* ⬆ Bump cairosvg from 2.7.1 to 2.8.2. PR [#246](https://github.com/tiangolo/dockerswarm.rocks/pull/246) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump typer from 0.15.1 to 0.16.0. PR [#248](https://github.com/tiangolo/dockerswarm.rocks/pull/248) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 🔧 Remove Google Analytics. PR [#247](https://github.com/tiangolo/dockerswarm.rocks/pull/247) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Use uv for CI. PR [#228](https://github.com/tiangolo/dockerswarm.rocks/pull/228) by [@tiangolo](https://github.com/tiangolo).
