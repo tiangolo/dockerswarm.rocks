@@ -29,6 +29,7 @@
 
 ### Internal
 
+* ⬆ Bump astral-sh/setup-uv from 5 to 6. PR [#239](https://github.com/tiangolo/dockerswarm.rocks/pull/239) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump mkdocs-material from 9.6.2 to 9.6.14. PR [#243](https://github.com/tiangolo/dockerswarm.rocks/pull/243) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump cairosvg from 2.7.1 to 2.8.2. PR [#246](https://github.com/tiangolo/dockerswarm.rocks/pull/246) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump typer from 0.15.1 to 0.16.0. PR [#248](https://github.com/tiangolo/dockerswarm.rocks/pull/248) by [@dependabot[bot]](https://github.com/apps/dependabot).
