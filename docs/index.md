@@ -16,6 +16,8 @@ See [Docker Swarm Mode or Kubernetes](swarm-or-kubernetes.md) for more informati
 
 If you want to see alternative resources, you could check the [awesome-swarm](https://github.com/BretFisher/awesome-swarm) list for more resources about Docker Swarm Mode. 🤓
 
+Or have a look at [Docker Swarm still rocks](https://dockerswarmstill.rocks) that is a continuation of the work done here. 👍
+
 ## Why?
 
 <a href="https://www.docker.com/" target="_blank">Docker</a> is a great tool (the "de facto" standard) to build **Linux containers**.
