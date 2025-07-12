@@ -30,6 +30,7 @@
 
 ### Internal
 
+* ⬆ Bump pillow from 11.2.1 to 11.3.0. PR [#253](https://github.com/tiangolo/dockerswarm.rocks/pull/253) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 📄 Add MIT License. PR [#251](https://github.com/tiangolo/dockerswarm.rocks/pull/251) by [@ChristianUlbrich](https://github.com/ChristianUlbrich).
 * ⬆ Bump pillow from 11.1.0 to 11.2.1. PR [#237](https://github.com/tiangolo/dockerswarm.rocks/pull/237) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump astral-sh/setup-uv from 5 to 6. PR [#239](https://github.com/tiangolo/dockerswarm.rocks/pull/239) by [@dependabot[bot]](https://github.com/apps/dependabot).
