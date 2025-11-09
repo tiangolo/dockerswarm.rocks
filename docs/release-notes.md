@@ -30,6 +30,7 @@
 
 ### Internal
 
+* ⬆ Bump mkdocs-macros-plugin from 1.3.7 to 1.4.1. PR [#279](https://github.com/tiangolo/dockerswarm.rocks/pull/279) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump actions/download-artifact from 5 to 6. PR [#278](https://github.com/tiangolo/dockerswarm.rocks/pull/278) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump pillow from 11.3.0 to 12.0.0. PR [#275](https://github.com/tiangolo/dockerswarm.rocks/pull/275) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump actions/setup-python from 5 to 6. PR [#264](https://github.com/tiangolo/dockerswarm.rocks/pull/264) by [@dependabot[bot]](https://github.com/apps/dependabot).
