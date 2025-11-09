@@ -30,6 +30,7 @@
 
 ### Internal
 
+* ⬆ Bump actions/checkout from 4 to 5. PR [#258](https://github.com/tiangolo/dockerswarm.rocks/pull/258) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump tiangolo/latest-changes from 0.3.2 to 0.4.0. PR [#256](https://github.com/tiangolo/dockerswarm.rocks/pull/256) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 👷 Update docs previews comment, single comment, add failure status. PR [#273](https://github.com/tiangolo/dockerswarm.rocks/pull/273) by [@tiangolo](https://github.com/tiangolo).
 * ⬆ Bump mkdocs-material from 9.6.14 to 9.6.15. PR [#254](https://github.com/tiangolo/dockerswarm.rocks/pull/254) by [@dependabot[bot]](https://github.com/apps/dependabot).
