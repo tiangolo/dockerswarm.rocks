@@ -30,6 +30,7 @@
 
 ### Internal
 
+* ⬆ Bump actions/setup-python from 5 to 6. PR [#264](https://github.com/tiangolo/dockerswarm.rocks/pull/264) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump actions/checkout from 4 to 5. PR [#258](https://github.com/tiangolo/dockerswarm.rocks/pull/258) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump tiangolo/latest-changes from 0.3.2 to 0.4.0. PR [#256](https://github.com/tiangolo/dockerswarm.rocks/pull/256) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 👷 Update docs previews comment, single comment, add failure status. PR [#273](https://github.com/tiangolo/dockerswarm.rocks/pull/273) by [@tiangolo](https://github.com/tiangolo).
