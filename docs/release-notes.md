@@ -30,6 +30,7 @@
 
 ### Internal
 
+* ⬆ Bump tiangolo/latest-changes from 0.3.2 to 0.4.0. PR [#256](https://github.com/tiangolo/dockerswarm.rocks/pull/256) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 👷 Update docs previews comment, single comment, add failure status. PR [#273](https://github.com/tiangolo/dockerswarm.rocks/pull/273) by [@tiangolo](https://github.com/tiangolo).
 * ⬆ Bump mkdocs-material from 9.6.14 to 9.6.15. PR [#254](https://github.com/tiangolo/dockerswarm.rocks/pull/254) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump pillow from 11.2.1 to 11.3.0. PR [#253](https://github.com/tiangolo/dockerswarm.rocks/pull/253) by [@dependabot[bot]](https://github.com/apps/dependabot).
