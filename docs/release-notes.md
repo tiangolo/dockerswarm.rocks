@@ -30,6 +30,7 @@
 
 ### Internal
 
+* 🔧 Upgrade Material for MkDocs and remove insiders. PR [#286](https://github.com/tiangolo/dockerswarm.rocks/pull/286) by [@tiangolo](https://github.com/tiangolo).
 * ⬆ Bump actions/labeler from 5 to 6. PR [#265](https://github.com/tiangolo/dockerswarm.rocks/pull/265) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump typer from 0.16.0 to 0.20.0. PR [#277](https://github.com/tiangolo/dockerswarm.rocks/pull/277) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump mkdocs-material from 9.6.15 to 9.6.23. PR [#280](https://github.com/tiangolo/dockerswarm.rocks/pull/280) by [@dependabot[bot]](https://github.com/apps/dependabot).
