@@ -1,4 +1,4 @@
-INHERIT: ./mkdocs.maybe-insiders.yml
+INHERIT: ./mkdocs.env.yml
 site_name: Docker Swarm Rocks
 site_description: Docker Swarm mode ideas and tools
 
@@ -58,6 +58,7 @@ plugins:
   # Material for MkDocs
   search:
   social:
+  typeset:
 
 nav:
     - Docker Swarm Rocks: index.md
@@ -77,6 +78,11 @@ nav:
     - release-notes.md
 
 markdown_extensions:
+  # Material for MkDocs
+  material.extensions.preview:
+    targets:
+      include:
+        - "*"
   # Python Markdown
   abbr:
   attr_list:

@@ -31,12 +31,9 @@ jobs:
             - README.md
             - docs/**
             - requirements-docs.txt
-            - requirements-docs-insiders.txt
             - pyproject.toml
             - mkdocs.yml
-            - mkdocs.insiders.yml
-            - mkdocs.maybe-insiders.yml
-            - mkdocs.no-insiders.yml
+            - mkdocs.env.yml
             - .github/workflows/build-docs.yml
             - .github/workflows/deploy-docs.yml
 
@@ -64,11 +61,6 @@ jobs:
             requirements**.txt
       - name: Install docs extras
         run: uv pip install -r requirements-docs.txt
-      - name: Install Material for MkDocs Insiders
-        if: ( github.event_name != 'pull_request' || github.secret_source == 'Actions' )
-        run: uv pip install -r requirements-docs-insiders.txt
-        env:
-          TOKEN: ${{ secrets.MKDOCS_MATERIAL_INSIDERS }}
       - uses: actions/cache@v4
         with:
           key: mkdocs-cards-${{ github.ref }}-v1
