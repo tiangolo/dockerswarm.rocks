@@ -30,6 +30,7 @@
 
 ### Internal
 
+* 💄 Use font Fira Code to fix display of Rich panels in docs in Windows. PR [#288](https://github.com/tiangolo/dockerswarm.rocks/pull/288) by [@tiangolo](https://github.com/tiangolo).
 * 🔧 Upgrade Material for MkDocs and remove insiders. PR [#286](https://github.com/tiangolo/dockerswarm.rocks/pull/286) by [@tiangolo](https://github.com/tiangolo).
 * ⬆ Bump actions/labeler from 5 to 6. PR [#265](https://github.com/tiangolo/dockerswarm.rocks/pull/265) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump typer from 0.16.0 to 0.20.0. PR [#277](https://github.com/tiangolo/dockerswarm.rocks/pull/277) by [@dependabot[bot]](https://github.com/apps/dependabot).
