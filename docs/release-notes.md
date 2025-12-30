@@ -20,6 +20,7 @@
 
 ### Docs
 
+* 📝 Fix typos. PR [#298](https://github.com/tiangolo/dockerswarm.rocks/pull/298) by [@alejsdev](https://github.com/alejsdev).
 * 💅 Update CSS to explicitly use emoji font. PR [#292](https://github.com/tiangolo/dockerswarm.rocks/pull/292) by [@tiangolo](https://github.com/tiangolo).
 * 📝 Add link to https://dockerswarmstill.rocks. PR [#249](https://github.com/tiangolo/dockerswarm.rocks/pull/249) by [@ChristianUlbrich](https://github.com/ChristianUlbrich).
 * 📝 Add note and link to Docker Swarm awesome list. PR [#142](https://github.com/tiangolo/dockerswarm.rocks/pull/142) by [@tiangolo](https://github.com/tiangolo).
