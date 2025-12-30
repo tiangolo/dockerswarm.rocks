@@ -31,6 +31,7 @@
 
 ### Internal
 
+* 🔧 Migrate from Material for MkDocs to Zensical. PR [#297](https://github.com/tiangolo/dockerswarm.rocks/pull/297) by [@alejsdev](https://github.com/alejsdev).
 * 👷 Upgrade actions/checkout from v5 to v6. PR [#290](https://github.com/tiangolo/dockerswarm.rocks/pull/290) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Upgrade `latest-changes` GitHub Action and pin `actions/checkout@v5`. PR [#289](https://github.com/tiangolo/dockerswarm.rocks/pull/289) by [@tiangolo](https://github.com/tiangolo).
 * 💄 Use font Fira Code to fix display of Rich panels in docs in Windows. PR [#288](https://github.com/tiangolo/dockerswarm.rocks/pull/288) by [@tiangolo](https://github.com/tiangolo).
