@@ -132,7 +132,7 @@ apt-get update
 apt-get upgrade -y
 ```
 
-* Install Docker following <a href="https://docs.docker.com/install/" target="_black">the official guide</a>...
+* Install Docker following <a href="https://docs.docker.com/install/" target="_blank">the official guide</a>...
 * ...or alternatively, run the official convenience script:
 
 ```bash

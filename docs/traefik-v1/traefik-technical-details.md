@@ -32,13 +32,13 @@ There is also `consul-replica`, a service with multiple replicas. Each one of th
 
 `consul-leader` is configured to listen to the first internal private IP address by using the environment variable `CONSUL_BIND_INTERFACE` listening on the first "ethernet" (virtual) interface `eth0`.
 
-It also has an evironment variable `CONSUL_LOCAL_CONFIG` with local configuration `{"leave_on_terminate": true}`. This means that if you re-deploy the service, the container it will leave the cluster before being turned off. And then the new container will be able to start. Otherwise, the new container will keep trying to contact the old container, without knowing that it is supposed to replace it.
+It also has an environment variable `CONSUL_LOCAL_CONFIG` with local configuration `{"leave_on_terminate": true}`. This means that if you re-deploy the service, the container it will leave the cluster before being turned off. And then the new container will be able to start. Otherwise, the new container will keep trying to contact the old container, without knowing that it is supposed to replace it.
 
 It is attached to the `default` network to be able to talk to the other `consul-replica` service (of multiple replica containers) and to the external network `traefik-public`, to be able to expose its web user interface with Traefik.
 
 It has several deployment labels, these are what make Traefik expose the Consul web UI with specific settings:
 
-* `traefik.frontend.rule=Host:consul.${DOMAIN?Variable not set}`: use as a host, the subdomain `consul` of the domain set in the environment variable `DOMAIN`. This host name is what will be used to genereate/acquire the HTTPS certificates. If there's no environment variable `DOMAIN`, show the error "`Variable not set`".
+* `traefik.frontend.rule=Host:consul.${DOMAIN?Variable not set}`: use as a host, the subdomain `consul` of the domain set in the environment variable `DOMAIN`. This host name is what will be used to generate/acquire the HTTPS certificates. If there's no environment variable `DOMAIN`, show the error "`Variable not set`".
 * `traefik.enable=true`: tell Traefik to expose this service in the web (otherwise, it wouldn't).
 * `traefik.port=8500`: expose the content from the port `8500` (that's the port inside the container).
 * `traefik.tags=${TRAEFIK_PUBLIC_TAG:-traefik-public}`: as the main Traefik proxy will only expose services with the `traefik-public` tag (using a parameter below), make the Consul service have this tag too, so that the Traefik public can find it and expose it. Use as the tag the environment variable `TRAEFIK_PUBLIC_TAG`, or by default, set it to `traefik-public`.
