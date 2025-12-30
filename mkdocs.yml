@@ -4,6 +4,7 @@ site_description: Docker Swarm mode ideas and tools
 
 site_url: https://dockerswarm.rocks
 theme:
+  variant: classic
   name: material
   palette:
   - media: "(prefers-color-scheme)"
