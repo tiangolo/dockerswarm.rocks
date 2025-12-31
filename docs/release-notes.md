@@ -32,6 +32,7 @@
 
 ### Internal
 
+* ⬆ Bump typer from 0.20.0 to 0.21.0. PR [#296](https://github.com/tiangolo/dockerswarm.rocks/pull/296) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 🔧 Migrate from Material for MkDocs to Zensical. PR [#297](https://github.com/tiangolo/dockerswarm.rocks/pull/297) by [@alejsdev](https://github.com/alejsdev).
 * 👷 Upgrade actions/checkout from v5 to v6. PR [#290](https://github.com/tiangolo/dockerswarm.rocks/pull/290) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Upgrade `latest-changes` GitHub Action and pin `actions/checkout@v5`. PR [#289](https://github.com/tiangolo/dockerswarm.rocks/pull/289) by [@tiangolo](https://github.com/tiangolo).
