@@ -20,6 +20,7 @@
 
 ### Docs
 
+* 📝 Update link syntax to minimal Markdown. PR [#310](https://github.com/tiangolo/dockerswarm.rocks/pull/310) by [@tiangolo](https://github.com/tiangolo).
 * 🔨 Handle external links `target=_blank` and CSS automatically in JS and CSS. PR [#309](https://github.com/tiangolo/dockerswarm.rocks/pull/309) by [@tiangolo](https://github.com/tiangolo).
 * 📝 Fix typos. PR [#298](https://github.com/tiangolo/dockerswarm.rocks/pull/298) by [@alejsdev](https://github.com/alejsdev).
 * 💅 Update CSS to explicitly use emoji font. PR [#292](https://github.com/tiangolo/dockerswarm.rocks/pull/292) by [@tiangolo](https://github.com/tiangolo).
