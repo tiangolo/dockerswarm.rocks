@@ -33,6 +33,7 @@
 
 ### Internal
 
+* 👷 Add pre-commit with prek, CI for it, generate README hook. PR [#311](https://github.com/tiangolo/dockerswarm.rocks/pull/311) by [@tiangolo](https://github.com/tiangolo).
 * ➕ Migrate to uv. PR [#302](https://github.com/tiangolo/dockerswarm.rocks/pull/302) by [@tiangolo](https://github.com/tiangolo).
 * ⬆ Bump typer from 0.20.0 to 0.21.0. PR [#296](https://github.com/tiangolo/dockerswarm.rocks/pull/296) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 🔧 Migrate from Material for MkDocs to Zensical. PR [#297](https://github.com/tiangolo/dockerswarm.rocks/pull/297) by [@alejsdev](https://github.com/alejsdev).
