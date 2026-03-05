@@ -5,6 +5,9 @@ description = "Docker Swarm mode ideas and tools"
 requires-python = ">=3.11"
 
 [dependency-groups]
+dev = [
+    "prek>=0.3.4",
+]
 docs = [
     "mkdocs-material==9.7.0",
     "mdx-include>=1.4.1,<2.0.0",
