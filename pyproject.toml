@@ -21,7 +21,7 @@ docs = [
     "griffe-warnings-deprecated==1.1.0",
     "typer==0.21.0",
     "mkdocs-macros-plugin==1.4.1",
-    "zensical==0.0.15",
+    "zensical==0.0.24",
 ]
 github-actions = [
     "PyGithub>=2.3.0,<3.0.0",
