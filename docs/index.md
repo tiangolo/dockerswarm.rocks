@@ -20,11 +20,11 @@ Or have a look at [Docker Swarm still rocks](https://dockerswarmstill.rocks) tha
 
 ## Why?
 
-<a href="https://www.docker.com/" target="_blank">Docker</a> is a great tool (the "de facto" standard) to build **Linux containers**.
+[Docker](https://www.docker.com/) is a great tool (the "de facto" standard) to build **Linux containers**.
 
-<a href="https://docs.docker.com/compose/" target="_blank">Docker Compose</a> is great to **develop locally** with Docker, in a replicable way.
+[Docker Compose](https://docs.docker.com/compose/) is great to **develop locally** with Docker, in a replicable way.
 
-<a href="https://docs.docker.com/engine/swarm/" target="_blank">Docker Swarm Mode</a> is great to **deploy** your application stacks to **production**, in a **distributed cluster**, using the same files used by Docker Compose locally.
+[Docker Swarm Mode](https://docs.docker.com/engine/swarm/) is great to **deploy** your application stacks to **production**, in a **distributed cluster**, using the same files used by Docker Compose locally.
 
 So, with Docker Swarm Mode you have:
 
@@ -52,8 +52,8 @@ You don't have to install anything else.
 
 Some of the main alternatives are:
 
-* <a href="https://kubernetes.io/" target="_blank">Kubernetes</a>.
-* <a href="http://mesos.apache.org/" target="_blank">Mesos</a>.
+* [Kubernetes](https://kubernetes.io/).
+* [Mesos](http://mesos.apache.org/).
 
 To use any of them you need to learn a huge new set of concepts, configurations, files, commands, etc.
 
@@ -136,7 +136,7 @@ apt-get update
 apt-get upgrade -y
 ```
 
-* Install Docker following <a href="https://docs.docker.com/install/" target="_blank">the official guide</a>...
+* Install Docker following [the official guide](https://docs.docker.com/install/)...
 * ...or alternatively, run the official convenience script:
 
 ```bash

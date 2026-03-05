@@ -1,6 +1,6 @@
 # GitLab CI runner for CI/CD
 
-<a href="https://about.gitlab.com/" target="_blank">GitLab</a> is an open source Git code management system, similar to GitHub and Bitbucket.
+[GitLab](https://about.gitlab.com/) is an open source Git code management system, similar to GitHub and Bitbucket.
 
 It has integrated CI/CD (continuous integration and continuous deployment).
 
@@ -68,9 +68,9 @@ gitlab-runner \
 
 GitLab CI is controlled using a `.gitlab-ci.yml` file that lives in your same code repository.
 
-To learn more about it, you can check <a href="https://about.gitlab.com/product/continuous-integration/" target="_blank">GitLab CI's official documentation</a>.
+To learn more about it, you can check [GitLab CI's official documentation](https://about.gitlab.com/product/continuous-integration/).
 
-If you have a Docker Swarm mode cluster with a main Traefik proxy set up using the ideas from <a href="https://dockerswarm.rocks" target="_blank">DockerSwarm.rocks</a>, your `.gitlab-ci.yml` file could look like:
+If you have a Docker Swarm mode cluster with a main Traefik proxy set up using the ideas from [DockerSwarm.rocks](https://dockerswarm.rocks), your `.gitlab-ci.yml` file could look like:
 
 ```YAML
 image: tiangolo/docker-with-compose
@@ -81,7 +81,7 @@ before_script:
 stages:
   - build
   - deploy
-  
+
 build-prod:
   stage: build
   script:
@@ -97,4 +97,4 @@ deploy-prod:
     - master
 ```
 
-To see more complete examples, check the <a href="https://dockerswarm.rocks/project-generators/" target="_blank">Project Generators at DockerSwarm.rocks</a>.
+To see more complete examples, check the [Project Generators at DockerSwarm.rocks](https://dockerswarm.rocks/project-generators/).

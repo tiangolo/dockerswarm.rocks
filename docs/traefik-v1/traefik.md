@@ -2,15 +2,15 @@
 
 This article lives in:
 
-* <a href="https://medium.com/@tiangolo/docker-swarm-mode-and-distributed-traefik-proxy-with-https-6df45d0c0fc0" target="_blank">Medium</a>
-* <a href="https://github.com/tiangolo/medium-posts/tree/master/docker-swarm-mode-and-distributed-traefik-proxy-with-https" target="_blank">GitHub</a>
-* <a href="https://dockerswarm.rocks/traefik/" target="_blank">DockerSwarm.rocks</a>
+* [Medium](https://medium.com/@tiangolo/docker-swarm-mode-and-distributed-traefik-proxy-with-https-6df45d0c0fc0)
+* [GitHub](https://github.com/tiangolo/medium-posts/tree/master/docker-swarm-mode-and-distributed-traefik-proxy-with-https)
+* [DockerSwarm.rocks](https://dockerswarm.rocks/traefik/)
 
 ## Note about Traefik v2
 
 This article is for Traefik version 1.
 
-There is now a guide for Traefik version 2, if you are starting a new project, you should check that one at <a href="https://dockerswarm.rocks/traefik/" class="external-link" target="_blank">DockerSwarm.rocks/traefik/</a>.
+There is now a guide for Traefik version 2, if you are starting a new project, you should check that one at [DockerSwarm.rocks/traefik/](https://dockerswarm.rocks/traefik/).
 
 /// warning
 
@@ -20,15 +20,15 @@ The technique described here using Consul to store the Let's Encrypt certificate
 
 ## Intro
 
-So, you have a **Docker Swarm mode** cluster set up as described in <a href="https://dockerswarm.rocks" target="_blank">DockerSwarm.rocks</a>.
+So, you have a **Docker Swarm mode** cluster set up as described in [DockerSwarm.rocks](https://dockerswarm.rocks).
 
-Now you can add a main, distributed, <a href="https://traefik.io/" target="_blank">**Traefik**</a> load balancer/proxy to:
+Now you can add a main, distributed, [**Traefik**](https://traefik.io/) load balancer/proxy to:
 
 * Handle **connections**.
 * **Expose** specific services and applications based on their domain names.
 * Handle **multiple domains** (if you need to). Similar to "virtual hosts".
 * Handle **HTTPS**.
-* Acquire (generate) **HTTPS certificates automatically** (including renewals) with <a href="https://letsencrypt.org/" target="_blank">Let's Encrypt</a>.
+* Acquire (generate) **HTTPS certificates automatically** (including renewals) with [Let's Encrypt](https://letsencrypt.org/).
 * Add HTTP **Basic Auth** for any service that you need to protect and doesn't have its own security, etc.
 * Get all its configurations automatically from **Docker labels** set in your stacks (you don't need to update configuration files).
 
@@ -36,7 +36,7 @@ This article/guide covers setting up Traefik in a distributed system, including 
 
 These ideas, techniques, and tools would also apply to other cluster orchestrators, like Kubernetes or Mesos, to add a main load balancer with HTTPS support, certificate generation, etc. But this article is focused on Docker Swarm mode.
 
-It's an alternative/continuation to a previous article <a href="https://medium.com/@tiangolo/docker-swarm-mode-and-traefik-for-a-https-cluster-20328dba6232" target="_blank">Docker Swarm Mode and Traefik for an HTTPS cluster</a> that covered Traefik in a Docker Swarm mode cluster but running on a single node.
+It's an alternative/continuation to a previous article [Docker Swarm Mode and Traefik for an HTTPS cluster](https://medium.com/@tiangolo/docker-swarm-mode-and-traefik-for-a-https-cluster-20328dba6232) that covered Traefik in a Docker Swarm mode cluster but running on a single node.
 
 ## Background
 
@@ -46,7 +46,7 @@ It's also used by several other friends and teams.
 
 ## Overview
 
-This guide will show you how to set up <a href="https://traefik.io/" target="_blank">**Traefik**</a> as a load balancer/proxy and <a href="https://www.consul.io/" target="_blank">**Consul**</a> to store configurations and HTTPS certificates.
+This guide will show you how to set up [**Traefik**](https://traefik.io/) as a load balancer/proxy and [**Consul**](https://www.consul.io/) to store configurations and HTTPS certificates.
 
 ### Redundancy
 
@@ -157,7 +157,7 @@ If you have a single node, you can set `CONSUL_REPLICAS` to `0`, that way you wi
 export CONSUL_REPLICAS=0
 ```
 
-**Note**: The <a href="https://www.consul.io/docs/internals/architecture.html" target="_blank">Consul documentation says</a>:
+**Note**: The [Consul documentation says](https://www.consul.io/docs/internals/architecture.html):
 
 > It is expected that there be between three to five servers.
 
@@ -312,7 +312,7 @@ The next thing would be to deploy a stack (a complete web application, with back
 
 It's actually very simple, as you can use Docker Compose for local development and then use the same files for deployment in the Docker Swarm mode cluster.
 
-If you want to try it right now, you can check this very simple <a href="https://github.com/tiangolo/flask-frontend-docker" target="_blank">project generator with a minimal Flask backend and Vue.js frontend</a>.
+If you want to try it right now, you can check this very simple [project generator with a minimal Flask backend and Vue.js frontend](https://github.com/tiangolo/flask-frontend-docker).
 
 It has everything set up to be deployed in a Docker Swarm mode cluster with Traefik as described in this article.
 

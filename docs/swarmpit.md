@@ -1,8 +1,8 @@
 # Swarmpit web user interface for your Docker Swarm cluster
 
-<a href="https://swarmpit.io/" target="_blank">Swarmpit</a> provides a nice and clean way to manage your Docker Swarm cluster.
+[Swarmpit](https://swarmpit.io/) provides a nice and clean way to manage your Docker Swarm cluster.
 
-Follow this guide to integrate it in your Docker Swarm mode cluster deployed as described in <a href="https://dockerswarm.rocks" target="_blank">DockerSwarm.rocks</a> with a global Traefik HTTPS proxy.
+Follow this guide to integrate it in your Docker Swarm mode cluster deployed as described in [DockerSwarm.rocks](https://dockerswarm.rocks) with a global Traefik HTTPS proxy.
 
 Here's one of the screens:
 

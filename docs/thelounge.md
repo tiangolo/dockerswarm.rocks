@@ -1,8 +1,8 @@
 # The Lounge - self-hosted web IRC client
 
-<a href="https://thelounge.chat/" target="_blank">The Lounge</a> is a self-hosted web IRC client.
+[The Lounge](https://thelounge.chat/) is a self-hosted web IRC client.
 
-Follow this guide to integrate it in your Docker Swarm mode cluster deployed as described in <a href="https://dockerswarm.rocks" target="_blank">DockerSwarm.rocks</a> with a global Traefik HTTPS proxy.
+Follow this guide to integrate it in your Docker Swarm mode cluster deployed as described in [DockerSwarm.rocks](https://dockerswarm.rocks) with a global Traefik HTTPS proxy.
 
 ## Preparation
 

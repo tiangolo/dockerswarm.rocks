@@ -6,6 +6,7 @@ requires-python = ">=3.11"
 
 [dependency-groups]
 dev = [
+    { include-group = "docs" },
     "prek>=0.3.4",
 ]
 docs = [
