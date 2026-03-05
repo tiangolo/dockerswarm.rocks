@@ -2,15 +2,15 @@
 
 This article lives in:
 
-* <a href="https://medium.com/@tiangolo/docker-swarm-with-swarmprom-for-real-time-monitoring-and-alerts-282da7890698" target="_blank">Medium</a>
-* <a href="https://github.com/tiangolo/medium-posts/tree/master/docker-swarm-with-swarmprom-for-real-time-monitoring-and-alerts" target="_blank">GitHub</a>
-* <a href="https://dockerswarm.rocks/swarmprom/" target="_blank">DockerSwarm.rocks</a>
+* [Medium](https://medium.com/@tiangolo/docker-swarm-with-swarmprom-for-real-time-monitoring-and-alerts-282da7890698)
+* [GitHub](https://github.com/tiangolo/medium-posts/tree/master/docker-swarm-with-swarmprom-for-real-time-monitoring-and-alerts)
+* [DockerSwarm.rocks](https://dockerswarm.rocks/swarmprom/)
 
 ## Intro
 
-Let's say you already set up a **<a href="https://dockerswarm.rocks" target="_blank">Docker Swarm mode</a>** cluster, with a <a href="https://dockerswarm.rocks/traefik/" target="_blank">Traefik HTTPS proxy</a>.
+Let's say you already set up a **[Docker Swarm mode](https://dockerswarm.rocks)** cluster, with a [Traefik HTTPS proxy](https://dockerswarm.rocks/traefik/).
 
-Here's how you can set up <a href="https://github.com/stefanprodan/swarmprom" target="_blank">Swarmprom</a> to monitor your cluster.
+Here's how you can set up [Swarmprom](https://github.com/stefanprodan/swarmprom) to monitor your cluster.
 
 It will allow you to:
 
@@ -24,12 +24,12 @@ Swarmprom is actually just a set of tools pre-configured in a smart way for a Do
 
 It includes:
 
-* <a href="https://prometheus.io/" target="_blank">Prometheus</a>
-* <a href="https://grafana.com/" target="_blank">Grafana</a>
-* <a href="https://github.com/google/cadvisor" target="_blank">cAdvisor</a>
-* <a href="https://github.com/prometheus/node_exporter" target="_blank">Node Exporter</a>
-* <a href="https://github.com/prometheus/alertmanager" target="_blank">Alert Manager</a>
-* <a href="https://github.com/cloudflare/unsee" target="_blank">Unsee</a>
+* [Prometheus](https://prometheus.io/)
+* [Grafana](https://grafana.com/)
+* [cAdvisor](https://github.com/google/cadvisor)
+* [Node Exporter](https://github.com/prometheus/node_exporter)
+* [Alert Manager](https://github.com/prometheus/alertmanager)
+* [Unsee](https://github.com/cloudflare/unsee)
 
 Here's how it looks like:
 

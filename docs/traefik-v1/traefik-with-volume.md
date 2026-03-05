@@ -2,15 +2,15 @@
 
 This article lives in:
 
-* <a href="https://medium.com/@tiangolo/docker-swarm-mode-and-traefik-for-a-https-cluster-20328dba6232" target="_blank">Medium</a>
-* <a href="https://github.com/tiangolo/medium-posts/tree/master/docker-swarm-mode-and-traefik-for-a-https-cluster" target="_blank">GitHub</a>
-* <a href="https://dockerswarm.rocks/traefik-with-volume/" target="_blank">DockerSwarm.rocks</a>
+* [Medium](https://medium.com/@tiangolo/docker-swarm-mode-and-traefik-for-a-https-cluster-20328dba6232)
+* [GitHub](https://github.com/tiangolo/medium-posts/tree/master/docker-swarm-mode-and-traefik-for-a-https-cluster)
+* [DockerSwarm.rocks](https://dockerswarm.rocks/traefik-with-volume/)
 
 ## Note about Traefik v2
 
 This article is for Traefik version 1.
 
-There is now a guide for Traefik version 2, if you are starting a new project, you should check that one at <a href="https://dockerswarm.rocks/traefik/" class="external-link" target="_blank">DockerSwarm.rocks/traefik/</a>.
+There is now a guide for Traefik version 2, if you are starting a new project, you should check that one at [DockerSwarm.rocks/traefik/](https://dockerswarm.rocks/traefik/).
 
 ## Set up
 
@@ -29,7 +29,7 @@ docker network create --driver=overlay traefik-public
 docker volume create traefik-public-certificates
 ```
 
-**Note**: you can <a href="https://dockerswarm.rocks/traefik/" target="_blank">store certificates in Consul and deploy Traefik in each node as a fully distributed load balancer</a>, this guide covers deploying to a single node, with a mounted volume instead of a distributed Consul.
+**Note**: you can [store certificates in Consul and deploy Traefik in each node as a fully distributed load balancer](https://dockerswarm.rocks/traefik/), this guide covers deploying to a single node, with a mounted volume instead of a distributed Consul.
 
 * Get the Swarm node ID of this node and store it in an environment variable:
 
@@ -244,4 +244,4 @@ The next thing would be to deploy a stack (a complete web application, with back
 
 It's actually very simple, as you can use Docker Compose for local development and then use the same files for deployment in the Docker Swarm mode cluster.
 
-If you want to try it right now, you can check this very simple <a href="https://github.com/tiangolo/flask-frontend-docker" target="_blank">project generator with a minimal Flask backend and Vue.js frontend</a>.
+If you want to try it right now, you can check this very simple [project generator with a minimal Flask backend and Vue.js frontend](https://github.com/tiangolo/flask-frontend-docker).

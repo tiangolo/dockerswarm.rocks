@@ -4,7 +4,7 @@
 
 This guide is updated for Traefik version 2 and version 3. ✨
 
-If you are looking for the previous guides for Traefik version 1, check them in <a href="https://dockerswarm.rocks/traefik-v1/" class="external-link" target="_blank">DockerSwarm.rocks/traefik-v1/</a>.
+If you are looking for the previous guides for Traefik version 1, check them in [DockerSwarm.rocks/traefik-v1/](https://dockerswarm.rocks/traefik-v1/).
 Using Traefik 3 is only one line difference in the YAML used to deploy Traefik, and is detailed below.
 
 /// note
@@ -19,15 +19,15 @@ But for new projects, continue here. 🚀
 
 ## Intro
 
-So, you have a **Docker Swarm mode** cluster set up as described in <a href="https://dockerswarm.rocks" target="_blank">DockerSwarm.rocks</a>.
+So, you have a **Docker Swarm mode** cluster set up as described in [DockerSwarm.rocks](https://dockerswarm.rocks).
 
-Now you can add a main <a href="https://traefik.io/" target="_blank">**Traefik**</a> load balancer/proxy to:
+Now you can add a main [**Traefik**](https://traefik.io/) load balancer/proxy to:
 
 * Handle **connections**.
 * **Expose** specific services and applications based on their domain names.
 * Handle **multiple domains** (if you need to). Similar to "virtual hosts".
 * Handle **HTTPS**.
-* Acquire (generate) **HTTPS certificates automatically** (including renewals) with <a href="https://letsencrypt.org/" target="_blank">Let's Encrypt</a>.
+* Acquire (generate) **HTTPS certificates automatically** (including renewals) with [Let's Encrypt](https://letsencrypt.org/).
 * Add HTTP **Basic Auth** for any service that you need to protect and doesn't have its own security, etc.
 * Get all its configurations automatically from **Docker labels** set in your stacks (you don't need to update configuration files).
 
@@ -262,7 +262,7 @@ There was a guide in DockerSwarm.rocks for setting up Traefik with Consul to sto
 
 Nevertheless, that technique was fragile and error prone. Because of that, the Traefik team disabled that functionality in Traefik version 2.
 
-In many cases the technique described here should be enough. But if you have a big and complex system that requires a distributed Let's Encrypt store for Traefik, you should check <a href="https://containo.us/traefikee/" class="external-link" target="_blank">Traefik Enterprise Edition</a> that supports it.
+In many cases the technique described here should be enough. But if you have a big and complex system that requires a distributed Let's Encrypt store for Traefik, you should check [Traefik Enterprise Edition](https://containo.us/traefikee/) that supports it.
 
 ## What's next
 
@@ -270,4 +270,4 @@ The next thing would be to deploy a stack (a complete web application, with back
 
 It's actually very simple, as you can use Docker Compose for local development and then use the same files for deployment in the Docker Swarm mode cluster.
 
-If you want to try it right now, you can check this project generator with a FastAPI backend and a frontend using Vue.js <a href="https://github.com/tiangolo/full-stack-fastapi-postgresql" class="external-link" target="_blank">https://github.com/tiangolo/full-stack-fastapi-postgresql</a>.
+If you want to try it right now, you can check this project generator with a FastAPI backend and a frontend using Vue.js [https://github.com/tiangolo/full-stack-fastapi-postgresql](https://github.com/tiangolo/full-stack-fastapi-postgresql).
