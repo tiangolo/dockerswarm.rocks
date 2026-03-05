@@ -12,6 +12,6 @@ internal:
         - scripts/**
         - .gitignore
         - .pre-commit-config.yaml
-        - requirements*.txt
+        - uv.lock
       - all-globs-to-all-files:
         - '!docs/**'
