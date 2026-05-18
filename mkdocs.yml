@@ -49,17 +49,12 @@ theme:
   - toc.follow
 
   icon:
-    repo: fontawesome/brands/github-alt
+    repo: octicons/mark-github-24
   logo: img/icon-white.svg
   favicon: img/favicon.png
   language: en
 repo_name: tiangolo/dockerswarm.rocks
 repo_url: https://github.com/tiangolo/dockerswarm.rocks
-plugins:
-  # Material for MkDocs
-  search:
-  social:
-  typeset:
 
 nav:
     - Docker Swarm Rocks: index.md
@@ -70,7 +65,7 @@ nav:
     - portainer.md
     - thelounge.md
     - gitlab-ci.md
-    - Traefik v1 (previous/obsolete guides):
+    - "":
         - traefik-v1/index.md
         - traefik-v1/traefik.md
         - traefik-v1/traefik-technical-details.md
@@ -84,6 +79,7 @@ markdown_extensions:
     targets:
       include:
         - "*"
+  zensical.extensions.macros:
   # Python Markdown
   abbr:
   attr_list:
@@ -131,18 +127,16 @@ markdown_extensions:
 
 extra:
   social:
-  - icon: fontawesome/brands/github-alt
-    link: https://github.com/tiangolo/dockerswarm.rocks
-  - icon: fontawesome/brands/twitter
-    link: https://twitter.com/tiangolo
-  - icon: fontawesome/brands/linkedin
-    link: https://www.linkedin.com/in/tiangolo
-  - icon: fontawesome/brands/dev
-    link: https://dev.to/tiangolo
-  - icon: fontawesome/brands/medium
-    link: https://medium.com/@tiangolo
-  - icon: fontawesome/solid/globe
-    link: https://tiangolo.com
+    - icon: octicons/mark-github-24
+      link: https://github.com/tiangolo/dockerswarm.rocks
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/tiangolo
+    - icon: fontawesome/brands/bluesky
+      link: https://bsky.app/profile/tiangolo.com
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/tiangolo
+    - icon: fontawesome/solid/globe
+      link: https://tiangolo.com
 
 extra_css:
   - css/termynal.css
@@ -152,5 +146,5 @@ extra_javascript:
   - js/termynal.js
   - js/custom.js
 
-hooks:
-  - scripts/mkdocs_hooks.py
+validation:
+  unresolved_references: false

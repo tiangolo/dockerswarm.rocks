@@ -1,4 +1,4 @@
-# Traefik v1
+# Traefik v1 (previous/obsolete guides)
 
 Here are the previous guides for Traefik using version 1.
 
