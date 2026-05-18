@@ -36,6 +36,7 @@
 
 ### Internal
 
+* ⬆ Bump urllib3 from 2.6.3 to 2.7.0. PR [#319](https://github.com/tiangolo/dockerswarm.rocks/pull/319) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 👷 Add pre-commit with prek, CI for it, generate README hook. PR [#311](https://github.com/tiangolo/dockerswarm.rocks/pull/311) by [@tiangolo](https://github.com/tiangolo).
 * ➕ Migrate to uv. PR [#302](https://github.com/tiangolo/dockerswarm.rocks/pull/302) by [@tiangolo](https://github.com/tiangolo).
 * ⬆ Bump typer from 0.20.0 to 0.21.0. PR [#296](https://github.com/tiangolo/dockerswarm.rocks/pull/296) by [@dependabot[bot]](https://github.com/apps/dependabot).
