@@ -48,7 +48,7 @@ nano thelounge.yml
 {!./docs/thelounge.yml!}
 ```
 
-/// info
+/// note
 
 This is just a standard Docker Compose file.
 

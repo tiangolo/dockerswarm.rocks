@@ -52,7 +52,7 @@ nano portainer.yml
 {!./docs/portainer.yml!}
 ```
 
-/// info
+/// note
 
 This is just a standard Docker Compose file.
 

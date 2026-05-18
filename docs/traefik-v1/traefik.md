@@ -201,7 +201,7 @@ nano traefik-v1.yml
 {!./docs/traefik-v1.yml!}
 ```
 
-/// info
+/// note
 
 This is just a standard Docker Compose file.
 
