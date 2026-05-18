@@ -20,6 +20,7 @@
 
 ### Docs
 
+* 📝 Update and simplify admonitions usage. PR [#321](https://github.com/tiangolo/dockerswarm.rocks/pull/321) by [@tiangolo](https://github.com/tiangolo).
 * 🔧 Upgrade Zensical docs setup. PR [#320](https://github.com/tiangolo/dockerswarm.rocks/pull/320) by [@tiangolo](https://github.com/tiangolo).
 * 📝 Update link syntax to minimal Markdown. PR [#310](https://github.com/tiangolo/dockerswarm.rocks/pull/310) by [@tiangolo](https://github.com/tiangolo).
 * 🔨 Handle external links `target=_blank` and CSS automatically in JS and CSS. PR [#309](https://github.com/tiangolo/dockerswarm.rocks/pull/309) by [@tiangolo](https://github.com/tiangolo).
