@@ -162,7 +162,7 @@ The file without comments is actually quite smaller, but the comments should giv
 
 ///
 
-/// info
+/// note
 
 This is just a standard Docker Compose file.
 

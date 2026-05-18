@@ -58,7 +58,7 @@ nano swarmpit.yml
 {!./docs/swarmpit.yml!}
 ```
 
-/// info
+/// note
 
 This is just a standard Docker Compose file.
 

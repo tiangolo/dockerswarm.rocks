@@ -129,7 +129,7 @@ nano swarmprom.yml
 {!./docs/swarmprom.yml!}
 ```
 
-/// info
+/// note
 
 This is just a standard Docker Compose file.
 
