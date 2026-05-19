@@ -36,6 +36,7 @@
 
 ### Internal
 
+* 👷 Update Dependabot. PR [#322](https://github.com/tiangolo/dockerswarm.rocks/pull/322) by [@tiangolo](https://github.com/tiangolo).
 * ⬆ Bump pyjwt from 2.11.0 to 2.12.0. PR [#313](https://github.com/tiangolo/dockerswarm.rocks/pull/313) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump urllib3 from 2.6.3 to 2.7.0. PR [#319](https://github.com/tiangolo/dockerswarm.rocks/pull/319) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 👷 Add pre-commit with prek, CI for it, generate README hook. PR [#311](https://github.com/tiangolo/dockerswarm.rocks/pull/311) by [@tiangolo](https://github.com/tiangolo).
