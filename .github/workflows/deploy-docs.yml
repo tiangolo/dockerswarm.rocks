@@ -20,7 +20,7 @@ jobs:
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUB_CONTEXT"
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
@@ -45,7 +45,7 @@ jobs:
         run: |
           rm -rf ./site
           mkdir ./site
-      - uses: actions/download-artifact@v6
+      - uses: actions/download-artifact@v8
         with:
           path: ./site/
           pattern: docs-site
@@ -59,7 +59,7 @@ jobs:
         env:
           PROJECT_NAME: dockerswarmrocks
           BRANCH: ${{ ( github.event.workflow_run.head_repository.full_name == github.repository && github.event.workflow_run.head_branch == 'master' && 'main' ) || ( github.event.workflow_run.head_sha ) }}
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
