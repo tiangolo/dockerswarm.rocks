@@ -36,6 +36,7 @@
 
 ### Internal
 
+* 🔥 Remove config files now stored in central GitHub repo. PR [#327](https://github.com/tiangolo/dockerswarm.rocks/pull/327) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Update Dependabot group name. PR [#325](https://github.com/tiangolo/dockerswarm.rocks/pull/325) by [@tiangolo](https://github.com/tiangolo).
 * ⬆ Bump the github-actions group with 7 updates. PR [#323](https://github.com/tiangolo/dockerswarm.rocks/pull/323) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump the python-packages group with 6 updates. PR [#324](https://github.com/tiangolo/dockerswarm.rocks/pull/324) by [@dependabot[bot]](https://github.com/apps/dependabot).
