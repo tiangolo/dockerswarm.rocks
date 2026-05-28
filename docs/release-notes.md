@@ -36,6 +36,7 @@
 
 ### Internal
 
+* ⬆ Bump astral-sh/setup-uv from 6 to 7. PR [#282](https://github.com/tiangolo/dockerswarm.rocks/pull/282) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 📌 Upgrade uv lock. PR [#328](https://github.com/tiangolo/dockerswarm.rocks/pull/328) by [@tiangolo](https://github.com/tiangolo).
 * ⬆ Bump idna from 3.11 to 3.15. PR [#326](https://github.com/tiangolo/dockerswarm.rocks/pull/326) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 🔥 Remove config files now stored in central GitHub repo. PR [#327](https://github.com/tiangolo/dockerswarm.rocks/pull/327) by [@tiangolo](https://github.com/tiangolo).
