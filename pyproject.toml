@@ -7,14 +7,14 @@ requires-python = ">=3.11"
 [dependency-groups]
 dev = [
     { include-group = "docs" },
-    "prek>=0.3.13",
+    "prek>=0.4.3",
 ]
 docs = [
     "mdx-include>=1.4.1,<2.0.0",
     "pyyaml>=5.3.1,<7.0.0",
     "pillow==12.2.0",
     "cairosvg==2.9.0",
-    "typer==0.25.1",
+    "typer==0.26.4",
     "zensical>=0.0.42",
 ]
 github-actions = [
