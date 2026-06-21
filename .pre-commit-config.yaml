@@ -22,7 +22,7 @@ repos:
         files: ^docs/index\.md|scripts/docs\.py$
         pass_filenames: false
 
-  - repo: local
+-   repo: local
     hooks:
       - id: zizmor
         name: zizmor
