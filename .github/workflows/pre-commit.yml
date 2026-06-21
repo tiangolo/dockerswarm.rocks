@@ -28,8 +28,8 @@ jobs:
           # And it needs the full history to be able to compute diffs
           fetch-depth: 0
           # A token other than the default GITHUB_TOKEN is needed to be able to trigger CI
-          token: ${{ secrets.PRE_COMMIT }}
-          persist-credentials: false
+          token: ${{ secrets.PRE_COMMIT }} # zizmor: ignore[secrets-outside-env]
+          persist-credentials: true # Required for `git push` command
       # pre-commit lite ci needs the default checkout configs to work
       - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
         name: Checkout PR for fork
