@@ -8,6 +8,7 @@ requires-python = ">=3.11"
 dev = [
     { include-group = "docs" },
     "prek>=0.4.4",
+    "zizmor>=1.26.1",
 ]
 docs = [
     "mdx-include>=1.4.1,<2.0.0",

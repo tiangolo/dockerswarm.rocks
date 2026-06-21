@@ -21,3 +21,13 @@ repos:
         entry: uv run ./scripts/docs.py generate-readme
         files: ^docs/index\.md|scripts/docs\.py$
         pass_filenames: false
+
+-   repo: local
+    hooks:
+      - id: zizmor
+        name: zizmor
+        language: python
+        entry: uv run zizmor .
+        files: ^\.github/workflows/|^uv\.lock$
+        require_serial: true
+        pass_filenames: false
