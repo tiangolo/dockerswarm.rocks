@@ -36,6 +36,7 @@
 
 ### Internal
 
+* 🔒️ Add zizmor workflow security checks. PR [#339](https://github.com/tiangolo/dockerswarm.rocks/pull/339) by [@tiangolo](https://github.com/tiangolo).
 * ⬆️ Group Dependabot updates. PR [#338](https://github.com/tiangolo/dockerswarm.rocks/pull/338) by [@tiangolo](https://github.com/tiangolo).
 * ⬆️ Update Dependabot ecosystem coverage. PR [#337](https://github.com/tiangolo/dockerswarm.rocks/pull/337) by [@tiangolo](https://github.com/tiangolo).
 * ⬆ Bump tiangolo/latest-changes from 0.4.1 to 0.5.0 in the github-actions group across 1 directory. PR [#331](https://github.com/tiangolo/dockerswarm.rocks/pull/331) by [@dependabot[bot]](https://github.com/apps/dependabot).
