@@ -70,7 +70,7 @@ jobs:
       - uses: pre-commit-ci/lite-action@5d6cc0eb514c891a40562a58a8e71576c5c7fb43 # v1.1.0
         if: env.HAS_SECRETS == 'false'
         with:
-          msg: "\U0001F3A8 Auto format"
+          msg: 🎨 Auto format
       - name: Error out on pre-commit errors
         if: steps.precommit.outcome == 'failure'
         run: exit 1
