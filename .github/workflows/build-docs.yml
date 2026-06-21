@@ -7,12 +7,13 @@ on:
     types:
       - opened
       - synchronize
+permissions: {}
 jobs:
   changes:
-    runs-on: ubuntu-latest
-    # Required permissions
     permissions:
       pull-requests: read
+    runs-on: ubuntu-latest
+    # Required permissions
     # Set job outputs to values from filter step
     outputs:
       docs: ${{ steps.filter.outputs.docs }}
@@ -35,6 +36,8 @@ jobs:
               - .github/workflows/build-docs.yml
               - .github/workflows/deploy-docs.yml
   build-docs:
+    permissions:
+      contents: read
     needs:
       - changes
     if: ${{ needs.changes.outputs.docs == 'true' }}
@@ -71,10 +74,9 @@ jobs:
           name: docs-site
           path: ./site/**
           include-hidden-files: true
-    permissions:
-      contents: read
   # https://github.com/marketplace/actions/alls-green#why
   docs-all-green: # This job does nothing and is only used for the branch protection
+    permissions: {}
     if: always()
     needs:
       - build-docs
@@ -85,5 +87,3 @@ jobs:
         with:
           jobs: ${{ toJSON(needs) }}
           allowed-skips: build-docs
-    permissions: {}
-permissions: {}
