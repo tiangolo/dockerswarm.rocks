@@ -57,7 +57,16 @@ jobs:
         continue-on-error: true
       - name: Commit and push changes
         if: env.HAS_SECRETS == 'true'
-        run: "git config user.name \"github-actions[bot]\"\ngit config user.email \"github-actions[bot]@users.noreply.github.com\"\ngit add -A\nif git diff --staged --quiet; then\n  echo \"No changes to commit\"\nelse\n  git commit -m \"\U0001F3A8 Auto format\"\n  git push\nfi\n"
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "🎨 Auto format"
+            git push
+          fi
       - uses: pre-commit-ci/lite-action@5d6cc0eb514c891a40562a58a8e71576c5c7fb43 # v1.1.0
         if: env.HAS_SECRETS == 'false'
         with:
