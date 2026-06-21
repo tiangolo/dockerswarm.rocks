@@ -36,6 +36,7 @@
 
 ### Internal
 
+* ⬆️ Update Dependabot ecosystem coverage. PR [#337](https://github.com/tiangolo/dockerswarm.rocks/pull/337) by [@tiangolo](https://github.com/tiangolo).
 * ⬆ Bump tiangolo/latest-changes from 0.4.1 to 0.5.0 in the github-actions group across 1 directory. PR [#331](https://github.com/tiangolo/dockerswarm.rocks/pull/331) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump the python-packages group across 1 directory with 3 updates. PR [#332](https://github.com/tiangolo/dockerswarm.rocks/pull/332) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump astral-sh/setup-uv from 6 to 7. PR [#282](https://github.com/tiangolo/dockerswarm.rocks/pull/282) by [@dependabot[bot]](https://github.com/apps/dependabot).
