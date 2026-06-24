@@ -1,9 +1,6 @@
 name: pre-commit
 on:
   pull_request:
-    types:
-      - opened
-      - synchronize
 permissions: {}
 env:
   # Forks and Dependabot don't have access to secrets
