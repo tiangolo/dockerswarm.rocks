@@ -36,6 +36,7 @@
 
 ### Internal
 
+* 👷 Update issue-manager to 0.7.1. PR [#341](https://github.com/tiangolo/dockerswarm.rocks/pull/341) by [@tiangolo](https://github.com/tiangolo).
 * 🔒️ Add zizmor workflow security checks. PR [#339](https://github.com/tiangolo/dockerswarm.rocks/pull/339) by [@tiangolo](https://github.com/tiangolo).
 * ⬆️ Group Dependabot updates. PR [#338](https://github.com/tiangolo/dockerswarm.rocks/pull/338) by [@tiangolo](https://github.com/tiangolo).
 * ⬆️ Update Dependabot ecosystem coverage. PR [#337](https://github.com/tiangolo/dockerswarm.rocks/pull/337) by [@tiangolo](https://github.com/tiangolo).
