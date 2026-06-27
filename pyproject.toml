@@ -7,7 +7,7 @@ requires-python = ">=3.11"
 [dependency-groups]
 dev = [
     { include-group = "docs" },
-    "prek>=0.4.4",
+    "prek>=0.4.5",
     "zizmor>=1.26.1",
 ]
 docs = [
@@ -16,11 +16,11 @@ docs = [
     "pillow==12.2.0",
     "cairosvg==2.9.0",
     "typer==0.26.7",
-    "zensical>=0.0.44",
+    "zensical>=0.0.45",
 ]
 github-actions = [
     "PyGithub>=2.3.0,<3.0.0",
     "pydantic>=2.13.4,<3.0.0",
-    "pydantic-settings>=2.14.1,<3.0.0",
+    "pydantic-settings>=2.14.2,<3.0.0",
     "httpx>=0.27.0,<0.29.0",
 ]
