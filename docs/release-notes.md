@@ -36,6 +36,7 @@
 
 ### Internal
 
+* ⬆️ Update issue-manager to 0.8.1. PR [#347](https://github.com/tiangolo/dockerswarm.rocks/pull/347) by [@tiangolo](https://github.com/tiangolo).
 * ⬆️ Update latest-changes to 0.6.1. PR [#346](https://github.com/tiangolo/dockerswarm.rocks/pull/346) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Simplify pull request workflow triggers. PR [#342](https://github.com/tiangolo/dockerswarm.rocks/pull/342) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Update issue-manager to 0.7.1. PR [#341](https://github.com/tiangolo/dockerswarm.rocks/pull/341) by [@tiangolo](https://github.com/tiangolo).
