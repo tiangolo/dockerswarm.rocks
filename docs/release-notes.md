@@ -20,6 +20,7 @@
 
 ### Docs
 
+* 🐛 Use buttons for Termynal controls. PR [#358](https://github.com/tiangolo/dockerswarm.rocks/pull/358) by [@tiangolo](https://github.com/tiangolo).
 * 🐛 Prevent Termynal controls from scrolling. PR [#355](https://github.com/tiangolo/dockerswarm.rocks/pull/355) by [@tiangolo](https://github.com/tiangolo).
 * 📝 Update and simplify admonitions usage. PR [#321](https://github.com/tiangolo/dockerswarm.rocks/pull/321) by [@tiangolo](https://github.com/tiangolo).
 * 🔧 Upgrade Zensical docs setup. PR [#320](https://github.com/tiangolo/dockerswarm.rocks/pull/320) by [@tiangolo](https://github.com/tiangolo).
