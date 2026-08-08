@@ -38,6 +38,7 @@
 
 ### Internal
 
+* 👷 Use PR Push for pre-commit. PR [#363](https://github.com/tiangolo/dockerswarm.rocks/pull/363) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Remove Zensical docs cache. PR [#361](https://github.com/tiangolo/dockerswarm.rocks/pull/361) by [@tiangolo](https://github.com/tiangolo).
 * 🔥 Remove the old Latest Changes workflow. PR [#360](https://github.com/tiangolo/dockerswarm.rocks/pull/360) by [@tiangolo](https://github.com/tiangolo).
 * ⬆️ Upgrade latest-changes to 0.7.1. PR [#356](https://github.com/tiangolo/dockerswarm.rocks/pull/356) by [@tiangolo](https://github.com/tiangolo).
