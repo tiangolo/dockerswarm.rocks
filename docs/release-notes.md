@@ -38,6 +38,7 @@
 
 ### Internal
 
+* 👷 Use GitHub CLI for Git authentication. PR [#367](https://github.com/tiangolo/dockerswarm.rocks/pull/367) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Use PR Push commit identity. PR [#366](https://github.com/tiangolo/dockerswarm.rocks/pull/366) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Use PR Push for pre-commit. PR [#363](https://github.com/tiangolo/dockerswarm.rocks/pull/363) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Remove Zensical docs cache. PR [#361](https://github.com/tiangolo/dockerswarm.rocks/pull/361) by [@tiangolo](https://github.com/tiangolo).
