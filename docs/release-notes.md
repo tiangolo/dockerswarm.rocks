@@ -38,6 +38,7 @@
 
 ### Internal
 
+* ⬆ Bump cryptography from 48.0.0 to 50.0.0. PR [#359](https://github.com/tiangolo/dockerswarm.rocks/pull/359) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 🐛 Pin label checker action. PR [#370](https://github.com/tiangolo/dockerswarm.rocks/pull/370) by [@tiangolo](https://github.com/tiangolo).
 * ⬆ Bump pymdown-extensions from 10.21.3 to 11.0.1. PR [#364](https://github.com/tiangolo/dockerswarm.rocks/pull/364) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump the github-actions group across 1 directory with 6 updates. PR [#362](https://github.com/tiangolo/dockerswarm.rocks/pull/362) by [@dependabot[bot]](https://github.com/apps/dependabot).
