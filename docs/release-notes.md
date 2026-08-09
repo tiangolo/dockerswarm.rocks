@@ -38,6 +38,7 @@
 
 ### Internal
 
+* ⬆ Bump the github-actions group across 1 directory with 6 updates. PR [#362](https://github.com/tiangolo/dockerswarm.rocks/pull/362) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump pillow from 12.2.0 to 12.3.0. PR [#354](https://github.com/tiangolo/dockerswarm.rocks/pull/354) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump pydantic-settings from 2.14.1 to 2.14.2. PR [#334](https://github.com/tiangolo/dockerswarm.rocks/pull/334) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 👷 Use GitHub CLI for Git authentication. PR [#367](https://github.com/tiangolo/dockerswarm.rocks/pull/367) by [@tiangolo](https://github.com/tiangolo).
