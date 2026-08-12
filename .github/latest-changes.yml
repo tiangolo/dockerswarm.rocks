@@ -1,0 +1,9 @@
+auto-labels:
+  docs:
+    - docs/**
+  internal:
+    - .github/**
+    - scripts/**
+    - .gitignore
+    - .pre-commit-config.yaml
+    - uv.lock
