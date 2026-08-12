@@ -38,6 +38,7 @@
 
 ### Internal
 
+* 👷 Migrate automatic labels to Latest Changes. PR [#372](https://github.com/tiangolo/dockerswarm.rocks/pull/372) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Remove legacy label check. PR [#371](https://github.com/tiangolo/dockerswarm.rocks/pull/371) by [@tiangolo](https://github.com/tiangolo).
 * ⬆ Bump the python-packages group across 1 directory with 4 updates. PR [#369](https://github.com/tiangolo/dockerswarm.rocks/pull/369) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump cryptography from 48.0.0 to 50.0.0. PR [#359](https://github.com/tiangolo/dockerswarm.rocks/pull/359) by [@dependabot[bot]](https://github.com/apps/dependabot).
