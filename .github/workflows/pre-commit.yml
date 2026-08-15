@@ -61,7 +61,7 @@ jobs:
       - name: Get PR Push token
         id: pr-push
         if: env.CAN_PUSH == 'true' && steps.changes.outputs.changed == 'true'
-        uses: tiangolo/pr-push@ff4e51a433de4c22bbf90597e069e8247b9203d2 # 0.0.1
+        uses: tiangolo/pr-push@4c31924988b7c8edac04c09526a3b8a1b25a8b3a # 0.0.3
       - name: Commit and push changes
         if: env.CAN_PUSH == 'true' && steps.changes.outputs.changed == 'true'
         env:
