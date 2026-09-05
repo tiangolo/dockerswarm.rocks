@@ -15,7 +15,7 @@ docs = [
     "pyyaml>=5.3.1,<7.0.0",
     "pillow==12.3.0",
     "cairosvg==2.9.0",
-    "typer==0.27.0",
+    "typer==0.27.2",
     "zensical>=0.0.52",
 ]
 github-actions = [
