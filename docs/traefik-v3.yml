@@ -9,7 +9,8 @@ services:
       # Listen on port 80, default for HTTP, necessary to redirect to HTTPS
       - 80:80
       # Listen on port 443, default for HTTPS
-      - 443:443
+      - 443:443/tcp
+      - 443:443/udp
     deploy:
       placement:
         constraints:
@@ -56,18 +57,18 @@ services:
       # Mount the volume to store the certificates
       - traefik-public-certificates:/certificates
     command:
-      # Enable Docker in Traefik, so that it reads labels from Docker services
-      - --providers.docker
       # Add a constraint to only use services with the label "traefik.constraint-label=traefik-public"
-      - --providers.docker.constraints=Label(`traefik.constraint-label`, `traefik-public`)
+      - --providers.swarm.constraints=Label(`traefik.constraint-label`, `traefik-public`)
       # Do not expose all Docker services, only the ones explicitly exposed
-      - --providers.docker.exposedbydefault=false
+      - --providers.swarm.exposedbydefault=false
       # Enable Docker Swarm mode
       - --providers.swarm.endpoint=unix:///var/run/docker.sock
       # Create an entrypoint "http" listening on port 80
       - --entrypoints.http.address=:80
       # Create an entrypoint "https" listening on port 443
       - --entrypoints.https.address=:443
+      # Enable http3 support for HTTPS
+      - --entrypoints.https.http3
       # Create the certificate resolver "le" for Let's Encrypt, uses the environment variable EMAIL
       - --certificatesresolvers.le.acme.email=${EMAIL?Variable not set}
       # Store the Let's Encrypt certificates in the mounted volume
