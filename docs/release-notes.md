@@ -38,6 +38,7 @@
 
 ### Internal
 
+* ⬆ Bump urllib3 from 2.7.0 to 2.8.0. PR [#384](https://github.com/tiangolo/dockerswarm.rocks/pull/384) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump pyjwt from 2.13.0 to 2.15.0. PR [#383](https://github.com/tiangolo/dockerswarm.rocks/pull/383) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump anyio from 4.13.0 to 4.14.2. PR [#381](https://github.com/tiangolo/dockerswarm.rocks/pull/381) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 👷 Migrate automatic labels to Latest Changes. PR [#372](https://github.com/tiangolo/dockerswarm.rocks/pull/372) by [@tiangolo](https://github.com/tiangolo).
