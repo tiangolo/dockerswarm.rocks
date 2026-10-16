@@ -14,7 +14,7 @@ docs = [
     "mdx-include>=1.4.1,<2.0.0",
     "pyyaml>=5.3.1,<7.0.0",
     "pillow==12.3.0",
-    "cairosvg==2.9.0",
+    "cairosvg==2.9.1",
     "typer==0.27.0",
     "zensical>=0.0.52",
 ]
