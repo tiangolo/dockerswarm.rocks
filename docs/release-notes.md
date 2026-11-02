@@ -38,6 +38,7 @@
 
 ### Internal
 
+* ⬆ Bump the github-actions group across 1 directory with 10 updates. PR [#392](https://github.com/tiangolo/dockerswarm.rocks/pull/392) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump certifi from 2026.5.20 to 2026.10.18. PR [#391](https://github.com/tiangolo/dockerswarm.rocks/pull/391) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump pillow from 12.3.0 to 13.0.0. PR [#389](https://github.com/tiangolo/dockerswarm.rocks/pull/389) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump cairosvg from 2.9.0 to 2.9.1. PR [#387](https://github.com/tiangolo/dockerswarm.rocks/pull/387) by [@dependabot[bot]](https://github.com/apps/dependabot).
