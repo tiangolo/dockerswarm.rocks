@@ -20,6 +20,7 @@
 
 ### Docs
 
+* 🎨 Use the Zensical modern theme for docs. PR [#394](https://github.com/tiangolo/dockerswarm.rocks/pull/394) by [@tiangolo](https://github.com/tiangolo).
 * 🐛 Use buttons for Termynal controls. PR [#358](https://github.com/tiangolo/dockerswarm.rocks/pull/358) by [@tiangolo](https://github.com/tiangolo).
 * 🐛 Prevent Termynal controls from scrolling. PR [#355](https://github.com/tiangolo/dockerswarm.rocks/pull/355) by [@tiangolo](https://github.com/tiangolo).
 * 📝 Update and simplify admonitions usage. PR [#321](https://github.com/tiangolo/dockerswarm.rocks/pull/321) by [@tiangolo](https://github.com/tiangolo).
