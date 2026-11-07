@@ -4,7 +4,7 @@ site_description: Docker Swarm mode ideas and tools
 
 site_url: https://dockerswarm.rocks
 theme:
-  variant: classic
+  variant: modern
   name: material
   palette:
   - media: "(prefers-color-scheme)"
@@ -50,7 +50,7 @@ theme:
 
   icon:
     repo: octicons/mark-github-24
-  logo: img/icon-white.svg
+  logo: img/icon-light-blue.svg
   favicon: img/favicon.png
   language: en
 repo_name: tiangolo/dockerswarm.rocks
