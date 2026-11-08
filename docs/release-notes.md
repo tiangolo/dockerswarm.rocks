@@ -18,6 +18,10 @@
 
 * 🐛 Fix main branch for building docs. PR [#112](https://github.com/tiangolo/dockerswarm.rocks/pull/112) by [@tiangolo](https://github.com/tiangolo).
 
+### Upgrades
+
+* ⬆️ Use latest-known uv and upgrade GitHub Actions. PR [#395](https://github.com/tiangolo/dockerswarm.rocks/pull/395) by [@dependabot[bot]](https://github.com/apps/dependabot).
+
 ### Docs
 
 * 🎨 Use the Zensical modern theme for docs. PR [#394](https://github.com/tiangolo/dockerswarm.rocks/pull/394) by [@tiangolo](https://github.com/tiangolo).
